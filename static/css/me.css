@@ -7,3 +7,18 @@
     padding-top: 5em !important;
     padding-bottom: 5em !important;
 }
+
+/*-----text style-----*/
+.m-text-thin {
+    font-weight: 300 !important;
+}
+.m-text-spaced {
+    letter-spacing: 2px !important;
+}
+.m-text-lined {
+    line-height: 1.8;
+}
+
+.m-opacity-mini {
+    opacity: 0.8 !important;
+}

@@ -1,6 +1,37 @@
+/*-----padding adjust----*/
 .m-padded-tb-mini{
     padding-top:0.2em !important;
     padding-bottom:0.2em !important;
+}
+
+.m-padded-tb-tiny{
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+
+.m-padded-tb-small{
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.m-padded-tb-average{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.m-padded-tb-large{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+.m-padded-tb-extraLarge{
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+
+.m-padded-tb-huge{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
 }
 
 .m-padded-tb-massive{
@@ -21,4 +52,9 @@
 
 .m-opacity-mini {
     opacity: 0.8 !important;
+}
+
+/*-----display-----*/
+.m-inline-block{
+    display: inline-block !important;
 }

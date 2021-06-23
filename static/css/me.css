@@ -7,8 +7,6 @@
     padding: 0.3em !important;
 }
 
-
-
 /*-----top bottom padding adjust----*/
 .m-padded-tb-mini{
     padding-top:0.2em !important;
@@ -51,11 +49,17 @@
 }
 
 /*-----text style-----*/
+.m-text {
+    font-weight: 300 !important;
+    line-height: 1.8;
+    letter-spacing: 1px !important;
+}
+
 .m-text-thin {
     font-weight: 300 !important;
 }
 .m-text-spaced {
-    letter-spacing: 2px !important;
+    letter-spacing: 1px !important;
 }
 .m-text-lined {
     line-height: 1.8;
@@ -68,4 +72,9 @@
 /*-----display-----*/
 .m-inline-block{
     display: inline-block !important;
+}
+
+.m-container{
+    max-width: 72em !important;
+    margin: auto !important;
 }

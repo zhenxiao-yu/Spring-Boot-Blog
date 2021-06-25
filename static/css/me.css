@@ -81,7 +81,7 @@
 }
 
 /*-----top bottom margin adjust----*/
-.m-margin-tb-tiny{
+.m-margin-tb-tiny {
     margin-top: 0.3em !important;
     margin-bottom: 0.3em; !important;
 }
@@ -89,4 +89,17 @@
 /*-----color-----*/
 .m-black{
     color: #333 !important;
+}
+
+/*-----top margin-----*/
+.m-margin-top-small{
+    margin-top: 0.5em !important;
+}
+
+.m-margin-top-average{
+    margin-top: 1em !important;
+}
+
+.m-margin-top-large{
+    margin-top: 2em !important;
 }

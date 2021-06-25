@@ -78,3 +78,9 @@
     max-width: 72em !important;
     margin: auto !important;
 }
+
+/*-----top bottom margin adjust----*/
+.m-margin-tb-tiny{
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em; !important;
+}

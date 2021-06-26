@@ -71,9 +71,15 @@ body{
     line-height: 1.8;
 }
 
+/*-----opacity-----*/
 .m-opacity-mini {
     opacity: 0.8 !important;
 }
+
+.m-opacity-tiny {
+    opacity: 0.6 !important;
+}
+
 
 /*-----display-----*/
 .m-inline-block{

@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Page</title>
+    <title>Publish Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <!--CDN Release Of Semantic UI -->
     <link rel="stylesheet" href="../static/css/me.css">
 </head>
 <body>
 <!--Navigation-->
-<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">  <!--inverted color(black) + attached(square edges)-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <!--inverted color(black) + attached(square edges)-->
     <div class="ui container">
         <div class="ui inverted secondary stackable menu"> <!--menu ui item-->
             <!--menu items -->
-            <h2 class="ui purple header item">Blog Manager</h2> <!--logo -->
+            <h2 class="ui purple header item">Blog Publisher</h2> <!--logo -->
             <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blog</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
@@ -40,8 +41,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="item">Publish</a>
-            <a href="#" class="purple active item">List</a>
+            <a href="#" class="purple active item">Publish</a>
+            <a href="#" class="item">List</a>
         </div>
     </div>
 </div>
@@ -49,82 +50,112 @@
 <!--Center Content-->
 <div id="" class="m-container-small m-padded-tb-large animated fadeIn">
     <div class="ui container">
-        <!--post management form-->
-        <form action="#" method="post" class="ui segment form">
-            <div class="inline fields">
-                <!--title-->
-                <div class="field">
+        <!--form-->
+        <form action="#" method="post" class="ui form">
+            <div class="required field">
+                <div class="ui left labeled input">
+                    <!--type selection dropdown-->
+                    <div class="ui selection compact purple basic dropdown label">
+                        <input type="hidden" value="Original">
+                        <i class="dropdown icon"></i>
+                        <div class="text">Original</div>
+                        <div class="menu">
+                            <div class="item" data-value="Original">Original</div>
+                            <div class="item" data-value="Shared">Shared</div>
+                            <div class="item" data-value="Translated">Translated</div>
+                        </div>
+                    </div>
+                    <!--title input field-->
                     <input type="text" name="title" placeholder="Title">
                 </div>
+            </div>
+
+            <!--post content-->
+            <div class="field">
+                <div id="md-content" style="z-index: 1 !important;">
+                    <textarea placeholder="Post Content" name="content"></textarea>
+                </div>
+            </div>
+
+            <!--category and tag input fields-->
+            <div class="two fields">
                 <div class="field">
-                    <!--dropdown menu items-->
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="type">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Category</div>
-                        <div class="menu">
-                            <!--data value is the id that will be referenced in the backend-->
-                            <div class="item" data-value="1">Tech Insight</div>
-                            <div class="item" data-value="2">Spring Boot</div>
+                    <div class="ui left labeled action input">
+                        <label class="ui compact purple basic label">Category</label>
+                        <div class="ui fluid selection dropdown">
+                            <input type="hidden" name="type">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Category</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">Tech Insight</div>
+                                <div class="item" data-value="2">Spring Boot</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--is recommended checkbox-->
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact purple basic label">Tag</label>
+                        <!--enable multiple tag selection-->
+                        <div class="ui fluid selection multiple search dropdown">
+                            <input type="hidden" name="tag">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Tag</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">Unity</div>
+                                <div class="item" data-value="2">Vue.JS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--post picture input-->
+            <div class="field">
+                <div class="ui left labeled input">
+                    <label class="ui purple basic label">Thumbnail</label>
+                    <input type="text" name="indexPicture" placeholder="Image URL">
+                </div>
+
+            </div>
+
+            <div class="inline fields">
                 <div class="field">
                     <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend">
+                        <input type="checkbox" id="recommend" name="recommend" checked class="hidden">
                         <label for="recommend">Recommend</label>
                     </div>
                 </div>
-
-                <!--search-->
                 <div class="field">
-                    <button class="ui mini purple basic button"><i class="search icon"></i>Search</button>
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="shareInfo" name="shareInfo" class="hidden">
+                        <label for="shareInfo">Share Info</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="appreciation" name="appreciation" class="hidden">
+                        <label for="appreciation">Donate</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="comment" name="comment" class="hidden">
+                        <label for="comment">Comment</label>
+                    </div>
                 </div>
             </div>
-        </form>
 
-        <!--posts in table-->
-        <table class="ui celled table">
-            <thead>
-            <tr>
-                <th></th>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Recommend</th>
-                <th>Date</th>
-                <th>Update</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>UE4 vs Unity</td>
-                <td>Tech Insight</td>
-                <td>yes</td>
-                <td>2021-05-02 09:11</td>
-                <td>
-                    <!--change edit-->
-                    <a href="#" class="ui mini teal basic button">Edit</a>
-                    <a href="#" class="ui mini red basic button">Delete</a>
-                </td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr>
-                <!--merge 6 columns-->
-                <th colspan="6">
-                    <div class="ui middle mini pagination menu">
-                        <a class=" item">Prev</a>
-                        <a class=" item">Next</a>
-                    </div>
-                    <!--new post-->
-                    <a href="#" class="ui mini right floated purple basic button"><i class="pencil alternate icon"></i>Add</a>
-                </th>
-            </tr>
-            </tfoot>
-        </table>
+            <div class="ui error message"></div>
+            <!--bottom buttons-->
+            <div class="ui right aligned container">
+                <button type="button" class="ui button" onclick="window.history.go(-1)">Return</button>
+                <button class="ui secondary button">Save</button>
+                <button class="ui purple button">Publish</button>
+            </div>
+
+        </form>
     </div>
+
 </div>
 
 <br>
@@ -190,7 +221,7 @@
     });
     //user login logout drop down
     $('.ui.dropdown').dropdown({
-        on : 'hover'
+        on: 'hover'
     });
 
 </script>

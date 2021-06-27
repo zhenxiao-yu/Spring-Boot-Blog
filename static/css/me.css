@@ -135,7 +135,7 @@ body{
 
 /*------shadow------*/
 .m-shadow-small {
-    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important; /*browser compatibility*/
     box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
 }
 

@@ -22,7 +22,7 @@
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img class="ui avatar image" src="https://unsplash.it/100/100?image=900">
+                        <img class="ui avatar image" src="https://unsplash.it/100/100?image=900" alt="">
                         ZhenXiao Yu
                     </div>
                     <i class="dropdown icon"></i>
@@ -61,50 +61,58 @@
                         </div>
                     </div>
                 </div>
+                <!--is recommended checkbox-->
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">Recommended</label>
+                        <label for="recommend">Recommend</label>
                     </div>
                 </div>
+                <!--search-->
                 <div class="field">
-                    <button class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+                    <button class="ui mini purple basic button"><i class="search icon"></i>Search</button>
                 </div>
+
+
             </div>
         </form>
 
+        <!--posts in table-->
         <table class="ui celled table">
             <thead>
             <tr>
                 <th></th>
-                <th>标题</th>
-                <th>类型</th>
-                <th>推荐</th>
-                <th>更新时间</th>
-                <th>操作</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Recommend</th>
+                <th>Date</th>
+                <th>Update</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>1</td>
-                <td>刻意练习清单</td>
-                <td>认知升级</td>
-                <td>是</td>
-                <td>2017-10-02 09:45</td>
+                <td>UE4 vs Unity</td>
+                <td>Tech Insight</td>
+                <td>yes</td>
+                <td>2021-05-02 09:11</td>
                 <td>
-                    <a href="#" class="ui mini teal basic button">编辑</a>
-                    <a href="#" class="ui mini red basic button">删除</a>
+                    <!--change edit-->
+                    <a href="#" class="ui mini teal basic button">Edit</a>
+                    <a href="#" class="ui mini red basic button">Delete</a>
                 </td>
             </tr>
             </tbody>
             <tfoot>
             <tr>
+                <!--merge 6 columns-->
                 <th colspan="6">
-                    <div class="ui mini pagination menu">
-                        <a class=" item">上一页</a>
-                        <a class=" item">下一页</a>
+                    <div class="ui middle mini pagination menu">
+                        <a class=" item">Prev</a>
+                        <a class=" item">Next</a>
                     </div>
-                    <a href="#" class="ui mini right floated teal basic button">新增</a>
+                    <!--new post-->
+                    <a href="#" class="ui mini right floated purple basic button">Create New</a>
                 </th>
             </tr>
             </tfoot>

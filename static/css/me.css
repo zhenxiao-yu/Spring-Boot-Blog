@@ -115,7 +115,7 @@ body{
     color: #333 !important;
 }
 
-/*-----top margin-----*/
+/*-----margin-----*/
 .m-margin-top-small{
     margin-top: 0.5em !important;
 }
@@ -127,6 +127,11 @@ body{
 .m-margin-top-large{
     margin-top: 2em !important;
 }
+
+.m-margin-bottom-small{
+    margin-bottom: 0.5em !important;
+}
+
 
 /*------shadow------*/
 .m-shadow-small {

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--CDN Release Of Semantic UI -->
+    <link rel="stylesheet" href="./static/css/me.css">
+</head>
+<body>
+<!--Navigation-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <!--inverted color(black) + attached(square edges)-->
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu"> <!--menu ui item-->
+            <!--menu items -->
+            <h2 class="ui purple header item">ZXY</h2> <!--logo -->
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>Home</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>Archive</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="archive icon"></i>Projects</a>
+            <a href="#" class="active m-item item m-mobile-hide"><i class="info icon"></i>About Me</a>
+            <!--Search Bar-->
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input input m-margin-tb-tiny">
+                    <input type="text" placeholder="Search">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--Center Content-->
+<div id="" class="m-container m-padded-tb-large animated fadeIn">
+    <div class="ui container">
+
+        <div class="ui stackable grid">
+            <!--picture area-->
+            <div class="eleven wide column">
+                <div class="ui segment">
+                    <!--my picture-->
+                    <img src="https://unsplash.it/800/600?image=1005" alt="" class="ui rounded image">
+                </div>
+            </div>
+            <div class="five wide column">
+                <!--header-->
+                <div class="ui purple top attached segment">
+                    <div class="ui header">About Me</div>
+                </div>
+                <!--bio info-->
+                <div class="ui attached segment">
+                    <p class="m-text">Hello, my name is Mark Yu. I am a third year software engineering student at
+                        University of Western Ontario</p>
+                    <p class="m-text">With a background in visual arts, I focus mainly on front end development using
+                        vue and react. I also spend my time making games using the unity engine. </p>
+                </div>
+                <!--label-->
+                <div class="ui attached segment">
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Programming</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Writing</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Game Dev</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Study</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Java</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">JavaScript</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Vue</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">React</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Unity</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">MYSQL</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">C#</div>
+                </div>
+                <!--links-->
+                <div class="ui bottom attached center aligned segment">
+                    <!--github-->
+                    <a href="https://github.com/zhenxiao-yu" class="ui git circular icon button" data-content="zhenxiao-yu"
+                       data-position="bottom center"><i class="github icon"></i></a>
+                    <!--instagram-->
+                    <a href="#" class="ui insta circular icon button"><i class="instagram icon"></i></a>
+                    <!--discord-->
+                    <a href="#" class="ui discord circular icon button" data-content="TipsySamurai#7421"
+                       data-position="bottom center"><i class="discord icon"></i></a>
+                    <!--email-->
+                    <a href="#" class="ui email circular icon button" data-content="zyu347@uwo.ca"
+                       data-position="bottom center"><i class="envelope outline icon"></i></a>
+                    <!--phone-->
+                    <a href="#" class="ui phone circular icon button" data-content="(306)581-5556"
+                       data-position="bottom center"><i class="mobile alternate icon"></i></a>
+                </div>
+
+                <!--instagram QR-->
+                <div class="ui instagramQR flowing popup transition hidden">
+                    <img src="./static/images/PersonalQR.png" alt="" class="ui rounded image" style="width: 110px">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<br>
+<br>
+
+<!--Bottom Footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <!--inverted color(black) + vertical(square edges)-->
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <!--Semantic UI grid divide content into 16 pieces (Bootstrap has 12)-->
+            <!--Instagram QR Image-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="./static/images/PersonalQR.png" class="ui rounded image" alt="Instagram QR Code"
+                             style="width: 110px">
+                    </div>
+                </div>
+            </div>
+            <!--Directory-->
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">Latest Post</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">User Story</a>
+                    <a href="#" class="item">User Story</a>
+                    <a href="#" class="item">User Story</a>
+                </div>
+            </div>
+            <!--Contacts-->
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">Contact Me</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email: zyu347@uwo.ca </a>
+                    <a href="#" class="item">Cell: (306)581-5556</a>
+                    <a href="#" class="item">Snapchat: markyu2020</a>
+                </div>
+            </div>
+            <!--Short Intro-->
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">ZhenXiao Yu's Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">This is my personal blog, I will be posting
+                    content related to programming,
+                    game development, and other things I find worthy of discussion. I hope you find something
+                    useful...</p>
+            </div>
+        </div>
+        <!--Bottom CopyRight Info-->
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright ©2021-2022 ZhenXiao Yu</p>
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>  <!--CDN Release Of Jquery -->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--CDN Release Of Semantic UI -->
+
+<script>
+    //jQuery Command to toggle navigation menu items
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    //css popup control
+    $('.phone').popup();
+    $('.email').popup();
+    $('.discord').popup();
+    $('.git').popup();
+    //instaQR
+    $('.insta').popup({
+        popup: $('.instagramQR.popup'),
+        on: 'hover',
+        position: 'bottom center'
+    });
+
+</script>
+</body>
+</html>

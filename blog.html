@@ -639,7 +639,7 @@ h5,h6{font-size:1em;}
 </div>
 
 <!--tool bar-->
-<div id="toolbar" class="m-padded-average m-fixed m-right-bottom">
+<div id="toolbar" class="m-padded-average m-fixed m-right-bottom" style="display: none">
     <div class="ui vertical icon buttons ">
         <!--table of content-->
         <button type="button" class="ui toc purple button"><i class="list alternate icon"></i></button>
@@ -723,6 +723,7 @@ h5,h6{font-size:1em;}
 <script src="./static/lib/prism/prism.js"></script> <!--code viewer js -->
 <script src="./static/lib/tocbot/tocbot.min.js"></script><!--toc js -->
 <script src="./static/lib/qrcode/qrcode.min.js"></script><!--qr js -->
+<script src="./static/lib/waypoints/jquery.waypoints.min.js"></script><!--waypoint js -->
 
 
 <script>
@@ -766,10 +767,22 @@ h5,h6{font-size:1em;}
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
-
+    //scroll to top
     $('#toTop-button').click(function () {
-        $(window).scrollTo(0,500);
+        $(window).scrollTo(0,1000);
     });
+    //show toolbar when scrolled down
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                $('#toolbar').show(100);
+            } else {
+                $('#toolbar').hide(500);
+            }
+            console.log('Scrolled to waypoint!  ' + direction);
+        }
+    })
 </script>
 </body>
 </html>

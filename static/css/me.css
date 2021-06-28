@@ -151,6 +151,11 @@ body{
     right: 0;
 }
 
+.m-right-bottom {
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
 .m-mobile-show{
     display: none !important;
 }

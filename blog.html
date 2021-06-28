@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <!--animate css -->
     <link rel="stylesheet" href="./static/css/animate.css">
-    <!--typo.css-->
+    <!--typo css-->
     <link rel="stylesheet" href="./static/css/typo.css">
+    <!--code viewer css-->
+    <link rel="stylesheet" href="./static/lib/prism/prism.css">
     <!--CDN Release Of Semantic UI -->
     <link rel="stylesheet" href="./static/css/me.css">
 </head>
@@ -309,7 +311,7 @@ h5,h6{font-size:1em;}
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {
     margin:1em 0 0.6em;
 }
-</code></pre>
+                </code></pre>
 
                 <h3 id="section3">三、附录</h3>
 
@@ -633,7 +635,15 @@ h5,h6{font-size:1em;}
         </div>
     </div>
 </div>
-
+<!--tool bar-->
+<div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
+    <div class="ui vertical icon buttons ">
+        <button type="button" class="ui toc teal button" >目录</button>
+        <a href="#comment-container" class="ui teal button" >留言</a>
+        <button class="ui wechat icon button"><i class="weixin icon"></i></button>
+        <div id="toTop-button" class="ui icon button" ><i class="chevron up icon"></i></div>
+    </div>
+</div>
 <br>
 <br>
 
@@ -687,8 +697,9 @@ h5,h6{font-size:1em;}
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>  <!--CDN Release Of Jquery -->
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-<!--CDN Release Of Semantic UI -->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> <!--CDN Release Of Semantic UI -->
+<script src="./static/lib/prism/prism.js"></script> <!--code viewer js -->
+
 
 <script>
     //jQuery Command to toggle navigation menu items

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./static/css/animate.css">
     <!--typo css-->
     <link rel="stylesheet" href="./static/css/typo.css">
+    <!--toc css-->
+    <link rel="stylesheet" href="./static/lib/tocbot/tocbot.css">
     <!--code viewer css-->
     <link rel="stylesheet" href="./static/lib/prism/prism.css">
     <!--CDN Release Of Semantic UI -->
@@ -77,7 +79,7 @@
             <h2 class="ui center aligned header">11 Most In-Demand Programming Languages in 2021</h2>
             <br>
             <!--post text-->
-            <div id="content" class="typo typo-selection m-padded-lr-responsive m-padded-tb-large">
+            <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
                 <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
                 <pre><code class="language-css">p { color: red }</code></pre>
@@ -651,7 +653,15 @@ h5,h6{font-size:1em;}
 </div>
 
 <!--table of contents container-->
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px!important;">
+    <ol class="js-toc"> <!--generate toc in ol area-->
 
+    </ol>
+</div>
+<!--qr code container-->
+<div id="qrcode" class="ui qrCode flowing popup transition hidden "style="width: 130px !important;">
+    <!--<img src="./static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
+</div>
 
 
 
@@ -709,6 +719,8 @@ h5,h6{font-size:1em;}
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>  <!--CDN Release Of Jquery -->
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> <!--CDN Release Of Semantic UI -->
 <script src="./static/lib/prism/prism.js"></script> <!--code viewer js -->
+<script src="./static/lib/tocbot/tocbot.min.js"></script><!--toc js -->
+<script src="./static/lib/qrcode/qrcode.min.js"></script><!--qr js -->
 
 
 <script>
@@ -721,6 +733,26 @@ h5,h6{font-size:1em;}
         popup: $('.payQR.popup'),
         on: 'click',
         position: 'bottom center'
+    });
+    //initialize toc plugin
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+    });
+    //css toc popup control
+    $('.toc.button').popup({
+        popup : $('.toc-container.popup'),
+        on : 'click',
+        position: 'left center'
+    });
+    //qrCode popup control
+    $('.wechat').popup({
+        popup : $('.wechat-qr'),
+        position: 'left center'
     });
 </script>
 </body>

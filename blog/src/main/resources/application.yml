@@ -1,8 +1,6 @@
 spring:
-  #use thymeleaf 3.0
   thymeleaf:
     mode: HTML
-  #active application dev mode
   profiles:
     active: dev
 

@@ -11,25 +11,23 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
-/**
- * Created by limi on 2017/10/13.
- */
+//required notation
 @Aspect
 @Component
 public class LogAspect {
-
+    //keep track of log
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* com.zxy.web.*.*(..))")
-    public void log() {}
+    @Pointcut("execution(* com.zxy.web.*.*(..))") //stop all type of parameters under web directory
+    public void log() {} //get a instance of log
 
-
+    //execute before getting an instance of the log
     @Before("log()")
     public void doBefore(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        String url = request.getRequestURL().toString();
-        String ip = request.getRemoteAddr();
+        HttpServletRequest request = attributes.getRequest(); //get the request
+        String url = request.getRequestURL().toString(); //get the url that requested
+        String ip = request.getRemoteAddr(); // get the ip that requested
         String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
@@ -38,9 +36,10 @@ public class LogAspect {
 
     @After("log()")
     public void doAfter() {
-//        logger.info("--------doAfter--------");
+        //logger.info("--------doAfter--------");
     }
 
+    //execute after returning an instance of the log
     @AfterReturning(returning = "result",pointcut = "log()")
     public void doAfterRuturn(Object result) {
         logger.info("Result : {}", result);

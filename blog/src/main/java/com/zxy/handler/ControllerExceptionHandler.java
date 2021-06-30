@@ -10,9 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by limi on 2017/10/13.
- */
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
@@ -20,8 +17,8 @@ public class ControllerExceptionHandler {
 
 
     @ExceptionHandler(Exception.class)
-    public ModelAndView exceptionHander(HttpServletRequest request, Exception e) throws Exception {
-        logger.error("Requst URL : {}，Exception : {}", request.getRequestURL(),e);
+    public ModelAndView exceptionHandler(HttpServletRequest request, Exception e) throws Exception {
+        logger.error("Request URL : {}，Exception : {}", request.getRequestURL(),e);
 
         if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
             throw e;

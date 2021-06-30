@@ -1,4 +1,4 @@
-package com.lrm.aspect;
+package com.zxy.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -20,7 +20,7 @@ public class LogAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* com.lrm.web.*.*(..))")
+    @Pointcut("execution(* com.zxy.web.*.*(..))")
     public void log() {}
 
 

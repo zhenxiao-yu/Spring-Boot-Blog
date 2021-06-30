@@ -1,4 +1,4 @@
-package com.lrm;
+package com.zxy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -22,7 +22,7 @@
             <a href="#" class=" m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>Posts</a>
-            <a href="#" class="active m-item item m-mobile-hide"><i class="mini info icon"></i>About</a>
+            <a href="#" class="active m-item item m-mobile-hide"><i class="info icon"></i>About</a>
             <!--Search Bar-->
             <div class="right m-item item m-mobile-hide">
                 <div class="ui icon inverted transparent input m-margin-tb-tiny">
@@ -81,7 +81,8 @@
                 <!--links-->
                 <div class="ui bottom attached center aligned segment">
                     <!--github-->
-                    <a href="https://github.com/zhenxiao-yu" class="ui git circular icon button" data-content="zhenxiao-yu"
+                    <a href="https://github.com/zhenxiao-yu" class="ui git circular icon button"
+                       data-content="zhenxiao-yu"
                        data-position="bottom center"><i class="github icon"></i></a>
                     <!--instagram-->
                     <a href="#" class="ui insta circular icon button"><i class="instagram icon"></i></a>
@@ -108,10 +109,14 @@
 
 <br>
 <br>
-<!--底部footer-->
+
+<!--Bottom Footer-->
 <footer class="ui inverted vertical segment m-padded-tb-massive">
+    <!--inverted color(black) + vertical(square edges)-->
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
+            <!--Semantic UI grid divide content into 16 pieces (Bootstrap has 12)-->
+            <!--Instagram QR Image-->
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
@@ -119,24 +124,31 @@
                     </div>
                 </div>
             </div>
+            <!--Directory-->
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Latest Post</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                    <a href="#" class="item m-text-thin">User Story </a>
+                    <a href="#" class="item m-text-thin">User Story </a>
+                    <a href="#" class="item m-text-thin">User Story </a>
                 </div>
             </div>
+            <!--Contacts-->
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Contact Me</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
-                    <a href="#" class="item m-text-thin">QQ：865729312</a>
+                    <a href="#" class="item m-text-thin">Email: zyu347@uwo.ca</a>
+                    <a href="#" class="item m-text-thin">Cell: (306)581-5556</a>
+                    <a href="#" class="item">Snapchat: markyu2020</a>
                 </div>
             </div>
+            <!--Short Intro-->
             <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
-                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">ZhenXiao Yu's Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">This is my personal blog, I will be posting
+                    content related to programming,
+                    game development, and other things I find worthy of discussion. I hope you find something
+                    useful...</p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
@@ -145,8 +157,13 @@
 
 </footer>
 
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<!--CDN Release Of Jquery -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--CDN Release Of Semantic UI -->
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
 
 <script>
     //jQuery Command to toggle navigation menu items

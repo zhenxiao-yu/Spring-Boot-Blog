@@ -26,7 +26,7 @@
         <!--menu ui item-->
         <div class="ui inverted secondary stackable menu">
             <!--logo -->
-            <h2 class="ui teal header item">ZYX</h2>
+            <h2 class="ui purple header item">ZYX</h2>
             <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Home</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
@@ -476,7 +476,7 @@ h5,h6{font-size:1em;}
 
             <!--tag-->
             <div class="m-padded-lr-responsive">
-                <div class="ui basic teal left pointing label">Tech Insight</div>
+                <div class="ui basic purple left pointing label">Tech Insight</div>
             </div>
 
             <!--donate-->
@@ -486,32 +486,37 @@ h5,h6{font-size:1em;}
             <!--popup-->
             <div class="ui payQR flowing popup transition hidden">
                 <div class="ui orange basic label">
+                    <!--since Semantic Ui sets the default text siz eon image as 0, change font-size for image description to be visible-->
                     <div class="ui images" style="font-size: inherit !important;">
                         <!--image no.1-->
                         <div class="image">
                             <img src="../static/images/wechat.jpg" alt="" class="ui rounded bordered image"
                                  style="width: 120px">
-                            <div>支付宝</div>
+                            <!--image description-->
+                            <div>My Instagram</div>
                         </div>
                         <div class="image">
                             <img src="../static/images/wechat.jpg" alt="" class="ui rounded bordered image"
                                  style="width: 120px">
-                            <div>微信</div>
+                            <div>Drone Team</div>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="ui attached positive message">
+
+        <!--post information-->
+        <div class="ui attached positive message"> <!--positive gives green box effect-->
             <!--博客信息-->
             <div class="ui middle aligned grid">
+                <!--author info-->
                 <div class="eleven wide column">
                     <ui class="list">
-                        <li>作者：李仁密（联系作者）</li>
-                        <li>发表时间：2017-10-02 09:08</li>
-                        <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
-                        <li>公众号转载：请在文末添加作者公众号二维码</li>
+                        <li>Author：ZhenXiao Yu（Contact Author）</li>
+                        <li>Publication Date：2021-06-12 10:08</li>
+                        <li>Contact: zyu347@uwo.ca</li>
+                        <li>Sharing Requirement: Attach QR code</li>
                     </ui>
                 </div>
                 <div class="five wide column">
@@ -520,9 +525,10 @@ h5,h6{font-size:1em;}
                 </div>
             </div>
         </div>
+
         <div id="comment-container" class="ui bottom attached segment">
-            <!--留言区域列表-->
-            <div class="ui teal segment">
+            <!--comment section-->
+            <div class="ui purple segment">
                 <div class="ui threaded comments">
                     <h3 class="ui dividing header">Comments</h3>
                     <div class="comment">
@@ -538,7 +544,7 @@ h5,h6{font-size:1em;}
                                 How artistic!
                             </div>
                             <div class="actions">
-                                <a class="reply">回复</a>
+                                <a class="reply">Reply</a>
                             </div>
                         </div>
                     </div>
@@ -555,7 +561,7 @@ h5,h6{font-size:1em;}
                                 <p>This has been very useful for my research. Thanks as well!</p>
                             </div>
                             <div class="actions">
-                                <a class="reply">回复</a>
+                                <a class="reply">Reply</a>
                             </div>
                         </div>
                         <div class="comments">
@@ -572,7 +578,7 @@ h5,h6{font-size:1em;}
                                         Elliot you are always so right :)
                                     </div>
                                     <div class="actions">
-                                        <a class="reply">回复</a>
+                                        <a class="reply">Reply</a>
                                     </div>
                                 </div>
                             </div>
@@ -591,31 +597,34 @@ h5,h6{font-size:1em;}
                                 Dude, this is awesome. Thanks so much
                             </div>
                             <div class="actions">
-                                <a class="reply">回复</a>
+                                <a class="reply">Reply</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!--comment form-->
             <div class="ui form">
+                <!--comment box-->
                 <div class="field">
-                    <textarea name="content" placeholder="请输入评论信息..."></textarea>
+                    <textarea name="content" placeholder="Leave a comment..."></textarea>
                 </div>
                 <div class="fields">
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
                             <i class="user icon"></i>
-                            <input type="text" name="nickname" placeholder="姓名">
+                            <input type="text" name="nickname" placeholder="Name">
                         </div>
                     </div>
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
                             <i class="mail icon"></i>
-                            <input type="text" name="email" placeholder="邮箱">
+                            <input type="text" name="email" placeholder="Email">
                         </div>
                     </div>
                     <div class="field  m-margin-bottom-small m-mobile-wide">
-                        <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                        <button class="ui purple button m-mobile-wide"><i class="edit icon"></i>Send</button>
                     </div>
                 </div>
 
@@ -624,61 +633,80 @@ h5,h6{font-size:1em;}
     </div>
 </div>
 
+<!--tool bar-->
 <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
-    <div class="ui vertical icon buttons ">
-        <button type="button" class="ui toc teal button">目录</button>
-        <a href="#comment-container" class="ui teal button">留言</a>
-        <button class="ui wechat icon button"><i class="weixin icon"></i></button>
-        <div id="toTop-button" class="ui icon button"><i class="chevron up icon"></i></div>
+    <div class="ui vertical icon buttons">
+        <!--table of content-->
+        <button type="button" class="ui toc purple button"><i class="list icon"></i></button>
+        <!--comment-->
+        <a href="#comment-container" class="ui purple button"><i class="edit outline icon"></i></a>
+        <!--QR code-->
+        <button class="ui scan icon button"><i class="qrcode icon"></i></button>
+        <!--up button-->
+        <div id="toTop-button" class="ui icon button"><i class="angle up icon"></i></div>
     </div>
 </div>
 
+<!--table of contents container-->
 <div class="ui toc-container flowing popup transition hidden" style="width: 250px!important;">
+    <!--generate toc in ol area-->
     <ol class="js-toc">
 
     </ol>
 </div>
 
-<div id="qrcode" class="ui wechat-qr flowing popup transition hidden " style="width: 130px !important;">
-    <!--<img src="./static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
+<!--qr code container-->
+<div id="qrcode" class="ui qrCode flowing popup transition hidden" style="width: 130px !important;">
+    <!--<img src="./static/images/PersonalQR.png" alt="" class="ui rounded image" style="width: 120px !important;">-->
 </div>
 
 
 <br>
 <br>
-<!--底部footer-->
+<!--Bottom Footer-->
 <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <!--inverted color(black) + vertical(square edges)-->
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
+            <!--Semantic UI grid divide content into 16 pieces (Bootstrap has 12)-->
+            <!--Instagram QR Image-->
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-                        <img src="../static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 110px">
+                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image"
+                             alt="" style="width: 110px">
                     </div>
                 </div>
             </div>
+            <!--Directory-->
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Latest Post</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                    <a href="#" class="item m-text-thin">User Story </a>
+                    <a href="#" class="item m-text-thin">User Story </a>
+                    <a href="#" class="item m-text-thin">User Story </a>
                 </div>
             </div>
+            <!--Contacts-->
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Contact Me</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
-                    <a href="#" class="item m-text-thin">QQ：865729312</a>
+                    <a href="#" class="item m-text-thin">Email: zyu347@uwo.ca</a>
+                    <a href="#" class="item m-text-thin">Cell: (306)581-5556</a>
+                    <a href="#" class="item">Snapchat: markyu2020</a>
                 </div>
             </div>
+            <!--Short Intro-->
             <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
-                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">ZhenXiao Yu's Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">This is my personal blog, I will be posting
+                    content related to programming,
+                    game development, and other things I find worthy of discussion. I hope you find something
+                    useful...</p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2021 ZhenXiao Yu</p>
     </div>
 
 </footer>
@@ -722,25 +750,29 @@ h5,h6{font-size:1em;}
         position: 'left center'
     });
 
-    $('.wechat').popup({
-        popup: $('.wechat-qr'),
+    //qrCode popup control
+    $('.scan').popup({
+        popup : $('.qrCode'),
+        on: 'click',
         position: 'left center'
     });
 
+    //generate new qr
     var qrcode = new QRCode("qrcode", {
         text: "http://jindo.dev.naver.com/collie",
         width: 110,
         height: 110,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
     });
 
+    //scroll to top
     $('#toTop-button').click(function () {
-        $(window).scrollTo(0, 500);
+        $(window).scrollTo(0, 1000);
     });
 
-
+    //show toolbar when scrolled down
     var waypoint = new Waypoint({
         element: document.getElementById('waypoint'),
         handler: function (direction) {

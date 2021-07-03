@@ -23,7 +23,7 @@
     font-weight: 300;
 }
 .toc-list li a:hover {
-    color: #00B5AD;
+    color: purple;
 }
 
 a.toc-link {
@@ -48,7 +48,7 @@ a.toc-link {
 
 .is-active-link {
     font-weight: 700;
-    color: #00B5AD !important;
+    color: purple !important;
 }
 
 .toc-link::before {

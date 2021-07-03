@@ -1,9 +1,6 @@
 package com.zxy.po;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -24,7 +21,9 @@ public class Blog {
     private boolean commentabled; //enable comment section
     private boolean published; //is published
     private boolean recommend; //is recommended
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime; //date when the post was created
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime; //date when the post was last updated
 
     //class constructor
@@ -137,40 +136,8 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
-    public Type getType() {
-        return type;
-    }
 
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
-
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-
+    //to string method
     @Override
     public String toString() {
         return "Blog{" +

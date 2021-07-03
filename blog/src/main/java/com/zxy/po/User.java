@@ -1,7 +1,9 @@
 package com.zxy.po;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "t_user") //sql table name
@@ -20,6 +22,9 @@ public class User {
     private Date createTime; //account creation time
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime; //account update time
+
+    @OneToMany(mappedBy = "user")
+    private List<Blog> blogs = new ArrayList<>();
 
     //class constructor
     public User() {
@@ -96,6 +101,14 @@ public class User {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
     }
 
     //to string method

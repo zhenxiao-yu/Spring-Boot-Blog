@@ -1,6 +1,7 @@
 package com.zxy.po;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -27,7 +28,16 @@ public class Blog {
     private Date updateTime; //date when the post was last updated
 
     @ManyToOne
-    private Type type; //assign many category labels to a blog post
+    private Type type; //assign category label to a blog post
+
+    @ManyToMany(cascade = {CascadeType.PERSIST}) //"PERSIST save new tags to database
+    private List<Tag> tags = new ArrayList<>(); //assign tag labels to a blog post
+
+    @ManyToOne //many blog posts can be made one user
+    private User user; //establish user relationship
+
+    @OneToMany(mappedBy = "blog")
+    private List<Comment> comments = new ArrayList<>(); //assign comments to a blog post
 
     //class constructor
     public Blog(){
@@ -145,6 +155,30 @@ public class Blog {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     //to string method

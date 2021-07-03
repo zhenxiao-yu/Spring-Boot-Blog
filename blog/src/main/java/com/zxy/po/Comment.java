@@ -1,7 +1,6 @@
 package com.zxy.po;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,6 +18,16 @@ public class Comment {
     private String avatar; //commenter's avatar
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime; //comment time
+
+    @ManyToOne
+    private Blog blog; //associate many comments to one blog
+
+    @OneToMany(mappedBy = "parentComment")
+    private List<Comment> replyComments = new ArrayList<>(); //array of reply comments
+
+    @ManyToOne
+    private Comment parentComment; //parent comment calss
+
 
     //constructor
     public Comment() {
@@ -71,6 +80,30 @@ public class Comment {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public Blog getBlog() {
+        return blog;
+    }
+
+    public void setBlog(Blog blog) {
+        this.blog = blog;
+    }
+
+    public List<Comment> getReplyComments() {
+        return replyComments;
+    }
+
+    public void setReplyComments(List<Comment> replyComments) {
+        this.replyComments = replyComments;
+    }
+
+    public Comment getParentComment() {
+        return parentComment;
+    }
+
+    public void setParentComment(Comment parentComment) {
+        this.parentComment = parentComment;
     }
 
     //to string method

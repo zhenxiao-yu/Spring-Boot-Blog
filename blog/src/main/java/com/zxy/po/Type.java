@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity //Entity Class
-@Table(name = "t_blog") //sql table name
+@Table(name = "t_type") //sql table name
 public class Type {
 
     @Id
@@ -17,7 +17,7 @@ public class Type {
     private String name; //tag name
 
     @OneToMany(mappedBy="type") //establish relationship with type from Blog.java
-    private List<Blog> blogs = new ArrayList<>(); // assign one post with many types
+    private List<Blog> blogs = new ArrayList<>(); // assign post with many types
 
     //constructor
     public Type(){
@@ -41,6 +41,14 @@ public class Type {
         this.name = name;
     }
 
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
+    }
+
     //to string method
     @Override
     public String toString() {
@@ -50,11 +58,5 @@ public class Type {
                 '}';
     }
 
-    public List<Blog> getBlogs() {
-        return blogs;
-    }
 
-    public void setBlogs(List<Blog> blogs) {
-        this.blogs = blogs;
-    }
 }

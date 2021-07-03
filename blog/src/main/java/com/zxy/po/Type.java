@@ -16,10 +16,12 @@ public class Type {
     private Long id; //tag id
     private String name; //tag name
 
+    //constructor
     public Type(){
 
     }
 
+    //getters and setters
     public Long getId() {
         return id;
     }
@@ -36,6 +38,7 @@ public class Type {
         this.name = name;
     }
 
+    //to string method
     @Override
     public String toString() {
         return "Type{" +

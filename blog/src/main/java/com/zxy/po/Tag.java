@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.AbstractList;
 
 @Entity
 @Table(name = "t_tag")//sql table name
@@ -13,6 +14,8 @@ public class Tag {
     @GeneratedValue
     private Long id; //tag id
     private String name; //tage name
+
+
 
     //constructors
     public Tag() {

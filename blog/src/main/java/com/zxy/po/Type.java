@@ -1,9 +1,9 @@
 package com.zxy.po;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +15,9 @@ public class Type {
     @GeneratedValue
     private Long id; //tag id
     private String name; //tag name
+
+    @OneToMany(mappedBy="type") //establish relationship with type from Blog.java
+    private List<Blog> blogs = new ArrayList<>(); // assign one post with many types
 
     //constructor
     public Type(){
@@ -45,5 +48,13 @@ public class Type {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
     }
 }

@@ -26,6 +26,9 @@ public class Blog {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime; //date when the post was last updated
 
+    @ManyToOne
+    private Type type; //assign many category labels to a blog post
+
     //class constructor
     public Blog(){
 
@@ -136,6 +139,13 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
 
     //to string method
     @Override

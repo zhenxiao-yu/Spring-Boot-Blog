@@ -27,10 +27,12 @@ public class Blog {
     private Date createTime; //date when the post was created
     private Date updateTime; //date when the post was last updated
 
+    //class constructor
     public Blog(){
 
     }
 
+    //getters and setters
     public Long getId() {
         return id;
     }

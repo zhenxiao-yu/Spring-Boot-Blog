@@ -34,6 +34,7 @@ public class TypeController {
         return "admin/types";
     }
 
+    //return new category page
     @GetMapping("/types/input")
     public String input(Model model) {
         model.addAttribute("type", new Type());

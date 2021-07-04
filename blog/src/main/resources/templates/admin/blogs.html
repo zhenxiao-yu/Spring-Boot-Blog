@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Page</title>
-    <!--CDN Release Of Semantic UI -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-    <!--custom css file-->
     <link rel="stylesheet" href="../../static/css/me.css">
 </head>
 <body>
 
 <!--Navigation-->
-<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+<nav th:replace="admin/_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui purple header item">Post Manager</h2>
@@ -131,7 +129,7 @@
 
 
 <!--Bottom Footer-->
-<footer class="ui inverted vertical segment m-padded-tb-massive">
+<footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
     <!--inverted color(black) + vertical(square edges)-->
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
@@ -179,8 +177,12 @@
 
 </footer>
 
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<!--CDN Release Of Jquery -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--CDN Release Of Semantic UI -->
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
 
 <script>
     $('.menu.toggle').click(function () {

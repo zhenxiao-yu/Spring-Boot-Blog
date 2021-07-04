@@ -38,7 +38,7 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" xmlns:th="http://www.w3.org/1999/xhtml" class="item">Post</a>
+            <a href="#" th:href="@{/admin/types/input}" class="item">New</a>
             <a href="#" th:href="@{/admin/types}" class="purple active item">List</a>
         </div>
     </div>
@@ -51,7 +51,7 @@
         <!--action response message area-->
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
             <i class="close icon"></i>
-            <div class="header">Tip：</div>
+            <div class="header">System Message：</div>
             <p th:text="${message}">Congrats, action successful!</p>
         </div>
 
@@ -70,7 +70,7 @@
                 <td th:text="${type.name}">UE4 vs Unity</td>
                 <td>
                     <!--change edit-->
-                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">Edit</a>
+                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">Edit  </a>
                     <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red basic button">Delete</a>
                 </td>
             </tr>
@@ -79,12 +79,18 @@
             <tr>
                 <!--merge 6 columns-->
                 <th colspan="6">
-                    <div class="ui mini pagination menu">
-                        <a class="item" th:href="@{/admin/types(page=${page.number}-1)}" >Prev</a>
-                        <a class="item" th:href="@{/admin/types(page=${page.number}+1)}">Next</a>
+                    <!--show page turner only when theres buttons-->
+                    <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
+                        <!--show prev button when theres previous page applicable-->
+                        <a th:href="@{/admin/types(page=${page.number}-1)}" class=" item"
+                           th:unless="${page.first}">Prev</a>
+                        <!--show next button when theres next page applicable-->
+                        <a th:href="@{/admin/types(page=${page.number}+1)}" class=" item"
+                           th:unless="${page.last}">Next</a>
                     </div>
                     <!--new post-->
-                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated purple basic button"> New Post </a>
+                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated purple basic button"> New
+                        Category </a>
                 </th>
             </tr>
             </tfoot>

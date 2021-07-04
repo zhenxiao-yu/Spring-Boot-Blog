@@ -45,8 +45,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="purple active item">Publish</a>
-            <a href="#" class="item">List</a>
+            <a href="#" th:href="@{/admin/types/input}" class="purple active item">New</a>
+            <a href="#" th:href="@{/admin/types}" class="item">List</a>
         </div>
     </div>
 </div>
@@ -55,24 +55,33 @@
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <!--form-->
-        <form action="#" method="post" class="ui form">
-
-            <!--post picture input-->
+        <form action="#" method="post" th:object="${type}"
+              th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})} " class="ui form">
+            <input type="hidden" name="id" th:value="*{id}">
+            <!--new category input-->
             <div class="field">
                 <div class="ui left labeled input">
                     <label class="ui purple basic label">Category Label</label>
-                    <input type="text" name="name" placeholder="Enter new category name">
+                    <input type="text" name="name" placeholder="Enter new category name" th:value="*{name}">
                 </div>
             </div>
 
 
             <!--where error message is displayed-->
             <div class="ui error message"></div>
+            <!--/*/
+            <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
+            <i class="close icon"></i>
+            <div class="header">Validation Failed</div>
+            <p th:errors="*{name}">The required field contains invalid input!</p>
+            </div>
+            /*/-->
+
             <!--bottom action buttons-->
             <div class="ui right aligned container">
                 <!--window.history.go(-1) points the previous page-->
                 <button type="button" class="ui button" onclick="window.history.go(-1)">Return</button>
-                <button class="ui purple button">Submit</button>
+                <button class="ui purple submit button">Submit</button>
             </div>
 
         </form>
@@ -156,14 +165,22 @@
     $('.ui.form').form({
         fields: {
             title: {
-                identifier: 'title',
+                identifier: 'name',
                 rules: [{
                     type: 'empty',
-                    prompt: 'Title: Can not be empty!'
+                    prompt: 'Category name can not be empty!'
                 }]
             }
         }
     });
+
+    //message close
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
 
 </script>
 </body>

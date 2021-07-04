@@ -1,5 +1,7 @@
 package com.zxy.po;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,6 +16,7 @@ public class Type {
     @Id
     @GeneratedValue
     private Long id; //tag id
+    @NotBlank(message ="Category name can not be empty!")
     private String name; //tag name
 
     @OneToMany(mappedBy="type") //establish relationship with type from Blog.java

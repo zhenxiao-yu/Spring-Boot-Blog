@@ -27,7 +27,7 @@ public class TypeController {
     //direct to category page
     @GetMapping("/types")
     //divide into pages (3 items per page, sort by id in reverse direction)
-    public String types(@PageableDefault(size = 3, sort = {"id"}, direction = Sort.Direction.DESC)
+    public String types(@PageableDefault(size = 5, sort = {"id"}, direction = Sort.Direction.DESC)
                                 Pageable pageable, Model model) {
 
         model.addAttribute("page", typeService.listType(pageable));
@@ -48,7 +48,7 @@ public class TypeController {
         return "admin/types-input";
     }
 
-    //return types page
+    //task completion message controller
     @PostMapping("/types")
     public String post(@Valid Type type, BindingResult result, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
@@ -60,9 +60,9 @@ public class TypeController {
         }
         Type t = typeService.saveType(type);
         if (t == null) {
-            attributes.addFlashAttribute("message", "Add: Failed");
+            attributes.addFlashAttribute("message", "Unable to add new Category!");
         } else {
-            attributes.addFlashAttribute("message", "Add: Succeeded");
+            attributes.addFlashAttribute("message", "New Category added!");
         }
         return "redirect:/admin/types";
     }
@@ -70,6 +70,7 @@ public class TypeController {
     @PostMapping("/types/{id}")
     public String editPost(@Valid Type type, BindingResult result, @PathVariable Long id, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
+        //check if theres any duplicates
         if (type1 != null) {
             result.rejectValue("name", "nameError", "Category Already Exists!");
         }
@@ -78,17 +79,18 @@ public class TypeController {
         }
         Type t = typeService.updateType(id, type);
         if (t == null) {
-            attributes.addFlashAttribute("message", "Update: Failed");
+            attributes.addFlashAttribute("message", "Unable to update Category!");
         } else {
-            attributes.addFlashAttribute("message", "Update: Succeeded");
+            attributes.addFlashAttribute("message", "Category updated!");
         }
         return "redirect:/admin/types";
     }
 
+    //Delete Entry
     @GetMapping("/types/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes) {
         typeService.deleteType(id);
-        attributes.addFlashAttribute("message", "Delete: Succeeded");
+        attributes.addFlashAttribute("message", "Category deleted!");
         return "redirect:/admin/types";
     }
 }

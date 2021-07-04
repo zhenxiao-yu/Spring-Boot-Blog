@@ -20,7 +20,7 @@
             <div class="column">
                 <h2 class="ui purple image header">
                     <div class="content">
-                        Are you an Admin? Please Log In
+                        Please Log In
                     </div>
                 </h2>
 
@@ -62,20 +62,21 @@
 <!--/*/</th:block>/*/-->
 
 <script>
+    //check if username or password is empty
     $('.ui.form').form({
         fields: {
             username: {
                 identifier: 'username',
                 rules: [{
                     type: 'empty',
-                    prompt: 'Enter Username'
+                    prompt: 'Enter Username' //error message
                 }]
             },
             password: {
                 identifier: 'password',
                 rules: [{
                     type: 'empty',
-                    prompt: 'Enter Password'
+                    prompt: 'Enter Password' //error message
                 }]
             }
         }

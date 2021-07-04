@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,8 +38,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="item">Post</a>
-            <a href="#" class="purple active item">List</a>
+            <a href="#" xmlns:th="http://www.w3.org/1999/xhtml" class="item">Post</a>
+            <a href="#" th:href="@{/admin/types}" class="purple active item">List</a>
         </div>
     </div>
 </div>
@@ -47,7 +47,13 @@
 <!--Center Content-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
-
+        
+        <!--action response message area-->
+        <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+            <i class="close icon"></i>
+            <div class="header">提示：</div>
+            <p th:text="${message}">恭喜，操作成功！</p>
+        </div>
 
         <!--posts in table-->
         <table class="ui celled table">
@@ -59,13 +65,13 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>1</td>
-                <td>UE4 vs Unity</td>
+            <tr th:each="type,iterStat : ${page.content}">
+                <td th:text="${iterStat.count}">1</td>
+                <td th:text="${type.name}">UE4 vs Unity</td>
                 <td>
                     <!--change edit-->
-                    <a href="#" class="ui mini teal basic button">Edit</a>
-                    <a href="#" class="ui mini red basic button">Delete</a>
+                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">Edit</a>
+                    <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red basic button">Delete</a>
                 </td>
             </tr>
             </tbody>
@@ -154,6 +160,14 @@
     $('.ui.dropdown').dropdown({
         on: 'hover'
     });
+
+    //message close
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
 
 </script>
 </body>

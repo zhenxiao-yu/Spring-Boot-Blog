@@ -3,17 +3,17 @@
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Page</title>
+    <title>Category Manage Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../../static/css/me.css">
 </head>
 <body>
 
 <!--Navigation-->
-<nav th:replace="admin/_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+<nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui purple header item">Post Manager</h2>
+            <h2 class="ui purple header item">Category Manager</h2>
             <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blog</a>
             <a href="#" class=" m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
@@ -47,49 +47,14 @@
 <!--Center Content-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
-        <!--post management form-->
-        <form action="#" method="post" class="ui segment form">
-            <div class="inline fields">
-                <!--title-->
-                <div class="field">
-                    <input type="text" name="title" placeholder="Title">
-                </div>
-                <div class="field">
-                    <!--dropdown menu items-->
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="type">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Category</div>
-                        <div class="menu">
-                            <div class="item" data-value="1">Tech Insight</div>
-                            <div class="item" data-value="2">Spring Boot</div>
-                        </div>
-                    </div>
-                </div>
-                <!--is recommended checkbox-->
-                <div class="field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">Recommend</label>
-                    </div>
-                </div>
 
-                <!--search-->
-                <div class="field">
-                    <button class="ui mini purple basic button"><i class="search icon"></i>Search</button>
-                </div>
-            </div>
-        </form>
 
         <!--posts in table-->
         <table class="ui celled table">
             <thead>
             <tr>
                 <th></th>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Recommend</th>
-                <th>Date</th>
+                <th>Category Label</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -97,9 +62,6 @@
             <tr>
                 <td>1</td>
                 <td>UE4 vs Unity</td>
-                <td>Tech Insight</td>
-                <td>yes</td>
-                <td>2021-05-02 09:11</td>
                 <td>
                     <!--change edit-->
                     <a href="#" class="ui mini teal basic button">Edit</a>

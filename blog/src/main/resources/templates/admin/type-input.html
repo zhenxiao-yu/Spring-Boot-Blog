@@ -3,20 +3,27 @@
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Page</title>
+    <!--Page Title-->
+    <title>Add Category Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <!--editorMD css-->
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+    <!--animate css -->
     <link rel="stylesheet" href="../../static/css/me.css">
 </head>
 <body>
 
 <!--Navigation-->
-<nav th:replace="admin/_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+<nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <!--inverted color(black) + attached(square edges)-->
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu">
-            <h2 class="ui purple header item">Post Manager</h2>
-            <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blog</a>
-            <a href="#" class=" m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+        <div class="ui inverted secondary stackable menu"><!--menu ui item-->
+            <!--menu items -->
+            <h2 class="ui purple header item">Category Manager</h2>
+            <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blog</a> <!--active item-->
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
+            <!--login dropdown-->
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown  item">
                     <div class="text">
@@ -38,8 +45,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="item">Post</a>
-            <a href="#" class="purple active item">List</a>
+            <a href="#" class="purple active item">Publish</a>
+            <a href="#" class="item">List</a>
         </div>
     </div>
 </div>
@@ -47,88 +54,41 @@
 <!--Center Content-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
-        <!--post management form-->
-        <form action="#" method="post" class="ui segment form">
-            <div class="inline fields">
-                <!--title-->
-                <div class="field">
-                    <input type="text" name="title" placeholder="Title">
-                </div>
-                <div class="field">
-                    <!--dropdown menu items-->
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="type">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Category</div>
-                        <div class="menu">
-                            <div class="item" data-value="1">Tech Insight</div>
-                            <div class="item" data-value="2">Spring Boot</div>
-                        </div>
-                    </div>
-                </div>
-                <!--is recommended checkbox-->
-                <div class="field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">Recommend</label>
-                    </div>
-                </div>
+        <!--form-->
+        <form action="#" method="post" class="ui form">
 
-                <!--search-->
-                <div class="field">
-                    <button class="ui mini purple basic button"><i class="search icon"></i>Search</button>
+            <!--post picture input-->
+            <div class="field">
+                <div class="ui left labeled input">
+                    <label class="ui purple basic label">Category Label</label>
+                    <input type="text" name="name" placeholder="Enter new category name">
                 </div>
             </div>
-        </form>
 
-        <!--posts in table-->
-        <table class="ui celled table">
-            <thead>
-            <tr>
-                <th></th>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Recommend</th>
-                <th>Date</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>UE4 vs Unity</td>
-                <td>Tech Insight</td>
-                <td>yes</td>
-                <td>2021-05-02 09:11</td>
-                <td>
-                    <!--change edit-->
-                    <a href="#" class="ui mini teal basic button">Edit</a>
-                    <a href="#" class="ui mini red basic button">Delete</a>
-                </td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr>
-                <!--merge 6 columns-->
-                <th colspan="6">
-                    <div class="ui mini pagination menu">
-                        <a class=" item">Prev</a>
-                        <a class=" item">Next</a>
-                    </div>
-                    <!--new post-->
-                    <a href="#" class="ui mini right floated purple basic button"> New Post </a>
-                </th>
-            </tr>
-            </tfoot>
-        </table>
+
+            <!--where error message is displayed-->
+            <div class="ui error message"></div>
+            <!--bottom action buttons-->
+            <div class="ui right aligned container">
+                <!--window.history.go(-1) points the previous page-->
+                <button type="button" class="ui button" onclick="window.history.go(-1)">Return</button>
+                <button class="ui purple button">Submit</button>
+            </div>
+
+        </form>
     </div>
 </div>
 
 <br>
 <br>
-
-
-<!--Bottom Footer-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--bottom footer-->
 <footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
     <!--inverted color(black) + vertical(square edges)-->
     <div class="ui center aligned container">
@@ -191,6 +151,18 @@
 
     $('.ui.dropdown').dropdown({
         on: 'hover'
+    });
+
+    $('.ui.form').form({
+        fields: {
+            title: {
+                identifier: 'title',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Title: Can not be empty!'
+                }]
+            }
+        }
     });
 
 </script>

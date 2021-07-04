@@ -47,12 +47,12 @@
 <!--Center Content-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
-        
+
         <!--action response message area-->
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
             <i class="close icon"></i>
-            <div class="header">提示：</div>
-            <p th:text="${message}">恭喜，操作成功！</p>
+            <div class="header">Tip：</div>
+            <p th:text="${message}">Congrats, action successful!</p>
         </div>
 
         <!--posts in table-->
@@ -80,11 +80,11 @@
                 <!--merge 6 columns-->
                 <th colspan="6">
                     <div class="ui mini pagination menu">
-                        <a class=" item">Prev</a>
-                        <a class=" item">Next</a>
+                        <a class="item" th:href="@{/admin/types(page=${page.number}-1)}" >Prev</a>
+                        <a class="item" th:href="@{/admin/types(page=${page.number}+1)}">Next</a>
                     </div>
                     <!--new post-->
-                    <a href="#" class="ui mini right floated purple basic button"> New Post </a>
+                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated purple basic button"> New Post </a>
                 </th>
             </tr>
             </tfoot>

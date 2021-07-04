@@ -62,21 +62,20 @@
 <!--/*/</th:block>/*/-->
 
 <script>
-    //check if username or password is empty
     $('.ui.form').form({
         fields: {
             username: {
                 identifier: 'username',
                 rules: [{
                     type: 'empty',
-                    prompt: 'Enter Username' //error message
+                    prompt: 'Enter Username'
                 }]
             },
             password: {
                 identifier: 'password',
                 rules: [{
                     type: 'empty',
-                    prompt: 'Enter Password' //error message
+                    prompt: 'Enter Password'
                 }]
             }
         }

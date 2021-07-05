@@ -17,7 +17,7 @@
 <nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <!--inverted color(black) + attached(square edges)-->
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu"><!--menu ui item-->
+        <div class="ui inverted secondary stackable menu">
             <!--menu items -->
             <h2 class="ui purple header item">Category Manager</h2>
             <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blog</a> <!--active item-->
@@ -66,7 +66,6 @@
                 </div>
             </div>
 
-
             <!--where error message is displayed-->
             <div class="ui error message"></div>
             <!--/*/
@@ -80,7 +79,7 @@
             <!--bottom action buttons-->
             <div class="ui right aligned container">
                 <!--window.history.go(-1) points the previous page-->
-                <button type="button" class="ui button" onclick="window.history.go(-1)">Return</button>
+                <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
                 <button class="ui purple submit button">Submit</button>
             </div>
 

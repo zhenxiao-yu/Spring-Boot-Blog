@@ -60,7 +60,9 @@ public class TagServiceImpl implements TagService {
         return tagRepository.findAll(convertToList(ids));
     }
 
+    //covert tag to list of tag ids
     private List<Long> convertToList(String ids) {
+        //new
         List<Long> list = new ArrayList<>();
         if (!"".equals(ids) && ids != null) {
             String[] idarray = ids.split(",");

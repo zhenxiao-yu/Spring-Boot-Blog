@@ -5,14 +5,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+
 @Entity //Entity Class
 @Table(name = "t_blog") //sql table name
 public class Blog {
+
     @Id
     @GeneratedValue
     private Long id; //post id
 
-    private String title; //post title
+    private String title;//post title
+
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
     private String content; //post content/text
     private String firstPicture; //post cover picture
     private String flag; //post marker
@@ -39,12 +44,15 @@ public class Blog {
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>(); //assign comments to a blog post
 
-    //class constructor
-    public Blog(){
+    @Transient
+    private String tagIds;
 
+    private String description;
+
+    public Blog() {
+        //class constructor
     }
 
-    //getters and setters
     public Long getId() {
         return id;
     }
@@ -165,6 +173,7 @@ public class Blog {
         this.tags = tags;
     }
 
+
     public User getUser() {
         return user;
     }
@@ -172,6 +181,7 @@ public class Blog {
     public void setUser(User user) {
         this.user = user;
     }
+
 
     public List<Comment> getComments() {
         return comments;
@@ -181,7 +191,47 @@ public class Blog {
         this.comments = comments;
     }
 
-    //to string method
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void init() {
+        this.tagIds = tagsToIds(this.getTags());
+    }
+
+    //1,2,3
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if (flag) {
+                    ids.append(",");
+                } else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        } else {
+            return tagIds;
+        }
+    }
+
+
     @Override
     public String toString() {
         return "Blog{" +
@@ -198,6 +248,12 @@ public class Blog {
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

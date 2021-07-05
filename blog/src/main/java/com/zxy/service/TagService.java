@@ -4,6 +4,8 @@ import com.zxy.po.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 
 public interface TagService {
 
@@ -16,8 +18,14 @@ public interface TagService {
     //retrieve tag by name
     Tag getTagByName(String name);
 
-    //list of tags
+    //list of pages
     Page<Tag> listTag(Pageable pageable);
+
+    //list of tags
+    List<Tag> listTag();
+
+    //list of tag ids
+    List<Tag> listTag(String ids);
 
     //change tag
     Tag updateTag(Long id, Tag type);

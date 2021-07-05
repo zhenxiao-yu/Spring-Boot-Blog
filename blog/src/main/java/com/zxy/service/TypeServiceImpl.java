@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service //notation
 public class TypeServiceImpl implements TypeService{
 
@@ -39,8 +41,14 @@ public class TypeServiceImpl implements TypeService{
     @Transactional
     @Override
     public Page<Type> listType(Pageable pageable) {
-        //list of categories
+        //list of pages
         return typeRepository.findAll(pageable);
+    }
+
+    @Override
+    public List<Type> listType() {
+        //list of categories
+        return typeRepository.findAll();
     }
 
     @Transactional

@@ -4,6 +4,7 @@ package com.zxy.web.admin;
 
 import com.zxy.po.Blog;
 import com.zxy.po.Type;
+import com.zxy.po.Tag;
 import com.zxy.po.User;
 import com.zxy.service.BlogService;
 import com.zxy.service.TagService;
@@ -94,9 +95,9 @@ public class BlogController {
         }
 
         if (b == null) {
-            attributes.addFlashAttribute("message", "操作失败");
+            attributes.addFlashAttribute("message", "Task failed!");
         } else {
-            attributes.addFlashAttribute("message", "操作成功");
+            attributes.addFlashAttribute("message", "Task Successful!");
         }
         return REDIRECT_LIST;
     }
@@ -105,7 +106,7 @@ public class BlogController {
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.deleteBlog(id);
-        attributes.addFlashAttribute("message", "删除成功");
+        attributes.addFlashAttribute("message", "Post deleted!");
         return REDIRECT_LIST;
     }
 

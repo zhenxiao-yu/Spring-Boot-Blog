@@ -26,7 +26,7 @@ public class TypeController {
 
     //direct to category page
     @GetMapping("/types")
-    //divide into pages (3 items per page, sort by id in reverse direction)
+    //divide into pages (5 items per page, sorted by id in reverse direction)
     public String types(@PageableDefault(size = 5, sort = {"id"}, direction = Sort.Direction.DESC)
                                 Pageable pageable, Model model) {
 
@@ -34,14 +34,14 @@ public class TypeController {
         return "admin/types";
     }
 
-    //return new category page
+    //add type method
     @GetMapping("/types/input")
     public String input(Model model) {
         model.addAttribute("type", new Type());
         return "admin/types-input";
     }
 
-    //return types-input page
+    //edit type method
     @GetMapping("/types/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         model.addAttribute("type", typeService.getType(id));

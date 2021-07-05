@@ -37,23 +37,32 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
+        //look for all the current blog posts in the repo
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
+
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
+                //root = post
+                //CriteriaQuery = searching container
+                //CriteriaBuilder = rules and predicating search
                 List<Predicate> predicates = new ArrayList<>();
+                //title is not empty
                 if (!"".equals(blog.getTitle()) && blog.getTitle() != null) {
-                    predicates.add(cb.like(root.<String>get("title"), "%"+blog.getTitle()+"%"));
+                    predicates.add(cb.like(root.<String>get("title"), "%" + blog.getTitle() + "%"));
                 }
+                //search by category using it's id
                 if (blog.getTypeId() != null) {
                     predicates.add(cb.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
                 }
+                //search by isRecommend check mark
                 if (blog.isRecommend()) {
                     predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
                 }
+                //cast to array
                 cq.where(predicates.toArray(new Predicate[predicates.size()]));
                 return null;
             }
-        },pageable);
+        }, pageable);
     }
 
     @Transactional
@@ -61,8 +70,10 @@ public class BlogServiceImpl implements BlogService {
     public Blog saveBlog(Blog blog) {
         //save current blog
         if (blog.getId() == null) {
+            //save time stamp
             blog.setCreateTime(new Date());
             blog.setUpdateTime(new Date());
+            //init view number
             blog.setViews(0);
         } else {
             blog.setUpdateTime(new Date());
@@ -78,7 +89,7 @@ public class BlogServiceImpl implements BlogService {
         if (b == null) {
             throw new NotFoundException("Post does not exist");
         }
-        BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
+        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
         b.setUpdateTime(new Date());
         return blogRepository.save(b);
     }

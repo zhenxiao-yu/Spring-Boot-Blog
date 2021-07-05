@@ -26,8 +26,8 @@ public class TagController {
 
     //direct to tag page
     @GetMapping("/tags")
-    //divide into pages (5 items per page, sorted by id in reverse direction)
-    public String tags(@PageableDefault(size = 5,sort = {"id"},direction = Sort.Direction.DESC)
+    //divide into pages (8 items per page, sorted by id in reverse direction)
+    public String tags(@PageableDefault(size = 8,sort = {"id"},direction = Sort.Direction.DESC)
                                     Pageable pageable, Model model) {
         model.addAttribute("page",tagService.listTag(pageable));
         return "admin/tags";

@@ -48,7 +48,7 @@
     </div>
 </div>
 
-<!--中间内容-->
+<!--Center Content-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <div class="ui secondary segment form">
@@ -79,7 +79,7 @@
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">Is Recommended?</label>
+                        <label for="recommend">Is Recommended</label>
                     </div>
                 </div>
                 <div class="field">
@@ -205,7 +205,7 @@
         on: 'hover'
     });
 
-    //消息提示关闭初始化
+    //close message controller
     $('.message .close')
         .on('click', function () {
             $(this)
@@ -221,6 +221,7 @@
         })
     ;
 
+    //send form to backend
     function page(obj) {
         $("[name='page']").val($(obj).data("page"));
         loaddata();
@@ -231,6 +232,7 @@
         loaddata();
     });
 
+    //load page partially
     function loaddata() {
         $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search", {
             title: $("[name='title']").val(),

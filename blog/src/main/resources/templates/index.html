@@ -52,7 +52,8 @@
                         </div>
                         <!--post counter-->
                         <div class="right aligned column">
-                            Total <h2 class="ui orange header m-inline-block m-text-thin"> 10 </h2> Posts
+                            Total <h2 class="ui orange header m-inline-block m-text-thin"
+                                      th:text="${page.totalElements}"> 10 </h2> Posts
                         </div>
                     </div>
                 </div>
@@ -60,14 +61,18 @@
                 <!--main panel content-->
                 <div class="ui attached  segment"> <!--attach posts to header-->
                     <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
+                    <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
                         <!--reversed image and text in mobile platform-->
                         <div class="ui middle aligned mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
+                                <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                                                         class="m-black" th:text="${blog.title}">
+                                    Top 10 Most In-Demand Programming Languages in 2021</a>
+                                </h3>
                                 <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
+                                <p class="m-text" th:text="|${blog.description}......|">You don’t want to waste your
+                                    time. If you’re going to put aside the
                                     time and energy
                                     needed to learn new programming languages, you want to make sure, without a doubt,
                                     that the ones you choose are the most in-demand programming languages on the market.
@@ -80,450 +85,32 @@
                                             <div class="item">
                                                 <img src="https://picsum.photos/id/883/100/100" alt=""
                                                      class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
+                                                <div class="content"><a href="#" class="header"
+                                                                        th:text="${blog.user.nickname}">ZhenXiao Yu</a>
+                                                </div>
                                             </div>
                                             <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
+                                                <i class="calendar icon"></i><span
+                                                    th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-07-06</span>
                                             </div>
                                             <div class="item">
-                                                <i class="eye icon"></i> 420
+                                                <i class="eye icon"></i> <span th:text="${blog.views}">420</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
                                         <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
+                                           class="ui purple basic label m-padded-tiny m-text-thin"
+                                           th:text="${blog.type.name}">Game Development</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="five wide column">
                                 <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--post-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <!--reversed image and text in mobile platform-->
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="eleven wide column">
-                                <!--post text-->
-                                <h3 class="ui header">Top 10 Most In-Demand Programming Languages in 2021</h3>
-                                <!--post preview-->
-                                <p class="m-text">You don’t want to waste your time. If you’re going to put aside the
-                                    time and energy
-                                    needed to learn new programming languages, you want to make sure, without a doubt,
-                                    that the ones you choose are the most in-demand programming languages on the market.
-                                </p>
-                                <!--post info-->
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <!--avatar, name, publish date, view count-->
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://picsum.photos/id/883/100/100" alt=""
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">ZhenXiao Yu</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2021-06-23
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 420
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui purple basic label m-padded-tiny m-text-thin">Tech Insight</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="five wide column">
-                                <!--label-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
+                                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                    <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"
+                                         alt="" class="ui rounded image">
                                 </a>
                             </div>
 
@@ -532,16 +119,17 @@
                 </div>
 
                 <!--main panel footer -->
-                <div class="ui bottom attached segment">
+                <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                     <div class="ui middle aligned two column grid">
                         <!--"previous" footer -->
                         <div class="column">
-                            <a href="#" class="ui mini purple basic button"><i
-                                    class="angle double left icon"></i>Prev</a>
+                            <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}"
+                               class="ui mini purple basic button"><i class="angle double left icon"></i>Prev</a>
                         </div>
                         <!--"next" button-->
                         <div class="right aligned column">
-                            <a href="#" class="ui mini purple basic button">Next<i class="angle double right icon"></i></a>
+                            <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}"
+                               class="ui mini purple basic button">Next<i class="angle double right icon"></i></a>
                         </div>
                     </div>
                 </div>
@@ -567,33 +155,17 @@
                     <div class="ui purple segment">
                         <!--fill in menu items-->
                         <div class="ui fluid vertical menu">
-                            <a href="#" class="item">
-                                Game Development
-                                <div class="ui purple basic left pointing label">13</div>
-                            </a>
-                            <a href="#" class="item">
-                                ArduPilot
-                                <div class="ui purple basic left pointing label">13</div>
-                            </a>
-                            <a href="#" class="item">
-                                SpringBoot
-                                <div class="ui purple basic left pointing label">13</div>
-                            </a>
-                            <a href="#" class="item">
-                                JavaScript
-                                <div class="ui purple basic left pointing label">13</div>
-                            </a>
-                            <a href="#" class="item">
-                                AR/VR
-                                <div class="ui purple basic left pointing label">13</div>
-                            </a>
-                            <a href="#" class="item">
-                                Data Structure
-                                <div class="ui purple basic left pointing label">13</div>
+                            <a href="#" class="item" th:each="type : ${types}">
+                                <span th:text="${type.name}">Game Development</span>
+                                <div class="ui purple basic left pointing label"
+                                     th:text="${#arrays.length(type.blogs)}">13
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
+
+
                 <!--tag-->
                 <div class="ui segments m-margin-top-large">
                     <div class="ui secondary segment">
@@ -606,48 +178,12 @@
                             </div>
                         </div>
                     </div>
-                    <!--tag-->
                     <div class="ui purple segment">
                         <!--tag name + article number-->
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            Java
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            Unity
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            Blender
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            TypeScript
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            Frontend
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            UE4
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            React
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            UAV
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            MySQL
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny">
-                            Backend
-                            <div class="detail">23</div>
+                        <a href="#" target="_blank" class="ui purple basic left pointing label m-margin-tb-tiny"
+                           th:each="tag : ${tags}">
+                            <span th:text="${tag.name}">Java</span>
+                            <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
                         </a>
                     </div>
                 </div>
@@ -657,30 +193,9 @@
                     <div class="ui secondary segment ">
                         <i class="bookmark icon"></i>New Recommendation
                     </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">UE4 Blueprint Guide </a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">Best Visual Studio Plugins </a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">Drone Firmware + Mission Planner
-                            Tutorial </a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">Coding Project Ideas </a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">Making a Monetised Android/iOS Game </a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">OpenCV Practical with Python </a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">Building a Music App with Vue </a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">React: E-Commerce Project </a>
+                    <div class="ui segment" th:each="blog : ${recommendBlogs}">
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text-thin"
+                           th:text="${blog.title}">UE4 Blueprint Guide</a>
                     </div>
                 </div>
 

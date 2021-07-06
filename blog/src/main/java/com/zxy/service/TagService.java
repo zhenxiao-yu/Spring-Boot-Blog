@@ -24,6 +24,9 @@ public interface TagService {
     //list of tags
     List<Tag> listTag();
 
+    //list of most used tags
+    List<Tag> listTagTop(Integer size);
+
     //list of tag ids
     List<Tag> listTag(String ids);
 

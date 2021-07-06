@@ -23,6 +23,9 @@ public interface TypeService {
     //list of categories
     List<Type> listType();
 
+    //list of most used categories
+    List<Type> listTypeTop(Integer size);
+
     //change category
     Type updateType(Long id,Type type);
 

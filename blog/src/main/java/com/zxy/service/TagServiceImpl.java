@@ -55,16 +55,18 @@ public class TagServiceImpl implements TagService {
 
 
     @Override
-    public List<Tag> listTag(String ids) { //1,2,3
+    public List<Tag> listTag(String ids) {
         //list of tag ids
         return tagRepository.findAll(convertToList(ids));
     }
 
     //covert tag to list of tag ids
     private List<Long> convertToList(String ids) {
-        //new
+        //new arraylist
         List<Long> list = new ArrayList<>();
+        //if not empty
         if (!"".equals(ids) && ids != null) {
+
             String[] idarray = ids.split(",");
             for (int i=0; i < idarray.length;i++) {
                 list.add(new Long(idarray[i]));

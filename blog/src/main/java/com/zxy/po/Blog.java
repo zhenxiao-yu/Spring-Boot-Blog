@@ -16,9 +16,10 @@ public class Blog {
 
     private String title;//post title
 
-    @Basic(fetch = FetchType.LAZY)
+    @Basic(fetch = FetchType.LAZY) //Dont load when not needed
     @Lob
     private String content; //post content/text
+
     private String firstPicture; //post cover picture
     private String flag; //post marker
     private Integer views; //no. of view

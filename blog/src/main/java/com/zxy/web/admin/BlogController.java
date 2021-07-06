@@ -66,12 +66,13 @@ public class BlogController {
         return INPUT;
     }
 
+    //associate a post with category and tags
     private void setTypeAndTag(Model model) {
         model.addAttribute("types", typeService.listType());
         model.addAttribute("tags", tagService.listTag());
     }
 
-
+    //edit post method
     @GetMapping("/blogs/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         setTypeAndTag(model);
@@ -81,7 +82,7 @@ public class BlogController {
         return INPUT;
     }
 
-
+    //add new post method
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
         blog.setUser((User) session.getAttribute("user"));
@@ -103,7 +104,7 @@ public class BlogController {
         return REDIRECT_LIST;
     }
 
-
+    //delete post method
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.deleteBlog(id);

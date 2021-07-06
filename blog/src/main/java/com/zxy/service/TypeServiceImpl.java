@@ -6,7 +6,9 @@ import com.zxy.po.Type;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -49,6 +51,14 @@ public class TypeServiceImpl implements TypeService{
     public List<Type> listType() {
         //list of categories
         return typeRepository.findAll();
+    }
+
+    @Override
+    public List<Type> listTypeTop(Integer size) {
+        //list of most used categories
+        Sort sort = new Sort(Sort.Direction.DESC,"blogs.size"); //sort from most to lest
+        Pageable pageable = new PageRequest(0,size,sort);
+        return typeRepository.findTop(pageable);
     }
 
     @Transactional

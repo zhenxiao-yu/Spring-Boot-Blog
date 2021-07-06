@@ -213,7 +213,8 @@ public class Blog {
         this.tagIds = tagsToIds(this.getTags());
     }
 
-    //1,2,3
+
+    //covert tag to an array  of id
     private String tagsToIds(List<Tag> tags) {
         if (!tags.isEmpty()) {
             StringBuffer ids = new StringBuffer();

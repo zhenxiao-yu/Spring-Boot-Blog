@@ -4,6 +4,7 @@ import com.zxy.NotFoundException;
 import com.zxy.dao.BlogRepository;
 import com.zxy.po.Blog;
 import com.zxy.po.Type;
+import com.zxy.util.MarkdownUtils;
 import com.zxy.util.MyBeanUtils;
 import com.zxy.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -16,13 +17,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import javax.persistence.criteria.*;
+import java.util.*;
 
 
 @Service
@@ -31,12 +27,30 @@ public class BlogServiceImpl implements BlogService {
     @Autowired
     private BlogRepository blogRepository; //declare new blog repository
 
+    //return a blog by it's id
     @Override
     public Blog getBlog(Long id) {
         return blogRepository.findOne(id);
     }
 
+    //convert content from repository (md) to displayed post (html)
+    @Transactional
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.findOne(id);
+        if (blog == null) {
+            throw new NotFoundException("Post does not exist!");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        //update views
+        blogRepository.updateViews(id);
+        return b;
+    }
 
+    //return pages of blogs
     @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
         //look for all the current blog posts in the repo
@@ -66,19 +80,31 @@ public class BlogServiceImpl implements BlogService {
         }, pageable);
     }
 
-    //list of blogs in pages
+    //Return list of blogs in pages
     @Override
     public Page<Blog> listBlog(Pageable pageable) {
         return blogRepository.findAll(pageable);
     }
 
-    //list of blogs for search result
+    //return a list of blogs for search result
     @Override
     public Page<Blog> listBlog(String query, Pageable pageable) {
         return blogRepository.findByQuery(query,pageable);
     }
 
-    //list of recommended blogs
+    //return a list of blogs associated with each tag
+    @Override
+    public Page<Blog> listBlog(Long tagId, Pageable pageable) {
+        return blogRepository.findAll(new Specification<Blog>() {
+            @Override
+            public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
+                Join join = root.join("tags");
+                return cb.equal(join.get("id"),tagId);
+            }
+        },pageable);
+    }
+
+    //return a list of recommended blogs
     @Override
     public List<Blog> listRecommendBlogTop(Integer size) {
         Sort sort = new Sort(Sort.Direction.DESC,"updateTime");
@@ -86,6 +112,24 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findTop(pageable);
     }
 
+    //group blogs in the repository by year
+    @Override
+    public Map<String, List<Blog>> archiveBlog() {
+        List<String> years = blogRepository.findGroupYear();
+        Map<String, List<Blog>> map = new HashMap<>();
+        for (String year : years) {
+            map.put(year, blogRepository.findByYear(year));
+        }
+        return map;
+    }
+
+    //count the number of blogs in the repository
+    @Override
+    public Long countBlog() {
+        return blogRepository.count();
+    }
+
+    //save current blog as a draft
     @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
@@ -102,13 +146,14 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.save(blog);
     }
 
+    //update existing blog
     @Transactional
     @Override
     public Blog updateBlog(Long id, Blog blog) {
         //update post content
         Blog b = blogRepository.findOne(id);
         if (b == null) {
-            throw new NotFoundException("Post does not exist");
+            throw new NotFoundException("Post does not exist!");
         }
         //filter out null properties with BeanUtils
         BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
@@ -116,6 +161,7 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.save(b);
     }
 
+    //delete existing blog
     @Transactional
     @Override
     public void deleteBlog(Long id) {

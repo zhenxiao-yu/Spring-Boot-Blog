@@ -26,8 +26,8 @@ public class TypeController {
 
     //direct to category page
     @GetMapping("/types")
-    //divide into pages (8 items per page, sorted by id in reverse direction)
-    public String types(@PageableDefault(size = 8, sort = {"id"}, direction = Sort.Direction.DESC)
+    //divide into pages (10 items per page, sorted by id in reverse direction)
+    public String types(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC)
                                 Pageable pageable, Model model) {
 
         model.addAttribute("page", typeService.listType(pageable));

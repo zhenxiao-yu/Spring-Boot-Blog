@@ -29,15 +29,15 @@ public class IndexController {
 
     //0 blog posts per page, sorted in reverse direction
     @GetMapping("/")
-    public String index(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String index(@PageableDefault(size = 7, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         Model model) {
         model.addAttribute("page",blogService.listBlog(pageable));
-        //display 6 categories in a list
+        //display categories in a list
         model.addAttribute("types", typeService.listTypeTop(6));
-        //display 10 tags in a list
+        //display tags in a list
         model.addAttribute("tags", tagService.listTagTop(10));
-        //display 8 recent posts in recommendation area
-        model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
+        //display recent posts in recommendation area
+        model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(6));
         return "index";
     }
 

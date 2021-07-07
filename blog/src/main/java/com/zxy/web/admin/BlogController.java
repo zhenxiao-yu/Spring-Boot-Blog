@@ -42,7 +42,7 @@ public class BlogController {
 
     //direct to blogs page
     @GetMapping("/blogs")
-    //divide into pages (8 items per page, sorted by id in reverse direction)
+    //divide into pages (7 items per page, sorted by id in reverse direction)
     public String blogs(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         BlogQuery blog, Model model) {
         model.addAttribute("types", typeService.listType());

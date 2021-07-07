@@ -19,6 +19,9 @@ public interface BlogService {
     //list of blogs in pages
     Page<Blog> listBlog(Pageable pageable);
 
+    //list of blogs for search result
+    Page<Blog> listBlog(String query,Pageable pageable);
+
     //list of recommended blogs
     List<Blog> listRecommendBlogTop(Integer size);
 

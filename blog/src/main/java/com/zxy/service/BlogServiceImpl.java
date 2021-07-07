@@ -72,6 +72,12 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findAll(pageable);
     }
 
+    //list of blogs for search result
+    @Override
+    public Page<Blog> listBlog(String query, Pageable pageable) {
+        return blogRepository.findByQuery(query,pageable);
+    }
+
     //list of recommended blogs
     @Override
     public List<Blog> listRecommendBlogTop(Integer size) {

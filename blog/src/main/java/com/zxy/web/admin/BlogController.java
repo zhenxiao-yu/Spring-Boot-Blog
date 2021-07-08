@@ -1,10 +1,6 @@
 package com.zxy.web.admin;
 
-//dependencies
-
 import com.zxy.po.Blog;
-import com.zxy.po.Type;
-import com.zxy.po.Tag;
 import com.zxy.po.User;
 import com.zxy.service.BlogService;
 import com.zxy.service.TagService;
@@ -24,6 +20,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 
+/**
+ * Created by limi on 2017/10/15.
+ */
 @Controller
 @RequestMapping("/admin")
 public class BlogController {
@@ -32,7 +31,7 @@ public class BlogController {
     private static final String LIST = "admin/blogs";
     private static final String REDIRECT_LIST = "redirect:/admin/blogs";
 
-    //Declare instances of entity service classes
+
     @Autowired
     private BlogService blogService;
     @Autowired
@@ -40,16 +39,13 @@ public class BlogController {
     @Autowired
     private TagService tagService;
 
-    //direct to blogs page
     @GetMapping("/blogs")
-    //divide into pages (7 items per page, sorted by id in reverse direction)
     public String blogs(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         BlogQuery blog, Model model) {
         model.addAttribute("types", typeService.listType());
         model.addAttribute("page", blogService.listBlog(pageable, blog));
         return LIST;
     }
-
 
     @PostMapping("/blogs/search")
     public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
@@ -66,51 +62,51 @@ public class BlogController {
         return INPUT;
     }
 
-    //associate a post with category and tags
     private void setTypeAndTag(Model model) {
         model.addAttribute("types", typeService.listType());
         model.addAttribute("tags", tagService.listTag());
     }
 
-    //edit post method
+
     @GetMapping("/blogs/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         setTypeAndTag(model);
         Blog blog = blogService.getBlog(id);
         blog.init();
-        model.addAttribute("blog", blog);
+        model.addAttribute("blog",blog);
         return INPUT;
     }
 
-    //add new post method
+
+
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
         blog.setUser((User) session.getAttribute("user"));
-        //initialize post type and tag
         blog.setType(typeService.getType(blog.getType().getId()));
         blog.setTags(tagService.listTag(blog.getTagIds()));
         Blog b;
         if (blog.getId() == null) {
-            b = blogService.saveBlog(blog);
+            b =  blogService.saveBlog(blog);
         } else {
             b = blogService.updateBlog(blog.getId(), blog);
         }
-        //return message
-        if (b == null) {
-            attributes.addFlashAttribute("message", "Task failed!");
+
+        if (b == null ) {
+            attributes.addFlashAttribute("message", "操作失败");
         } else {
-            attributes.addFlashAttribute("message", "Task Successful!");
+            attributes.addFlashAttribute("message", "操作成功");
         }
         return REDIRECT_LIST;
     }
 
-    //delete post method
+
     @GetMapping("/blogs/{id}/delete")
-    public String delete(@PathVariable Long id, RedirectAttributes attributes) {
+    public String delete(@PathVariable Long id,RedirectAttributes attributes) {
         blogService.deleteBlog(id);
-        attributes.addFlashAttribute("message", "Post deleted!");
+        attributes.addFlashAttribute("message", "删除成功");
         return REDIRECT_LIST;
     }
+
 
 
 }

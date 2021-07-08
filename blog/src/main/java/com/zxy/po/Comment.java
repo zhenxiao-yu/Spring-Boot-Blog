@@ -5,36 +5,37 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Created by limi on 2017/10/14.
+ */
 @Entity
-@Table(name = "t_comment") //sql table name
+@Table(name = "t_comment")
 public class Comment {
 
     @Id
     @GeneratedValue
-    private Long id; //comment id
-    private String nickname; //commenter's name
-    private String email; //commenter's email
-    private String content; //comment
-    private String avatar; //commenter's avatar
+    private Long id;
+    private String nickname;
+    private String email;
+    private String content;
+    private String avatar;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime; //comment time
+    private Date createTime;
 
     @ManyToOne
-    private Blog blog; //associate many comments to one blog
+    private Blog blog;
 
     @OneToMany(mappedBy = "parentComment")
-    private List<Comment> replyComments = new ArrayList<>(); //array of reply comments
+    private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
-    private Comment parentComment; //parent comment class
+    private Comment parentComment;
 
-    private boolean adminComment; //comment made by an admin
+    private boolean adminComment;
 
-    //constructor
     public Comment() {
     }
 
-    //getters and setters
     public Long getId() {
         return id;
     }
@@ -115,7 +116,6 @@ public class Comment {
         this.adminComment = adminComment;
     }
 
-    //to string method
     @Override
     public String toString() {
         return "Comment{" +

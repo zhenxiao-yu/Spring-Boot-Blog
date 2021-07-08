@@ -1,186 +1,151 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="admin/_fragments :: head(~{::title})">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Page Title-->
-    <title>Add Category Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-    <!--editorMD css-->
-    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
-    <!--animate css -->
-    <link rel="stylesheet" href="../../static/css/me.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分类新增</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+  <link rel="stylesheet" href="../../static/css/me.css">
 </head>
 <body>
 
-<!--Navigation-->
-<nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
-    <!--inverted color(black) + attached(square edges)-->
+  <!--导航-->
+  <nav th:replace="admin/_fragments :: menu(2)"  class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu">
-            <!--menu items -->
-            <h2 class="ui purple header item">Category Manager</h2>
-            <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blog</a> <!--active item-->
-            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
-            <!--login dropdown-->
-            <div class="right m-item m-mobile-hide menu">
-                <div class="ui dropdown  item">
-                    <div class="text">
-                        <img class="ui avatar image" src="https://unsplash.it/100/100?image=1005">
-                        ZhenXiao Yu
-                    </div>
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <a href="#" class="item">Log Out</a>
-                    </div>
-                </div>
+      <div class="ui inverted secondary stackable menu">
+        <h2 class="ui teal header item">管理后台</h2>
+        <a href="#" class="active m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
+        <a href="#" class=" m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+        <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+        <div class="right m-item m-mobile-hide menu">
+          <div class="ui dropdown  item">
+            <div class="text">
+              <img class="ui avatar image" src="https://unsplash.it/100/100?image=1005">
+              李仁密
             </div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a href="#" class="item">注销</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
-        <i class="sidebar icon"></i>
+      <i class="sidebar icon"></i>
     </a>
-</nav>
-<div class="ui attached pointing menu">
+  </nav>
+  <div class="ui attached pointing menu">
     <div class="ui container">
-        <div class="right menu">
-            <a href="#" th:href="@{/admin/types/input}" class="purple active item">New</a>
-            <a href="#" th:href="@{/admin/types}" class="item">List</a>
+      <div class="right menu">
+        <a href="#" th:href="@{/admin/types/input}" class="active item">新增</a>
+        <a href="#" th:href="@{/admin/types}" class="teal  item">列表</a>
+      </div>
+    </div>
+  </div>
+
+  <!--中间内容-->
+  <div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+      <form action="#" method="post"  th:object="${type}" th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})} "  class="ui form">
+        <input type="hidden" name="id" th:value="*{id}">
+        <div class=" field">
+          <div class="ui left labeled input">
+            <label class="ui teal basic label">名称</label>
+            <input type="text" name="name" placeholder="分类名称" th:value="*{name}" >
+          </div>
         </div>
+
+        <div class="ui error message"></div>
+        <!--/*/
+        <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
+          <i class="close icon"></i>
+          <div class="header">验证失败</div>
+          <p th:errors="*{name}">提交信息不符合规则</p>
+        </div>
+         /*/-->
+        <div class="ui right aligned container">
+          <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
+          <button class="ui teal submit button">提交</button>
+        </div>
+
+      </form>
     </div>
-</div>
+  </div>
 
-<!--Center Content-->
-<div class="m-container-small m-padded-tb-big">
-    <div class="ui container">
-        <!--form-->
-        <form action="#" method="post" th:object="${type}"
-              th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})} " class="ui form">
-            <input type="hidden" name="id" th:value="*{id}">
-            <!--new category input-->
-            <div class="field">
-                <div class="ui left labeled input">
-                    <label class="ui purple basic label">Category Label</label>
-                    <input type="text" name="name" placeholder="Enter new category name" th:value="*{name}">
-                </div>
-            </div>
-
-            <!--where error message is displayed-->
-            <div class="ui error message"></div>
-            <!--/*/
-            <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
-            <i class="close icon"></i>
-            <div class="header">Validation Failed</div>
-            <p th:errors="*{name}">The required field contains invalid input!</p>
-            </div>
-            /*/-->
-
-            <!--bottom action buttons-->
-            <div class="ui right aligned container">
-                <!--window.history.go(-1) points the previous page-->
-                <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
-                <button class="ui purple submit button">Submit</button>
-            </div>
-
-        </form>
-    </div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!--bottom footer-->
-<footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
-    <!--inverted color(black) + vertical(square edges)-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--底部footer-->
+  <footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
-        <div class="ui inverted divided stackable grid">
-            <!--Semantic UI grid divide content into 16 pieces (Bootstrap has 12)-->
-            <!--Instagram QR Image-->
-            <div class="three wide column">
-                <div class="ui inverted link list">
-                    <div class="item">
-                        <img src="../../static/images/wechat.jpg" class="ui rounded image" alt="Instagram QR Code"
-                             style="width: 110px">
-                    </div>
-                </div>
+      <div class="ui inverted divided stackable grid">
+        <div class="three wide column">
+          <div class="ui inverted link list">
+            <div class="item">
+              <img src="../../static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 110px">
             </div>
-            <!--Directory-->
-            <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced">Latest Post</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">User Story</a>
-                    <a href="#" class="item">User Story</a>
-                    <a href="#" class="item">User Story</a>
-                </div>
-            </div>
-            <!--Contacts-->
-            <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced">Contact Me</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Email: zyu347@uwo.ca </a>
-                    <a href="#" class="item">Cell: (306)581-5556</a>
-                    <a href="#" class="item">Snapchat: markyu2020</a>
-                </div>
-            </div>
-            <!--Short Intro-->
-            <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced">ZhenXiao Yu's Blog</h4>
-                <p class="m-text-thin m-text-spaced m-opacity-mini">This is my personal blog, I will be posting
-                    content related to programming,
-                    game development, and other things I find worthy of discussion. I hope you find something
-                    useful...</p>
-            </div>
+          </div>
         </div>
-        <!--Bottom CopyRight Info-->
-        <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright ©2021-2022 ZhenXiao Yu</p>
+        <div class="three wide column">
+          <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+            <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+            <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
+            <a href="#" class="item m-text-thin">QQ：865729312</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+          <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
     </div>
 
-</footer>
+  </footer>
 
-<!--/*/<th:block th:replace="_fragments :: script">/*/-->
-<!--CDN Release Of Jquery -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<!--CDN Release Of Semantic UI -->
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-<!--/*/</th:block>/*/-->
+  <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <!--/*/</th:block>/*/-->
 
-<script>
+  <script>
+
     $('.menu.toggle').click(function () {
-        $('.m-item').toggleClass('m-mobile-hide');
+      $('.m-item').toggleClass('m-mobile-hide');
     });
 
     $('.ui.dropdown').dropdown({
-        on: 'hover'
+      on : 'hover'
     });
 
     $('.ui.form').form({
-        fields: {
-            title: {
-                identifier: 'name',
-                rules: [{
-                    type: 'empty',
-                    prompt: 'Category name can not be empty!'
-                }]
-            }
+      fields : {
+        title : {
+          identifier: 'name',
+          rules: [{
+            type : 'empty',
+            prompt: '请输入分类名称'
+          }]
         }
+      }
     });
 
-    //message close
-    $('.message .close')
-        .on('click', function () {
-            $(this)
-                .closest('.message')
-                .transition('fade');
-        });
-
-</script>
+  </script>
 </body>
 </html>

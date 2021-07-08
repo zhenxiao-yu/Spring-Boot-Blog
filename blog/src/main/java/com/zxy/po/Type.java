@@ -3,31 +3,28 @@ package com.zxy.po;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity //Entity Class
-@Table(name = "t_type") //sql table name
+/**
+ * Created by limi on 2017/10/14.
+ */
+@Entity
+@Table(name = "t_type")
 public class Type {
 
     @Id
     @GeneratedValue
-    private Long id; //tag id
-    @NotBlank(message ="Category name can not be empty!")
-    private String name; //tag name
+    private Long id;
+    @NotBlank(message = "分类名称不能为空")
+    private String name;
 
-    @OneToMany(mappedBy="type") //establish relationship with type from Blog.java
-    private List<Blog> blogs = new ArrayList<>(); // assign post with many types
+    @OneToMany(mappedBy = "type")
+    private List<Blog> blogs = new ArrayList<>();
 
-    //constructor
-    public Type(){
-
+    public Type() {
     }
 
-    //getters and setters
     public Long getId() {
         return id;
     }
@@ -52,7 +49,6 @@ public class Type {
         this.blogs = blogs;
     }
 
-    //to string method
     @Override
     public String toString() {
         return "Type{" +
@@ -60,6 +56,4 @@ public class Type {
                 ", name='" + name + '\'' +
                 '}';
     }
-
-
 }

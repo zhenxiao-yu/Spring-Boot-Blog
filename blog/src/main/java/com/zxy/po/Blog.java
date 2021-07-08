@@ -5,45 +5,47 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
-@Entity //Entity Class
-@Table(name = "t_blog") //sql table name
+/**
+ * Created by limi on 2017/10/14.
+ */
+@Entity
+@Table(name = "t_blog")
 public class Blog {
 
     @Id
     @GeneratedValue
-    private Long id; //post id
+    private Long id;
 
-    private String title;//post title
+    private String title;
 
-    @Basic(fetch = FetchType.LAZY) //Dont load when not needed
+    @Basic(fetch = FetchType.LAZY)
     @Lob
-    private String content; //post content/text
-
-    private String firstPicture; //post cover picture
-    private String flag; //post marker
-    private Integer views; //no. of view
-    private boolean appreciation; //enable donation
-    private boolean shareStatement; //enable sharing info
-    private boolean commentabled; //enable comment section
-    private boolean published; //is published
-    private boolean recommend; //is recommended
+    private String content;
+    private String firstPicture;
+    private String flag;
+    private Integer views;
+    private boolean appreciation;
+    private boolean shareStatement;
+    private boolean commentabled;
+    private boolean published;
+    private boolean recommend;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime; //date when the post was created
+    private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updateTime; //date when the post was last updated
+    private Date updateTime;
 
     @ManyToOne
-    private Type type; //assign category label to a blog post
+    private Type type;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST}) //"PERSIST save new tags to database
-    private List<Tag> tags = new ArrayList<>(); //assign tag labels to a blog post
+    @ManyToMany(cascade = {CascadeType.PERSIST})
+    private List<Tag> tags = new ArrayList<>();
 
-    @ManyToOne //many blog posts can be made one user
-    private User user; //establish user relationship
+
+    @ManyToOne
+    private User user;
 
     @OneToMany(mappedBy = "blog")
-    private List<Comment> comments = new ArrayList<>(); //assign comments to a blog post
+    private List<Comment> comments = new ArrayList<>();
 
     @Transient
     private String tagIds;
@@ -51,7 +53,6 @@ public class Blog {
     private String description;
 
     public Blog() {
-        //class constructor
     }
 
     public Long getId() {
@@ -213,8 +214,7 @@ public class Blog {
         this.tagIds = tagsToIds(this.getTags());
     }
 
-
-    //covert tag to an array  of id
+    //1,2,3
     private String tagsToIds(List<Tag> tags) {
         if (!tags.isEmpty()) {
             StringBuffer ids = new StringBuffer();

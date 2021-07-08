@@ -1,28 +1,27 @@
 package com.zxy.po;
 
 import javax.persistence.*;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by limi on 2017/10/14.
+ */
 @Entity
-@Table(name = "t_tag")//sql table name
+@Table(name = "t_tag")
 public class Tag {
 
     @Id
     @GeneratedValue
-    private Long id; //tag id
-    private String name; //tage name
+    private Long id;
+    private String name;
 
-    @ManyToMany(mappedBy = "tags") //establish relationship with tags from Blog.java
-    private List<Blog> blogs = new ArrayList<>(); // assign posts with many tags
+    @ManyToMany(mappedBy = "tags")
+    private List<Blog> blogs = new ArrayList<>();
 
-    //constructors
     public Tag() {
     }
 
-    //getters and setters
     public Long getId() {
         return id;
     }
@@ -47,7 +46,6 @@ public class Tag {
         this.blogs = blogs;
     }
 
-    //to string method
     @Override
     public String toString() {
         return "Tag{" +
@@ -55,5 +53,4 @@ public class Tag {
                 ", name='" + name + '\'' +
                 '}';
     }
-
 }

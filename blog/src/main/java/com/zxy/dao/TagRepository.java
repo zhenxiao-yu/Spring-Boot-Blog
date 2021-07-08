@@ -7,11 +7,13 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
+/**
+ * Created by limi on 2017/10/16.
+ */
 public interface TagRepository extends JpaRepository<Tag,Long> {
-    //find tag by name in the repository
+
     Tag findByName(String name);
 
-    //find most used tags
     @Query("select t from Tag t")
     List<Tag> findTop(Pageable pageable);
 }

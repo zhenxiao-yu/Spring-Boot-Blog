@@ -6,29 +6,24 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
+/**
+ * Created by limi on 2017/10/16.
+ */
 public interface TypeService {
 
-    //save current category
     Type saveType(Type type);
 
-    //retrieve category by id
     Type getType(Long id);
 
-    //retrieve category by name
     Type getTypeByName(String name);
 
-    //list of pages
     Page<Type> listType(Pageable pageable);
 
-    //list of categories
     List<Type> listType();
 
-    //list of most used categories
     List<Type> listTypeTop(Integer size);
 
-    //change category
     Type updateType(Long id,Type type);
 
-    //delete category
     void deleteType(Long id);
 }

@@ -2,7 +2,10 @@ package com.zxy.service;
 
 import com.zxy.po.User;
 
+/**
+ * Created by limi on 2017/10/15.
+ */
 public interface UserService {
-    //check user username and password
+
     User checkUser(String username, String password);
 }

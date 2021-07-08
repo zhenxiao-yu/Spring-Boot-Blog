@@ -7,12 +7,14 @@ import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Created by limi on 2017/10/21.
+ */
 public class MyBeanUtils {
 
 
     /**
-     * Retrieve blog
+     * 获取所有的属性值为空属性名数组
      * @param source
      * @return
      */

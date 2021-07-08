@@ -5,32 +5,33 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Created by limi on 2017/10/14.
+ */
 @Entity
-@Table(name = "t_user") //sql table name
+@Table(name = "t_user")
 public class User {
 
     @Id
     @GeneratedValue
-    private Long id; //user id
-    private String nickname; // user's name
-    private String username; //username
-    private String password; //password
-    private String email; //user's email
-    private String avatar; //user's avatar
-    private Integer type; //user type
+    private Long id;
+    private String nickname;
+    private String username;
+    private String password;
+    private String email;
+    private String avatar;
+    private Integer type;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime; //account creation time
+    private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updateTime; //account update time
+    private Date updateTime;
 
     @OneToMany(mappedBy = "user")
     private List<Blog> blogs = new ArrayList<>();
 
-    //class constructor
     public User() {
     }
 
-    //getters and setters
     public Long getId() {
         return id;
     }
@@ -103,6 +104,7 @@ public class User {
         this.updateTime = updateTime;
     }
 
+
     public List<Blog> getBlogs() {
         return blogs;
     }
@@ -111,7 +113,6 @@ public class User {
         this.blogs = blogs;
     }
 
-    //to string method
     @Override
     public String toString() {
         return "User{" +

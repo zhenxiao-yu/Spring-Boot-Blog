@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/**
+ * Created by limi on 2017/10/13.
+ */
 @Controller
 public class IndexController {
 
-    //Declare service classes
     @Autowired
     private BlogService blogService;
 
@@ -27,27 +29,20 @@ public class IndexController {
     @Autowired
     private TagService tagService;
 
-    //Normal Display
-    //7 blog posts per page, sorted in reverse direction
     @GetMapping("/")
-    public String index(@PageableDefault(size = 7, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String index(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         Model model) {
         model.addAttribute("page",blogService.listBlog(pageable));
-        //display categories in a list
         model.addAttribute("types", typeService.listTypeTop(6));
-        //display tags in a list
         model.addAttribute("tags", tagService.listTagTop(10));
-        //display recent posts in recommendation area
-        model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(6));
+        model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
         return "index";
     }
 
-    //Search Result Display
-    //7 blog posts per page, sorted in reverse direction
+
     @PostMapping("/search")
-    public String search(@PageableDefault(size = 7, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                          @RequestParam String query, Model model) {
-        //search using SQL, hence %% in the parameters
         model.addAttribute("page", blogService.listBlog("%"+query+"%", pageable));
         model.addAttribute("query", query);
         return "search";
@@ -59,10 +54,10 @@ public class IndexController {
         return "blog";
     }
 
-    //Set recommended stories in the footer
     @GetMapping("/footer/newblog")
     public String newblogs(Model model) {
         model.addAttribute("newblogs", blogService.listRecommendBlogTop(3));
         return "_fragments :: newblogList";
     }
+
 }

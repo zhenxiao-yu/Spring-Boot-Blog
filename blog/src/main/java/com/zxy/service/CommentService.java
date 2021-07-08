@@ -4,11 +4,12 @@ import com.zxy.po.Comment;
 
 import java.util.List;
 
+/**
+ * Created by limi on 2017/10/22.
+ */
 public interface CommentService {
 
-    //get comment list by id
     List<Comment> listCommentByBlogId(Long blogId);
 
-    //save comment
     Comment saveComment(Comment comment);
 }

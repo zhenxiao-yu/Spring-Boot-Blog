@@ -35,7 +35,7 @@ public interface BlogService {
     //list of archive blogs
     Map<String,List<Blog>> archiveBlog();
 
-    //
+    //number of blogs
     Long countBlog();
 
     //add new blog post

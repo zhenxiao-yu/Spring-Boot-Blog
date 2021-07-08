@@ -1,10 +1,8 @@
 package com.zxy.web;
 
-import com.zxy.NotFoundException;
 import com.zxy.service.BlogService;
 import com.zxy.service.TagService;
 import com.zxy.service.TypeService;
-import com.zxy.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

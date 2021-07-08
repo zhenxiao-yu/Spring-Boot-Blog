@@ -38,10 +38,13 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog getAndConvert(Long id) {
         Blog blog = blogRepository.findOne(id);
+        //error handling when blog is null
         if (blog == null) {
             throw new NotFoundException("Post does not exist!");
         }
+        //new instance of blog
         Blog b = new Blog();
+        //copy properties to new instance of blog
         BeanUtils.copyProperties(blog,b);
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));

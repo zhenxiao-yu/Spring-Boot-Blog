@@ -48,7 +48,7 @@
 </nav>
 
 <!--Center Content-->
-<div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn">
+<div id="waypoint" class="m-container-small m-padded-tb-big animated fadeInLeft">
     <div class="ui container">
         <!--top header (avatar, view, date ..)-->
         <div class="ui top attached segment">
@@ -522,7 +522,7 @@ h5,h6{font-size:1em;}
                 <div class="eleven wide column">
                     <ui class="list">
                         <li>Author：<span th:text="${blog.user.nickname}">ZhenXiao Yu</span>
-                            <a href="#" th:href="@{/about}" target="_blank">（Contact）</a></li>
+                            <a href="#" th:href="@{/about}" target="_blank">（Contact)</a></li>
                         <li>Publication Date：<span
                                 th:text="${#dates.format(blog.createTime,'yyyy-MM-dd HH:mm')}">2021-06-12 10:08</span>
                         </li>

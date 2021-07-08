@@ -1,509 +1,193 @@
-2021-07-07 16:01:38.308  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 9556 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
-2021-07-07 16:01:38.311  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
-2021-07-07 16:01:38.439  INFO 9556 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@624907bf: startup date [Wed Jul 07 16:01:38 EDT 2021]; root of context hierarchy
-2021-07-07 16:01:39.730  INFO 9556 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2021-07-07 16:01:39.737  INFO 9556 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-07 16:01:39.738  INFO 9556 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2021-07-07 16:01:39.804  INFO 9556 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-07 16:01:39.804  INFO 9556 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1365 ms
-2021-07-07 16:01:39.909  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2021-07-07 16:01:39.911  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-07-07 16:01:39.912  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-07-07 16:01:39.912  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2021-07-07 16:01:39.912  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-07-07 16:01:40.658  INFO 9556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2021-07-07 16:01:40.667  INFO 9556 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2021-07-08 00:14:53.403  INFO 11492 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-08 00:14:53.428  INFO 11492 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-08 00:15:21.563  INFO 11492 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 00:15:21.572  INFO 11492 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 00:17:20.568  INFO 11492 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 1, size 7, sort: updateTime: DESC], {}]}
+2021-07-08 00:17:20.583  INFO 11492 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-08 00:17:57.700  INFO 11492 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 00:17:57.706  INFO 11492 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 11:59:16.658  INFO 8976 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 8976 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
+2021-07-08 11:59:16.659  INFO 8976 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
+2021-07-08 11:59:16.778  INFO 8976 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40a2fa11: startup date [Thu Jul 08 11:59:16 EDT 2021]; root of context hierarchy
+2021-07-08 11:59:17.984  INFO 8976 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2021-07-08 11:59:17.991  INFO 8976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-08 11:59:17.992  INFO 8976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2021-07-08 11:59:18.056  INFO 8976 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-08 11:59:18.056  INFO 8976 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1278 ms
+2021-07-08 11:59:18.171  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2021-07-08 11:59:18.173  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-07-08 11:59:18.174  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-07-08 11:59:18.174  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-07-08 11:59:18.174  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-07-08 11:59:18.914  INFO 8976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2021-07-08 11:59:18.923  INFO 8976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2021-07-07 16:01:40.722  INFO 9556 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2021-07-07 16:01:40.724  INFO 9556 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-07-07 16:01:40.724  INFO 9556 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2021-07-07 16:01:40.756  INFO 9556 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2021-07-07 16:01:40.886  INFO 9556 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-07-07 16:01:41.194  INFO 9556 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2021-07-07 16:01:41.396  INFO 9556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 16:01:41.594  INFO 9556 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-07-07 16:01:42.568  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@624907bf: startup date [Wed Jul 07 16:01:38 EDT 2021]; root of context hierarchy
-2021-07-07 16:01:42.622  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.622  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 16:01:42.623  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.input(org.springframework.ui.Model)
-2021-07-07 16:01:42.623  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.post(com.zxy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2021-07-07 16:01:42.623  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 16:01:42.623  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 16:01:42.624  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
-2021-07-07 16:01:42.624  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2021-07-07 16:01:42.624  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.625  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.626  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
-2021-07-07 16:01:42.626  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 16:01:42.626  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.626  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.627  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 16:01:42.628  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.628  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
-2021-07-07 16:01:42.628  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 16:01:42.628  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.628  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 16:01:42.629  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 16:01:42.630  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 16:01:42.630  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.zxy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2021-07-07 16:01:42.630  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.blog()
-2021-07-07 16:01:42.631  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2021-07-07 16:01:42.632  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2021-07-07 16:01:42.665  INFO 9556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 16:01:42.665  INFO 9556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 16:01:42.679  INFO 9556 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2021-07-07 16:01:42.696  INFO 9556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 16:01:43.255  INFO 9556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-07-07 16:01:43.302  INFO 9556 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2021-07-07 16:01:43.340  INFO 9556 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2021-07-07 16:01:43.344  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 5.325 seconds (JVM running for 6.008)
-2021-07-07 16:01:47.946  INFO 9556 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2021-07-07 16:01:47.946  INFO 9556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2021-07-07 16:01:47.966  INFO 9556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
-2021-07-07 16:01:47.993  INFO 9556 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 16:01:48.065  WARN 9556 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 16:01:48.071  WARN 9556 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 16:01:48.078  INFO 9556 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 17:09:27.902  INFO 9556 --- [Thread-16] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@624907bf: startup date [Wed Jul 07 16:01:38 EDT 2021]; root of context hierarchy
-2021-07-07 17:09:27.921  INFO 9556 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2021-07-07 17:09:27.923  INFO 9556 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:09:28.438  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 9556 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
-2021-07-07 17:09:28.438  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
-2021-07-07 17:09:28.444  INFO 9556 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78012bf6: startup date [Wed Jul 07 17:09:28 EDT 2021]; root of context hierarchy
-2021-07-07 17:09:28.964  INFO 9556 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2021-07-07 17:09:28.964  INFO 9556 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-07 17:09:28.964  INFO 9556 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2021-07-07 17:09:28.978  INFO 9556 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-07 17:09:28.979  INFO 9556 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 535 ms
-2021-07-07 17:09:29.021  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2021-07-07 17:09:29.021  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-07-07 17:09:29.021  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-07-07 17:09:29.021  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2021-07-07 17:09:29.022  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-07-07 17:09:29.255  INFO 9556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:09:29.256  INFO 9556 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2021-07-08 11:59:18.977  INFO 8976 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2021-07-08 11:59:18.979  INFO 8976 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-07-08 11:59:18.980  INFO 8976 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2021-07-08 11:59:19.011  INFO 8976 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-07-08 11:59:19.147  INFO 8976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-07-08 11:59:19.450  INFO 8976 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2021-07-08 11:59:19.635  INFO 8976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-08 11:59:19.828  INFO 8976 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-07-08 11:59:20.316  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40a2fa11: startup date [Thu Jul 08 11:59:16 EDT 2021]; root of context hierarchy
+2021-07-08 11:59:20.366  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.input(org.springframework.ui.Model)
+2021-07-08 11:59:20.367  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.post(com.zxy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2021-07-08 11:59:20.367  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
+2021-07-08 11:59:20.367  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 11:59:20.367  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.368  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
+2021-07-08 11:59:20.368  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.368  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
+2021-07-08 11:59:20.369  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2021-07-08 11:59:20.370  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
+2021-07-08 11:59:20.370  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-08 11:59:20.370  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.370  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.371  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 11:59:20.371  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.372  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
+2021-07-08 11:59:20.372  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-08 11:59:20.372  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.372  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.372  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 11:59:20.372  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 11:59:20.374  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 11:59:20.374  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.newblogs(org.springframework.ui.Model)
+2021-07-08 11:59:20.374  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-08 11:59:20.374  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.zxy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2021-07-08 11:59:20.375  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-07-08 11:59:20.376  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-07-08 11:59:20.405  INFO 8976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-08 11:59:20.405  INFO 8976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-08 11:59:20.417  INFO 8976 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2021-07-08 11:59:20.434  INFO 8976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-08 11:59:20.907  INFO 8976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-08 11:59:20.953  INFO 8976 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2021-07-08 11:59:20.988  INFO 8976 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2021-07-08 11:59:20.991  INFO 8976 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 4.619 seconds (JVM running for 5.278)
+2021-07-08 11:59:21.095  INFO 8976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-07-08 11:59:21.095  INFO 8976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2021-07-08 11:59:21.125  INFO 8976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2021-07-08 11:59:55.592  INFO 8976 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-08 11:59:55.609  WARN 8976 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2021-07-08 11:59:55.614  WARN 8976 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2021-07-08 11:59:55.621  INFO 8976 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-08 11:59:59.858  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 11:59:59.992  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:01:09.206  INFO 8976 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 12:01:09.216  INFO 8976 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:13:41.946  INFO 8976 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 12:13:41.953  INFO 8976 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:13:44.350  INFO 8976 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 12:13:44.359  INFO 8976 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:14:06.065  INFO 8976 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 12:14:06.073  INFO 8976 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:14:06.100  INFO 8976 --- [Thread-14] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40a2fa11: startup date [Thu Jul 08 11:59:16 EDT 2021]; root of context hierarchy
+2021-07-08 12:14:06.101  INFO 8976 --- [Thread-14] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2021-07-08 12:14:06.102  INFO 8976 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-07-08 12:14:06.423  INFO 8976 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 8976 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
+2021-07-08 12:14:06.423  INFO 8976 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
+2021-07-08 12:14:06.424  INFO 8976 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78ea245: startup date [Thu Jul 08 12:14:06 EDT 2021]; root of context hierarchy
+2021-07-08 12:14:06.885  INFO 8976 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2021-07-08 12:14:06.886  INFO 8976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-08 12:14:06.886  INFO 8976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2021-07-08 12:14:06.899  INFO 8976 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-08 12:14:06.899  INFO 8976 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 475 ms
+2021-07-08 12:14:06.937  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2021-07-08 12:14:06.938  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-07-08 12:14:06.938  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-07-08 12:14:06.938  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-07-08 12:14:06.938  INFO 8976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-07-08 12:14:07.162  INFO 8976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2021-07-08 12:14:07.162  INFO 8976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2021-07-07 17:09:29.311  INFO 9556 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-07-07 17:09:29.346  INFO 9556 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2021-07-07 17:09:29.482  INFO 9556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:09:29.564  INFO 9556 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-07-07 17:09:29.637  WARN 9556 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogController' defined in file [C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes\com\zxy\web\admin\BlogController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect bean class [com.zxy.web.admin.BlogController] for persistence metadata: could not find class that it depends on
-2021-07-07 17:09:29.637  INFO 9556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:09:29.641  INFO 9556 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-07-07 17:09:29.646  INFO 9556 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2021-07-07 17:09:29.651 ERROR 9556 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogController' defined in file [C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes\com\zxy\web\admin\BlogController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect bean class [com.zxy.web.admin.BlogController] for persistence metadata: could not find class that it depends on
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:526)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.zxy.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Failed to introspect bean class [com.zxy.web.admin.BlogController] for persistence metadata: could not find class that it depends on
-	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:401)
-	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:333)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:992)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
-	... 20 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: Lcom/zxy/service/BlogService;
-	at java.lang.Class.getDeclaredFields0(Native Method)
-	at java.lang.Class.privateGetDeclaredFields(Class.java:2611)
-	at java.lang.Class.getDeclaredFields(Class.java:1944)
-	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:715)
-	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:656)
-	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:418)
-	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:397)
-	... 23 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.zxy.service.BlogService
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:151)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	... 30 common frames omitted
-
-2021-07-07 17:11:10.248  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 9556 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
-2021-07-07 17:11:10.248  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
-2021-07-07 17:11:10.249  INFO 9556 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d6f3eae: startup date [Wed Jul 07 17:11:10 EDT 2021]; root of context hierarchy
-2021-07-07 17:11:10.671  INFO 9556 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2021-07-07 17:11:10.671  INFO 9556 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-07 17:11:10.672  INFO 9556 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2021-07-07 17:11:10.685  INFO 9556 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2021-07-07 17:11:10.685  INFO 9556 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 436 ms
-2021-07-07 17:11:10.722  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2021-07-07 17:11:10.722  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-07-07 17:11:10.722  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-07-07 17:11:10.722  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2021-07-07 17:11:10.723  INFO 9556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-07-07 17:11:10.937  INFO 9556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:11:10.937  INFO 9556 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-07-07 17:11:10.990  INFO 9556 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-07-07 17:11:11.020  INFO 9556 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2021-07-07 17:11:11.145  INFO 9556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:11:11.216  INFO 9556 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-07-07 17:11:11.424  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d6f3eae: startup date [Wed Jul 07 17:11:10 EDT 2021]; root of context hierarchy
-2021-07-07 17:11:11.446  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
-2021-07-07 17:11:11.446  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2021-07-07 17:11:11.447  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:11.447  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:11.448  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
-2021-07-07 17:11:11.448  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 17:11:11.448  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:11.448  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:11.448  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 17:11:11.449  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:11.449  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
-2021-07-07 17:11:11.449  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 17:11:11.449  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:11.449  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:11.449  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 17:11:11.450  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2021-07-07 17:11:11.451  INFO 9556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2021-07-07 17:11:11.470  INFO 9556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 17:11:11.470  INFO 9556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 17:11:11.477  INFO 9556 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2021-07-07 17:11:11.483  INFO 9556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 17:11:11.713  INFO 9556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-07-07 17:11:11.742  INFO 9556 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2021-07-07 17:11:11.749  INFO 9556 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2021-07-07 17:11:11.750  INFO 9556 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 1.539 seconds (JVM running for 4172.739)
-2021-07-07 17:11:37.410  INFO 15636 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 15636 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
-2021-07-07 17:11:37.410  INFO 15636 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
-2021-07-07 17:11:37.522  INFO 15636 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e87da8c: startup date [Wed Jul 07 17:11:37 EDT 2021]; root of context hierarchy
-2021-07-07 17:11:38.646  INFO 15636 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2021-07-07 17:11:38.652  INFO 15636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-07 17:11:38.652  INFO 15636 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2021-07-07 17:11:38.716  INFO 15636 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-07 17:11:38.716  INFO 15636 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1194 ms
-2021-07-07 17:11:38.825  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2021-07-07 17:11:38.828  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-07-07 17:11:38.828  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-07-07 17:11:38.828  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2021-07-07 17:11:38.828  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-07-07 17:11:39.451  INFO 15636 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:11:39.458  INFO 15636 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-07-07 17:11:39.492  INFO 15636 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2021-07-07 17:11:39.493  INFO 15636 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-07-07 17:11:39.494  INFO 15636 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2021-07-07 17:11:39.516  INFO 15636 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2021-07-07 17:11:39.627  INFO 15636 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-07-07 17:11:39.892  INFO 15636 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2021-07-07 17:11:40.071  INFO 15636 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 17:11:40.254  INFO 15636 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-07-07 17:11:40.745  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e87da8c: startup date [Wed Jul 07 17:11:37 EDT 2021]; root of context hierarchy
-2021-07-07 17:11:40.793  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.794  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 17:11:40.794  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.input(org.springframework.ui.Model)
-2021-07-07 17:11:40.794  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 17:11:40.794  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 17:11:40.794  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.post(com.zxy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2021-07-07 17:11:40.795  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.795  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
-2021-07-07 17:11:40.795  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2021-07-07 17:11:40.796  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.796  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
-2021-07-07 17:11:40.797  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 17:11:40.797  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.797  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 17:11:40.797  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.798  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.798  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
-2021-07-07 17:11:40.799  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 17:11:40.799  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.799  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 17:11:40.799  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 17:11:40.801  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 17:11:40.801  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.zxy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2021-07-07 17:11:40.801  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 17:11:40.801  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.newblogs(org.springframework.ui.Model)
-2021-07-07 17:11:40.802  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2021-07-07 17:11:40.802  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2021-07-07 17:11:40.837  INFO 15636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 17:11:40.837  INFO 15636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 17:11:40.849  INFO 15636 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2021-07-07 17:11:40.865  INFO 15636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 17:11:41.363  INFO 15636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-07-07 17:11:41.413  INFO 15636 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2021-07-07 17:11:41.456  INFO 15636 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2021-07-07 17:11:41.461  INFO 15636 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 4.307 seconds (JVM running for 4.903)
-2021-07-07 17:12:06.454  INFO 15636 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2021-07-07 17:12:06.455  INFO 15636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2021-07-07 17:12:06.478  INFO 15636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
-2021-07-07 17:12:06.503  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 17:12:06.576  WARN 15636 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 17:12:06.583  WARN 15636 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 17:12:06.590  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 17:12:10.335  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/15', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[15, {}]}
-2021-07-07 17:12:10.395  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:28:19.386  INFO 15636 --- [Thread-14] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e87da8c: startup date [Wed Jul 07 17:11:37 EDT 2021]; root of context hierarchy
-2021-07-07 18:28:19.389  INFO 15636 --- [Thread-14] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2021-07-07 18:28:19.390  INFO 15636 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 18:28:19.762  INFO 15636 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 15636 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
-2021-07-07 18:28:19.762  INFO 15636 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
-2021-07-07 18:28:19.768  INFO 15636 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a5374ef: startup date [Wed Jul 07 18:28:19 EDT 2021]; root of context hierarchy
-2021-07-07 18:28:20.309  INFO 15636 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2021-07-07 18:28:20.309  INFO 15636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-07 18:28:20.309  INFO 15636 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2021-07-07 18:28:20.324  INFO 15636 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-07 18:28:20.324  INFO 15636 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 556 ms
-2021-07-07 18:28:20.365  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2021-07-07 18:28:20.365  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-07-07 18:28:20.365  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-07-07 18:28:20.365  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2021-07-07 18:28:20.365  INFO 15636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-07-07 18:28:20.596  INFO 15636 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2021-07-07 18:28:20.596  INFO 15636 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-07-07 18:28:20.650  INFO 15636 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-07-07 18:28:20.685  INFO 15636 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2021-07-07 18:28:20.809  INFO 15636 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 18:28:20.880  INFO 15636 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-07-07 18:28:21.129  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a5374ef: startup date [Wed Jul 07 18:28:19 EDT 2021]; root of context hierarchy
-2021-07-07 18:28:21.143  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.143  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 18:28:21.143  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.input(org.springframework.ui.Model)
-2021-07-07 18:28:21.143  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 18:28:21.143  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 18:28:21.143  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.post(com.zxy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2021-07-07 18:28:21.144  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.144  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
-2021-07-07 18:28:21.144  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2021-07-07 18:28:21.145  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.145  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
-2021-07-07 18:28:21.145  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 18:28:21.145  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.145  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 18:28:21.145  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.146  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.146  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
-2021-07-07 18:28:21.146  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 18:28:21.146  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.147  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 18:28:21.147  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 18:28:21.148  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 18:28:21.148  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.zxy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2021-07-07 18:28:21.149  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 18:28:21.149  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.newblogs(org.springframework.ui.Model)
-2021-07-07 18:28:21.150  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2021-07-07 18:28:21.150  INFO 15636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2021-07-07 18:28:21.166  INFO 15636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 18:28:21.166  INFO 15636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 18:28:21.173  INFO 15636 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2021-07-07 18:28:21.179  INFO 15636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 18:28:21.382  INFO 15636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-07-07 18:28:21.411  INFO 15636 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2021-07-07 18:28:21.418  INFO 15636 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2021-07-07 18:28:21.420  INFO 15636 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 1.697 seconds (JVM running for 4604.862)
-2021-07-07 18:28:24.685  INFO 15636 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2021-07-07 18:28:24.686  INFO 15636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2021-07-07 18:28:24.692  INFO 15636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
-2021-07-07 18:28:24.694  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 18:28:24.717  WARN 15636 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 18:28:24.722  WARN 15636 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 18:28:24.728  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 18:28:27.958  INFO 15636 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/15', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[15, {}]}
-2021-07-07 18:28:27.974  INFO 15636 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:36:54.562  INFO 15636 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 18:36:54.569  INFO 15636 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:53:08.039  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/13', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[13, {}]}
-2021-07-07 18:53:08.045  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:53:29.195  INFO 15636 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/12', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[12, {}]}
-2021-07-07 18:53:29.203  INFO 15636 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:53:33.157  INFO 15636 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/15', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[15, {}]}
-2021-07-07 18:53:33.167  INFO 15636 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:53:36.905  INFO 15636 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 18:53:36.912  INFO 15636 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:53:44.361  INFO 15636 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 18:53:44.368  INFO 15636 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:54:28.985  INFO 15636 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 18:54:28.996  INFO 15636 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 18:54:42.936  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 18:54:42.943  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:55:19.003  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 18:55:19.008  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:59:00.427  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 18:59:00.435  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 18:59:03.173  INFO 15636 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 18:59:03.179  INFO 15636 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:59:07.572  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/11', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[11, {}]}
-2021-07-07 18:59:07.580  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:59:11.713  INFO 15636 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/12', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[12, {}]}
-2021-07-07 18:59:11.721  INFO 15636 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 18:59:48.572  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 18:59:48.580  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 18:59:50.935  INFO 15636 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/16', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[16, {}]}
-2021-07-07 18:59:50.940  INFO 15636 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:00:39.617  INFO 15636 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 19:00:39.627  INFO 15636 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 19:01:23.232  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 19:01:23.241  INFO 15636 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 19:01:24.308  INFO 15636 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 19:01:24.313  INFO 15636 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:01:27.859  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/15', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[15, {}]}
-2021-07-07 19:01:27.868  INFO 15636 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:01:32.060  INFO 15636 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:01:32.067  INFO 15636 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:03:09.538  INFO 15636 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:03:09.545  INFO 15636 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:03:17.135  INFO 20860 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 20860 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
-2021-07-07 19:03:17.135  INFO 20860 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
-2021-07-07 19:03:17.275  INFO 20860 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e87da8c: startup date [Wed Jul 07 19:03:17 EDT 2021]; root of context hierarchy
-2021-07-07 19:03:18.421  INFO 20860 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2021-07-07 19:03:18.427  INFO 20860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-07 19:03:18.428  INFO 20860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2021-07-07 19:03:18.495  INFO 20860 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-07 19:03:18.495  INFO 20860 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1220 ms
-2021-07-07 19:03:18.602  INFO 20860 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2021-07-07 19:03:18.604  INFO 20860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-07-07 19:03:18.604  INFO 20860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-07-07 19:03:18.604  INFO 20860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2021-07-07 19:03:18.604  INFO 20860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-07-07 19:03:19.256  INFO 20860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2021-07-07 19:03:19.264  INFO 20860 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-07-07 19:03:19.314  INFO 20860 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2021-07-07 19:03:19.315  INFO 20860 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-07-07 19:03:19.315  INFO 20860 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2021-07-07 19:03:19.344  INFO 20860 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2021-07-07 19:03:19.473  INFO 20860 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-07-07 19:03:19.770  INFO 20860 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2021-07-07 19:03:19.949  INFO 20860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-07-07 19:03:20.142  INFO 20860 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-07-07 19:03:20.596  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e87da8c: startup date [Wed Jul 07 19:03:17 EDT 2021]; root of context hierarchy
-2021-07-07 19:03:20.646  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.post(com.zxy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2021-07-07 19:03:20.647  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 19:03:20.647  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 19:03:20.647  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.647  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
-2021-07-07 19:03:20.647  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.input(org.springframework.ui.Model)
-2021-07-07 19:03:20.648  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
-2021-07-07 19:03:20.648  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2021-07-07 19:03:20.649  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.650  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.650  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 19:03:20.650  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.650  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.650  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
-2021-07-07 19:03:20.651  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 19:03:20.652  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.652  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 19:03:20.652  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.652  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2021-07-07 19:03:20.652  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
-2021-07-07 19:03:20.652  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 19:03:20.654  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2021-07-07 19:03:20.655  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.newblogs(org.springframework.ui.Model)
-2021-07-07 19:03:20.655  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2021-07-07 19:03:20.655  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.zxy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2021-07-07 19:03:20.656  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2021-07-07 19:03:20.656  INFO 20860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2021-07-07 19:03:20.696  INFO 20860 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 19:03:20.696  INFO 20860 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 19:03:20.708  INFO 20860 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2021-07-07 19:03:20.724  INFO 20860 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2021-07-07 19:03:21.166  INFO 20860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-07-07 19:03:21.199  INFO 20860 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2021-07-07 19:03:21.231  INFO 20860 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2021-07-07 19:03:21.234  INFO 20860 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 4.387 seconds (JVM running for 5.106)
-2021-07-07 19:03:22.108  INFO 20860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2021-07-07 19:03:22.109  INFO 20860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2021-07-07 19:03:22.136  INFO 20860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
-2021-07-07 19:03:22.157  INFO 20860 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 19:03:22.218  WARN 20860 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 19:03:22.225  WARN 20860 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2021-07-07 19:03:22.232  INFO 20860 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 19:03:22.259  INFO 20860 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 19:03:22.275  INFO 20860 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 19:03:24.807  INFO 20860 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:03:24.851  INFO 20860 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:03:55.960  INFO 20860 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 19:03:55.971  INFO 20860 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 19:03:58.670  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:03:58.678  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:31:45.973  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 19:31:45.985  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 19:31:49.565  INFO 20860 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 19:31:49.572  INFO 20860 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:32:09.492  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:32:09.501  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:32:48.088  INFO 20860 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:32:48.094  INFO 20860 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:33:24.602  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:33:24.608  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:42:48.224  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:42:48.230  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:44:27.442  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:44:27.449  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:44:39.998  INFO 20860 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:44:40.004  INFO 20860 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:44:47.741  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:44:47.747  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:47:15.812  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:47:15.819  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:51:05.955  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:51:05.961  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:54:34.169  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:54:34.175  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 19:59:31.095  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
-2021-07-07 19:59:31.102  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:01:18.183  INFO 20860 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 20:01:18.191  INFO 20860 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 20:01:29.943  INFO 20860 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:01:29.949  INFO 20860 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:02:30.423  INFO 20860 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 20:02:30.431  INFO 20860 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 20:02:37.168  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:02:37.176  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:03:08.324  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:03:08.329  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:04:24.906  INFO 20860 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:04:24.912  INFO 20860 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:05:00.301  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:05:00.305  INFO 20860 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:05:15.393  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 20:05:15.404  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 20:06:35.434  INFO 20860 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:06:35.440  INFO 20860 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:08:09.622  INFO 20860 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:08:09.628  INFO 20860 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:09:47.244  INFO 20860 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:09:47.249  INFO 20860 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:10:43.839  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:10:43.846  INFO 20860 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:11:51.480  INFO 20860 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:11:51.484  INFO 20860 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:16:33.732  INFO 20860 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:16:33.739  INFO 20860 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:20:49.682  INFO 20860 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:20:49.689  INFO 20860 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
-2021-07-07 20:21:20.185  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
-2021-07-07 20:21:20.194  INFO 20860 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
-2021-07-07 20:21:22.120  INFO 20860 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
-2021-07-07 20:21:22.124  INFO 20860 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:14:07.217  INFO 8976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-07-08 12:14:07.250  INFO 8976 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2021-07-08 12:14:07.377  INFO 8976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-08 12:14:07.450  INFO 8976 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-07-08 12:14:07.701  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78ea245: startup date [Thu Jul 08 12:14:06 EDT 2021]; root of context hierarchy
+2021-07-08 12:14:07.714  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.input(org.springframework.ui.Model)
+2021-07-08 12:14:07.714  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.post(com.zxy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2021-07-08 12:14:07.714  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
+2021-07-08 12:14:07.714  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 12:14:07.714  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.714  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.zxy.vo.BlogQuery,org.springframework.ui.Model)
+2021-07-08 12:14:07.715  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.715  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
+2021-07-08 12:14:07.715  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2021-07-08 12:14:07.715  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
+2021-07-08 12:14:07.716  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-08 12:14:07.716  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.716  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.716  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 12:14:07.716  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.717  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
+2021-07-08 12:14:07.717  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-08 12:14:07.717  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.717  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.717  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 12:14:07.717  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-08 12:14:07.719  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2021-07-08 12:14:07.719  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.newblogs(org.springframework.ui.Model)
+2021-07-08 12:14:07.719  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-08 12:14:07.719  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.zxy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2021-07-08 12:14:07.720  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-07-08 12:14:07.720  INFO 8976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-07-08 12:14:07.737  INFO 8976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-08 12:14:07.737  INFO 8976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-08 12:14:07.744  INFO 8976 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2021-07-08 12:14:07.750  INFO 8976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-08 12:14:07.953  INFO 8976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-08 12:14:07.980  INFO 8976 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2021-07-08 12:14:07.987  INFO 8976 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2021-07-08 12:14:07.988  INFO 8976 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 1.604 seconds (JVM running for 892.276)
+2021-07-08 12:14:08.050  INFO 8976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-07-08 12:14:08.050  INFO 8976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2021-07-08 12:14:08.054  INFO 8976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2021-07-08 12:14:10.684  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 12:14:10.699  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:16:15.205  INFO 8976 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-08 12:16:15.220  WARN 8976 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2021-07-08 12:16:15.224  WARN 8976 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2021-07-08 12:16:15.229  INFO 8976 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-08 12:16:16.546  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/14', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[14, {}]}
+2021-07-08 12:16:16.553  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:16:26.192  INFO 8976 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/10', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[10, {}]}
+2021-07-08 12:16:26.202  INFO 8976 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:16:44.459  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/10', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[10, {}]}
+2021-07-08 12:16:44.465  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:17:11.518  INFO 8976 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
+2021-07-08 12:17:11.526  INFO 8976 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:19:59.653  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
+2021-07-08 12:19:59.660  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:20:01.135  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
+2021-07-08 12:20:01.140  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:20:03.434  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
+2021-07-08 12:20:03.441  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:20:09.858  INFO 8976 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/12', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[12, {}]}
+2021-07-08 12:20:09.865  INFO 8976 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:26:04.762  INFO 8976 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/12', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[12, {}]}
+2021-07-08 12:26:04.768  INFO 8976 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 12:26:08.963  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-08 12:26:08.977  INFO 8976 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-08 13:40:09.479  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 1, size 7, sort: updateTime: DESC], {}]}
+2021-07-08 13:40:09.492  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-08 13:40:11.860  INFO 8976 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-08 13:40:11.870  INFO 8976 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-08 13:40:35.597  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/13', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[13, {}]}
+2021-07-08 13:40:35.605  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 13:40:55.440  INFO 8976 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/13', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[13, {}]}
+2021-07-08 13:40:55.448  INFO 8976 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 13:40:56.896  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/13', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[13, {}]}
+2021-07-08 13:40:56.901  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 13:40:58.090  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/13', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[13, {}]}
+2021-07-08 13:40:58.094  INFO 8976 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 13:40:59.145  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/13', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[13, {}]}
+2021-07-08 13:40:59.150  INFO 8976 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 13:41:21.088  INFO 8976 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
+2021-07-08 13:41:21.097  INFO 8976 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-08 13:41:24.953  INFO 8976 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
+2021-07-08 13:41:24.958  INFO 8976 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : blog

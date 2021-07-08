@@ -14,11 +14,13 @@ import org.commonmark.renderer.html.HtmlRenderer;
 
 import java.util.*;
 
-
+/**
+ * Created by limi on 2017/10/22.
+ */
 public class MarkdownUtils {
 
     /**
-     * markdown to html
+     * markdown格式转换成HTML格式
      * @param markdown
      * @return
      */
@@ -30,15 +32,15 @@ public class MarkdownUtils {
     }
 
     /**
-     *
-     * Markdowm to HTML
+     * 增加扩展[标题锚点，表格生成]
+     * Markdown转换成HTML
      * @param markdown
      * @return
      */
     public static String markdownToHtmlExtensions(String markdown) {
-        //generate id to h elements
+        //h标题生成id
         Set<Extension> headingAnchorExtensions = Collections.singleton(HeadingAnchorExtension.create());
-        //convert table to html
+        //转换table的HTML
         List<Extension> tableExtension = Arrays.asList(TablesExtension.create());
         Parser parser = Parser.builder()
                 .extensions(tableExtension)
@@ -57,12 +59,12 @@ public class MarkdownUtils {
     }
 
     /**
-     * process tag properties
+     * 处理标签的属性
      */
     static class CustomAttributeProvider implements AttributeProvider {
         @Override
         public void setAttributes(Node node, String tagName, Map<String, String> attributes) {
-            //change target of <a> elements to _blank
+            //改变a标签的target属性为_blank
             if (node instanceof Link) {
                 attributes.put("target", "_blank");
             }

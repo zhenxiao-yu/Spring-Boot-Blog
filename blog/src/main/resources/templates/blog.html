@@ -851,10 +851,13 @@ h5,h6{font-size:1em;}
 
     //reply
     function reply(obj) {
+        //"data" function cant recognize camel casing, hence all lower case property name
         var commentId = $(obj).data('commentid');
         var commentNickname = $(obj).data('commentnickname');
+        //append @ to replying target
         $("[name='content']").attr("placeholder", "@" + commentNickname).focus();
         $("[name='parentComment.id']").val(commentId);
+        //scroll to comment form (in case the thread is too long)
         $(window).scrollTo($('#comment-form'), 500);
     }
 

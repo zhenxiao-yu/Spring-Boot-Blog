@@ -3,10 +3,10 @@ package com.zxy.dao;
 import com.zxy.po.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-/**
- * Created by limi on 2017/10/15.
- */
-public interface UserRepository extends JpaRepository<User,Long> {
+/*Repository Interface*/
 
+//extends JpaSpecificationExecutor for dynamic searching
+public interface UserRepository extends JpaRepository<User,Long> {
+    //find user based on username and password
     User findByUsernameAndPassword(String username, String password);
 }

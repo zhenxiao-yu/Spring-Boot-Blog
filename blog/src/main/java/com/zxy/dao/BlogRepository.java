@@ -8,21 +8,21 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 
-/**
- * Created by limi on 2017/10/20.
- */
-public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
+/*Repository Interface*/
 
+//extends JpaSpecificationExecutor for dynamic searching
+public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
+    //find recommended blogs from the database
     @Query("select b from Blog b where b.recommend = true")
     List<Blog> findTop(Pageable pageable);
 
+    //find search results from the database
     @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
     Page<Blog> findByQuery(String query,Pageable pageable);
 
-
+    //update the number of views on a post
     @Transactional
     @Modifying
     @Query("update Blog b set b.views = b.views+1 where b.id = ?1")

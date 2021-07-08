@@ -49,5 +49,5 @@ public class CommentController {
         }
         commentService.saveComment(comment);
         return "redirect:/comments/" + blogId;
-    }
+    }`
 }

@@ -1,30 +1,29 @@
 package com.zxy.po;
-
+//dependencies
 import org.hibernate.validator.constraints.NotBlank;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by limi on 2017/10/14.
- */
+/*Entity class*/
 @Entity
-@Table(name = "t_type")
+@Table(name = "t_type") //sql table name
 public class Type {
 
     @Id
     @GeneratedValue
-    private Long id;
-    @NotBlank(message = "分类名称不能为空")
-    private String name;
+    private Long id; //category id
+    @NotBlank(message = "Category cannot be empty!")
+    private String name; //category name
 
     @OneToMany(mappedBy = "type")
     private List<Blog> blogs = new ArrayList<>();
 
+    //class constructor
     public Type() {
     }
 
+    //getters and setters
     public Long getId() {
         return id;
     }

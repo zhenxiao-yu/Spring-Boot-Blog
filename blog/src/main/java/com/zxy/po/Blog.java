@@ -1,60 +1,59 @@
 package com.zxy.po;
-
+//dependencies
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by limi on 2017/10/14.
- */
+/*Entity class*/
 @Entity
-@Table(name = "t_blog")
+@Table(name = "t_blog") //sql table name
 public class Blog {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Long id; //post id
 
-    private String title;
+    private String title; //post title
 
-    @Basic(fetch = FetchType.LAZY)
+    @Basic(fetch = FetchType.LAZY) //LAZY - dont load when not needed
     @Lob
-    private String content;
-    private String firstPicture;
-    private String flag;
-    private Integer views;
-    private boolean appreciation;
-    private boolean shareStatement;
-    private boolean commentabled;
-    private boolean published;
-    private boolean recommend;
+    private String content; //post content/text
+    private String firstPicture; //post cover picture
+    private String flag; //post marker
+    private Integer views; //no. of view
+    private boolean appreciation; //enable donation
+    private boolean shareStatement; //enable copyright notice
+    private boolean commentabled; //enable comment section
+    private boolean published; //is published
+    private boolean recommend; //is recommended
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime;
+    private Date createTime; //date when the post was created
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updateTime;
+    private Date updateTime; //date when the post was last updated
 
     @ManyToOne
-    private Type type;
+    private Type type; //1 category can be associated to multiple blogs
 
-    @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<Tag> tags = new ArrayList<>();
+    @ManyToMany(cascade = {CascadeType.PERSIST}) //PERSIST save new tags to database
+    private List<Tag> tags = new ArrayList<>(); //assign tag labels to a blog post
 
-
-    @ManyToOne
+    @ManyToOne //1 user can be associated to multiple blogs
     private User user;
 
-    @OneToMany(mappedBy = "blog")
-    private List<Comment> comments = new ArrayList<>();
+    @OneToMany(mappedBy = "blog") //thread of comment son a blog post
+    private List<Comment> comments = new ArrayList<>(); //associate comments to a blog post
 
     @Transient
-    private String tagIds;
+    private String tagIds; //tag id
 
-    private String description;
+    private String description; //blog description
 
+    //class constructor
     public Blog() {
     }
 
+    //getters and setters
     public Long getId() {
         return id;
     }
@@ -214,7 +213,7 @@ public class Blog {
         this.tagIds = tagsToIds(this.getTags());
     }
 
-    //1,2,3
+    //covert tag to an array of id
     private String tagsToIds(List<Tag> tags) {
         if (!tags.isEmpty()) {
             StringBuffer ids = new StringBuffer();
@@ -233,7 +232,7 @@ public class Blog {
         }
     }
 
-
+    //toString method
     @Override
     public String toString() {
         return "Blog{" +

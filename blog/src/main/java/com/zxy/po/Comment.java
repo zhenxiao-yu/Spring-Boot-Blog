@@ -1,21 +1,19 @@
 package com.zxy.po;
-
+//dependencies
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by limi on 2017/10/14.
- */
+/*Entity class*/
 @Entity
-@Table(name = "t_comment")
+@Table(name = "t_comment") //sql table name
 public class Comment {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private String nickname;
+    private Long id; //comment id
+    private String nickname; //commenter's nickname
     private String email;
     private String content;
     private String avatar;
@@ -33,9 +31,11 @@ public class Comment {
 
     private boolean adminComment;
 
+    //class constructor
     public Comment() {
     }
 
+    //getters and setters
     public Long getId() {
         return id;
     }

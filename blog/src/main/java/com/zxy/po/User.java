@@ -1,37 +1,38 @@
 package com.zxy.po;
-
+//dependencies
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by limi on 2017/10/14.
- */
+/*Entity class*/
 @Entity
-@Table(name = "t_user")
+@Table(name = "t_user") //sql table name
 public class User {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private String nickname;
-    private String username;
-    private String password;
-    private String email;
-    private String avatar;
-    private Integer type;
+    private Long id; //user id
+    private String nickname; //user nickname
+    private String username; //username
+    private String password; //account password
+    private String email; //user email
+    private String avatar; //user picture
+    private Integer type; //user type (average or admin)
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime;
+    private Date createTime; //date when user profile was created
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updateTime;
+    private Date updateTime; //date when user profile was updated
 
+    //list of blogs posted by each user
     @OneToMany(mappedBy = "user")
     private List<Blog> blogs = new ArrayList<>();
 
+    //class constructor
     public User() {
     }
 
+    //getters and setters
     public Long getId() {
         return id;
     }
@@ -113,6 +114,7 @@ public class User {
         this.blogs = blogs;
     }
 
+    //toString method
     @Override
     public String toString() {
         return "User{" +

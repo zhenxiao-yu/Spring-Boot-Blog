@@ -10,10 +10,11 @@ import java.util.List;
 /*Repository Interface*/
 
 //extends JpaSpecificationExecutor for dynamic searching
-public interface TagRepository extends JpaRepository<Tag,Long> {
-
+public interface TagRepository extends JpaRepository<Tag, Long> {
+    //find a tag by it's name
     Tag findByName(String name);
 
+    //find most used tags
     @Query("select t from Tag t")
     List<Tag> findTop(Pageable pageable);
 }

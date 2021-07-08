@@ -14,22 +14,23 @@ public class Comment {
     @GeneratedValue
     private Long id; //comment id
     private String nickname; //commenter's nickname
-    private String email;
-    private String content;
-    private String avatar;
+    private String email; //commenter's email
+    private String content; //comment text
+    private String avatar; //commenter's avatar
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime;
+    private Date createTime; //time when the comment was made
 
     @ManyToOne
-    private Blog blog;
+    private Blog blog; //reference to the blo
+
 
     @OneToMany(mappedBy = "parentComment")
     private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
-    private Comment parentComment;
+    private Comment parentComment; //the comment that the target comment is replying to
 
-    private boolean adminComment;
+    private boolean adminComment; //whether or not a comment was made by an admin
 
     //class constructor
     public Comment() {
@@ -116,6 +117,7 @@ public class Comment {
         this.adminComment = adminComment;
     }
 
+    //toString method
     @Override
     public String toString() {
         return "Comment{" +

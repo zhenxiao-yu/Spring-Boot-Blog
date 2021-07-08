@@ -1,11 +1,10 @@
 package com.zxy.service;
+//dependencies
 
 import com.zxy.po.User;
 
-/**
- * Created by limi on 2017/10/15.
- */
-public interface UserService {
 
+public interface UserService {
+    //retrieve user bu username and id
     User checkUser(String username, String password);
 }

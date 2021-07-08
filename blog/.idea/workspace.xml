@@ -269,6 +269,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -616,7 +617,7 @@
       <workItem from="1524148023600" duration="710000" />
       <workItem from="1524662421735" duration="602000" />
       <workItem from="1524893653899" duration="3773000" />
-      <workItem from="1625772995922" duration="8421000" />
+      <workItem from="1625772995922" duration="10439000" />
     </task>
     <servers />
   </component>

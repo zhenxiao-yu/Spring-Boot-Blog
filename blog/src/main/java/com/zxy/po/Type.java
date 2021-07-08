@@ -13,10 +13,10 @@ public class Type {
     @Id
     @GeneratedValue
     private Long id; //category id
-    @NotBlank(message = "Category cannot be empty!")
+    @NotBlank(message = "Category cannot be empty!") //required field check
     private String name; //category name
 
-    @OneToMany(mappedBy = "type")
+    @OneToMany(mappedBy = "type") //list of blogs that has the specified category
     private List<Blog> blogs = new ArrayList<>();
 
     //class constructor
@@ -48,6 +48,7 @@ public class Type {
         this.blogs = blogs;
     }
 
+    //toString method
     @Override
     public String toString() {
         return "Type{" +

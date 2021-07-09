@@ -1,5 +1,6 @@
 package com.zxy.service;
 //dependencies
+
 import com.zxy.NotFoundException;
 import com.zxy.repo.TagRepository;
 import com.zxy.entity.Tag;
@@ -22,34 +23,40 @@ public class TagServiceImpl implements TagService {
     //declare new tag repository
     @Autowired
     private TagRepository tagRepository;
+
     //save tag
     @Transactional
     @Override
     public Tag saveTag(Tag tag) {
         return tagRepository.save(tag);
     }
+
     //retrieve tag
     @Transactional
     @Override
     public Tag getTag(Long id) {
         return tagRepository.findOne(id);
     }
+
     //retrieve tag by name
     @Override
     public Tag getTagByName(String name) {
         return tagRepository.findByName(name);
     }
+
     //list of tags in pages
     @Transactional
     @Override
     public Page<Tag> listTag(Pageable pageable) {
         return tagRepository.findAll(pageable);
     }
+
     //list of tags
     @Override
     public List<Tag> listTag() {
         return tagRepository.findAll();
     }
+
     //list of most used tags
     @Override
     public List<Tag> listTagTop(Integer size) {
@@ -57,6 +64,7 @@ public class TagServiceImpl implements TagService {
         Pageable pageable = new PageRequest(0, size, sort);
         return tagRepository.findTop(pageable);
     }
+
     //list of tags sorted by id
     @Override
     public List<Tag> listTag(String ids) { //1,2,3
@@ -69,7 +77,7 @@ public class TagServiceImpl implements TagService {
         //if not empty
         if (!"".equals(ids) && ids != null) {
             String[] idarray = ids.split(",");
-            for (int i=0; i < idarray.length;i++) {
+            for (int i = 0; i < idarray.length; i++) {
                 list.add(new Long(idarray[i]));
             }
         }
@@ -85,7 +93,7 @@ public class TagServiceImpl implements TagService {
             throw new NotFoundException("Tag does not exist!");
         }
         //pass the source date into the target data, performing update
-        BeanUtils.copyProperties(tag,t);
+        BeanUtils.copyProperties(tag, t);
         return tagRepository.save(t);
     }
 

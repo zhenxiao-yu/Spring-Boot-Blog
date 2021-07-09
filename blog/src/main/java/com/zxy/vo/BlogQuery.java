@@ -1,17 +1,18 @@
 package com.zxy.vo;
 
-/**
- * Created by limi on 2017/10/20.
- */
 public class BlogQuery {
-
+    //post title
     private String title;
+    //post category id
     private Long typeId;
+    //whether or not a blog post is recommended
     private boolean recommend;
 
+    //class constructor
     public BlogQuery() {
     }
 
+    //getters and setters
     public String getTitle() {
         return title;
     }

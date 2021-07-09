@@ -1,5 +1,5 @@
 package com.zxy.web;
-
+//dependencies
 import com.zxy.po.Comment;
 import com.zxy.po.User;
 import com.zxy.service.BlogService;
@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * Created by limi on 2017/10/22.
- */
+//controller class
 @Controller
 public class CommentController {
 

@@ -14,13 +14,10 @@ import org.commonmark.renderer.html.HtmlRenderer;
 
 import java.util.*;
 
-/**
- * Created by limi on 2017/10/22.
- */
+//utility class
 public class MarkdownUtils {
 
     /**
-     * markdown格式转换成HTML格式
      * @param markdown
      * @return
      */
@@ -31,16 +28,10 @@ public class MarkdownUtils {
         return renderer.render(document);
     }
 
-    /**
-     * 增加扩展[标题锚点，表格生成]
-     * Markdown转换成HTML
-     * @param markdown
-     * @return
-     */
     public static String markdownToHtmlExtensions(String markdown) {
-        //h标题生成id
+        //generate id based on "h" tag
         Set<Extension> headingAnchorExtensions = Collections.singleton(HeadingAnchorExtension.create());
-        //转换table的HTML
+        //convert to html table
         List<Extension> tableExtension = Arrays.asList(TablesExtension.create());
         Parser parser = Parser.builder()
                 .extensions(tableExtension)
@@ -58,13 +49,12 @@ public class MarkdownUtils {
         return renderer.render(document);
     }
 
-    /**
-     * 处理标签的属性
-     */
+
+     //process tag properties
     static class CustomAttributeProvider implements AttributeProvider {
         @Override
         public void setAttributes(Node node, String tagName, Map<String, String> attributes) {
-            //改变a标签的target属性为_blank
+            //set target to _blank in a elements
             if (node instanceof Link) {
                 attributes.put("target", "_blank");
             }
@@ -74,14 +64,14 @@ public class MarkdownUtils {
         }
     }
 
-
+    //test
     public static void main(String[] args) {
-        String table = "| hello | hi   | 哈哈哈   |\n" +
+        String table = "| test | te   | tes   |\n" +
                 "| ----- | ---- | ----- |\n" +
-                "| 斯维尔多  | 士大夫  | f啊    |\n" +
-                "| 阿什顿发  | 非固定杆 | 撒阿什顿发 |\n" +
+                "| test  | tes  | te    |\n" +
+                "| test  | test | tests |\n" +
                 "\n";
-        String a = "[imCoding 爱编程](http://www.lirenmi.cn)";
+        String a = "[test smaple](http://www.google.ca)";
         System.out.println(markdownToHtmlExtensions(a));
     }
 }

@@ -1,4 +1,5 @@
 package com.zxy.web;
+//dependencies
 
 import com.zxy.po.Tag;
 import com.zxy.service.BlogService;
@@ -14,27 +15,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-/**
- * Created by limi on 2017/10/23.
- */
+//controller notation
 @Controller
 public class TagShowController {
 
+    //declare service classes
     @Autowired
     private TagService tagService;
 
     @Autowired
     private BlogService blogService;
 
+    //7 blog posts per page, sorted in reverse direction
     @GetMapping("/tags/{id}")
-    public String tags(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
-                        @PathVariable Long id, Model model) {
+    public String tags(@PageableDefault(size = 7, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+                       @PathVariable Long id, Model model) {
         List<Tag> tags = tagService.listTagTop(10000);
         if (id == -1) {
-           id = tags.get(0).getId();
+            id = tags.get(0).getId();
         }
         model.addAttribute("tags", tags);
-        model.addAttribute("page", blogService.listBlog(id,pageable));
+        model.addAttribute("page", blogService.listBlog(id, pageable));
         model.addAttribute("activeTagId", id);
         return "tags";
     }

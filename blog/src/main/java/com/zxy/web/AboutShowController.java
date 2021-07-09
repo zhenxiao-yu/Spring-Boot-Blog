@@ -1,14 +1,12 @@
 package com.zxy.web;
-
+//dependencies
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-/**
- * Created by limi on 2017/10/24.
- */
+//controller class
 @Controller
 public class AboutShowController {
-
+    //direct to about page
     @GetMapping("/about")
     public String about() {
         return "about";

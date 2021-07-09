@@ -1,4 +1,4 @@
-package com.zxy.dao;
+package com.zxy.repo;
 
 import com.zxy.po.Comment;
 import org.springframework.data.domain.Sort;

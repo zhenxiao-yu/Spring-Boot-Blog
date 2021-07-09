@@ -1,6 +1,6 @@
 package com.zxy;
 
-import com.zxy.dao.UserRepository;
+import com.zxy.repo.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

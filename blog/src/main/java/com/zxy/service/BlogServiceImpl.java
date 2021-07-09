@@ -2,12 +2,12 @@ package com.zxy.service;
 //dependencies
 
 import com.zxy.NotFoundException;
-import com.zxy.dao.BlogRepository;
+import com.zxy.repo.BlogRepository;
 import com.zxy.po.Blog;
 import com.zxy.po.Type;
 import com.zxy.util.MarkdownUtils;
 import com.zxy.util.MyBeanUtils;
-import com.zxy.vo.BlogQuery;
+import com.zxy.query.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

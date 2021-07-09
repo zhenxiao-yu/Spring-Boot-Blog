@@ -3,15 +3,13 @@ package com.zxy.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- * Created by limi on 2017/10/15.
- */
+//utility class
 public class MD5Utils {
 
     /**
-     * MD5加密类
-     * @param str 要加密的字符串
-     * @return    加密后的字符串
+     * MD5 encoder
+     * @param str ready to be encoded password
+     * @return    password after encoded
      */
     public static String code(String str){
         try {
@@ -20,6 +18,7 @@ public class MD5Utils {
             byte[]byteDigest = md.digest();
             int i;
             StringBuffer buf = new StringBuffer("");
+
             for (int offset = 0; offset < byteDigest.length; offset++) {
                 i = byteDigest[offset];
                 if (i < 0)
@@ -28,9 +27,9 @@ public class MD5Utils {
                     buf.append("0");
                 buf.append(Integer.toHexString(i));
             }
-            //32位加密
+            //32 bit
             return buf.toString();
-            // 16位的加密
+            // 16 bit
             //return buf.toString().substring(8, 24);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
@@ -39,7 +38,7 @@ public class MD5Utils {
 
     }
 
-
+    //use the main method to get encoded password
     public static void main(String[] args) {
         System.out.println(code("111111"));
     }

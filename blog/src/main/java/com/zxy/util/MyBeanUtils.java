@@ -7,20 +7,11 @@ import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by limi on 2017/10/21.
- */
+//utility class
 public class MyBeanUtils {
-
-
-    /**
-     * 获取所有的属性值为空属性名数组
-     * @param source
-     * @return
-     */
     public static String[] getNullPropertyNames(Object source) {
         BeanWrapper beanWrapper = new BeanWrapperImpl(source);
-        PropertyDescriptor[] pds =  beanWrapper.getPropertyDescriptors();
+        PropertyDescriptor[] pds = beanWrapper.getPropertyDescriptors();
         List<String> nullPropertyNames = new ArrayList<>();
         for (PropertyDescriptor pd : pds) {
             String propertyName = pd.getName();
@@ -30,5 +21,4 @@ public class MyBeanUtils {
         }
         return nullPropertyNames.toArray(new String[nullPropertyNames.size()]);
     }
-
 }

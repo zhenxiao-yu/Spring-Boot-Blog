@@ -1,4 +1,4 @@
-package com.zxy.dao;
+package com.zxy.repo;
 
 import com.zxy.po.User;
 import org.springframework.data.jpa.repository.JpaRepository;

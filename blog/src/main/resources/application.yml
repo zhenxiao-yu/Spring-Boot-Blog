@@ -5,6 +5,6 @@ spring:
     active: dev
   messages:
     basename: i18n/messages
-
+#commenter's avatar
 comment.avatar: /images/avatar.png
 

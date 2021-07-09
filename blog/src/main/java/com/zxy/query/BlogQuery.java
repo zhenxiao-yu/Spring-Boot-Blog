@@ -1,4 +1,4 @@
-package com.zxy.vo;
+package com.zxy.query;
 
 public class BlogQuery {
     //post title

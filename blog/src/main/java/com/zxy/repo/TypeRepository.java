@@ -1,4 +1,4 @@
-package com.zxy.dao;
+package com.zxy.repo;
 
 import com.zxy.po.Type;
 import org.springframework.data.domain.Pageable;

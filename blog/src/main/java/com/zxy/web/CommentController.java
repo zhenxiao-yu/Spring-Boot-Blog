@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class CommentController {
 
+    //declare service classes
     @Autowired
     private CommentService commentService;
 
@@ -27,28 +28,29 @@ public class CommentController {
     @Value("${comment.avatar}")
     private String avatar;
 
+    //direct to corresponding comment position
     @GetMapping("/comments/{blogId}")
     public String comments(@PathVariable Long blogId, Model model) {
         model.addAttribute("comments", commentService.listCommentByBlogId(blogId));
         return "blog :: commentList";
     }
 
-
+    //post comment
     @PostMapping("/comments")
     public String post(Comment comment, HttpSession session) {
         Long blogId = comment.getBlog().getId();
         comment.setBlog(blogService.getBlog(blogId));
         User user = (User) session.getAttribute("user");
         if (user != null) {
+            //set commenter's avatar
             comment.setAvatar(user.getAvatar());
+            //is Admin = true
             comment.setAdminComment(true);
         } else {
             comment.setAvatar(avatar);
         }
+        //save comment
         commentService.saveComment(comment);
         return "redirect:/comments/" + blogId;
     }
-
-
-
 }

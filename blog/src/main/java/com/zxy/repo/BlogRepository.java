@@ -1,6 +1,6 @@
 package com.zxy.repo;
 
-import com.zxy.po.Blog;
+import com.zxy.entity.Blog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

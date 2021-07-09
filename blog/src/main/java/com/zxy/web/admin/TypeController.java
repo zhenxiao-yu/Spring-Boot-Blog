@@ -1,6 +1,6 @@
 package com.zxy.web.admin;
 //dependencies
-import com.zxy.po.Type;
+import com.zxy.entity.Type;
 import com.zxy.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;

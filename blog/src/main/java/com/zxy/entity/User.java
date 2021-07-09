@@ -1,4 +1,4 @@
-package com.zxy.po;
+package com.zxy.entity;
 //dependencies
 import javax.persistence.*;
 import java.util.ArrayList;

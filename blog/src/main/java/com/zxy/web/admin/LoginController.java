@@ -1,6 +1,6 @@
 package com.zxy.web.admin;
 //dependencies
-import com.zxy.po.User;
+import com.zxy.entity.User;
 import com.zxy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

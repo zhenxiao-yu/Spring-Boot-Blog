@@ -1,4 +1,4 @@
-package com.zxy.po;
+package com.zxy.entity;
 //dependencies
 import org.hibernate.validator.constraints.NotBlank;
 import javax.persistence.*;

@@ -1,6 +1,6 @@
 package com.zxy.repo;
 
-import com.zxy.po.User;
+import com.zxy.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /*Repository Interface*/

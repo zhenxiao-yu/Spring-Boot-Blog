@@ -1,7 +1,7 @@
 package com.zxy.service;
 //dependencies
 
-import com.zxy.po.Blog;
+import com.zxy.entity.Blog;
 import com.zxy.query.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

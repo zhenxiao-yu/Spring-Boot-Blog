@@ -1,6 +1,6 @@
 package com.zxy.repo;
 
-import com.zxy.po.Comment;
+import com.zxy.entity.Comment;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 

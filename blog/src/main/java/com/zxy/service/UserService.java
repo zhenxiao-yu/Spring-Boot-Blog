@@ -1,7 +1,7 @@
 package com.zxy.service;
 //dependencies
 
-import com.zxy.po.User;
+import com.zxy.entity.User;
 
 
 public interface UserService {

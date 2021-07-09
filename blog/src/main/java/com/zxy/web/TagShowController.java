@@ -1,7 +1,7 @@
 package com.zxy.web;
 //dependencies
 
-import com.zxy.po.Tag;
+import com.zxy.entity.Tag;
 import com.zxy.service.BlogService;
 import com.zxy.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;

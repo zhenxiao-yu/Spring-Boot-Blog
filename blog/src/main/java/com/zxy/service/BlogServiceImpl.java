@@ -3,8 +3,8 @@ package com.zxy.service;
 
 import com.zxy.NotFoundException;
 import com.zxy.repo.BlogRepository;
-import com.zxy.po.Blog;
-import com.zxy.po.Type;
+import com.zxy.entity.Blog;
+import com.zxy.entity.Type;
 import com.zxy.util.MarkdownUtils;
 import com.zxy.util.MyBeanUtils;
 import com.zxy.query.BlogQuery;

@@ -1,7 +1,7 @@
 package com.zxy.web;
 //dependencies
 
-import com.zxy.po.Type;
+import com.zxy.entity.Type;
 import com.zxy.service.BlogService;
 import com.zxy.service.TypeService;
 import com.zxy.query.BlogQuery;

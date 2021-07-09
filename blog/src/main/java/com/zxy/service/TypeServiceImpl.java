@@ -2,7 +2,7 @@ package com.zxy.service;
 //dependencies
 import com.zxy.NotFoundException;
 import com.zxy.repo.TypeRepository;
-import com.zxy.po.Type;
+import com.zxy.entity.Type;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

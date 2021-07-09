@@ -1,7 +1,7 @@
 package com.zxy.web;
 //dependencies
-import com.zxy.po.Comment;
-import com.zxy.po.User;
+import com.zxy.entity.Comment;
+import com.zxy.entity.User;
 import com.zxy.service.BlogService;
 import com.zxy.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;

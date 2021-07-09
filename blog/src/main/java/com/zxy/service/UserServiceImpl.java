@@ -2,7 +2,7 @@ package com.zxy.service;
 
 //dependencies
 import com.zxy.repo.UserRepository;
-import com.zxy.po.User;
+import com.zxy.entity.User;
 import com.zxy.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

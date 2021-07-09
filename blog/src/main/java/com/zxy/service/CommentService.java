@@ -1,7 +1,7 @@
 package com.zxy.service;
 //dependencies
 
-import com.zxy.po.Comment;
+import com.zxy.entity.Comment;
 
 import java.util.List;
 

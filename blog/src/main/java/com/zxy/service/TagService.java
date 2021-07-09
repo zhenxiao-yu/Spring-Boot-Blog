@@ -1,6 +1,6 @@
 package com.zxy.service;
 //dependencies
-import com.zxy.po.Tag;
+import com.zxy.entity.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

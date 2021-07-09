@@ -1,7 +1,7 @@
 package com.zxy.web.admin;
-
-import com.zxy.po.Blog;
-import com.zxy.po.User;
+//dependencies
+import com.zxy.entity.Blog;
+import com.zxy.entity.User;
 import com.zxy.service.BlogService;
 import com.zxy.service.TagService;
 import com.zxy.service.TypeService;
@@ -20,9 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * Created by limi on 2017/10/15.
- */
+
 @Controller
 @RequestMapping("/admin")
 public class BlogController {
@@ -39,7 +37,9 @@ public class BlogController {
     @Autowired
     private TagService tagService;
 
+    //direct to blog detail page
     @GetMapping("/blogs")
+    //divide into pages (8 items per page, sorted by id in reverse direction)
     public String blogs(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         BlogQuery blog, Model model) {
         model.addAttribute("types", typeService.listType());
@@ -47,14 +47,16 @@ public class BlogController {
         return LIST;
     }
 
+    //display searched blogs
     @PostMapping("/blogs/search")
+    //divide into pages (8 items per page, sorted by id in reverse direction)
     public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                          BlogQuery blog, Model model) {
         model.addAttribute("page", blogService.listBlog(pageable, blog));
         return "admin/blogs :: blogList";
     }
 
-
+    //direct to new blog page
     @GetMapping("/blogs/input")
     public String input(Model model) {
         setTypeAndTag(model);
@@ -62,12 +64,13 @@ public class BlogController {
         return INPUT;
     }
 
+    //set blog's category and tag
     private void setTypeAndTag(Model model) {
         model.addAttribute("types", typeService.listType());
         model.addAttribute("tags", tagService.listTag());
     }
 
-
+    //edit blog method
     @GetMapping("/blogs/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         setTypeAndTag(model);
@@ -78,7 +81,7 @@ public class BlogController {
     }
 
 
-
+    //task completion message controller
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
         blog.setUser((User) session.getAttribute("user"));
@@ -92,21 +95,18 @@ public class BlogController {
         }
 
         if (b == null ) {
-            attributes.addFlashAttribute("message", "操作失败");
+            attributes.addFlashAttribute("message", "Task success!");
         } else {
-            attributes.addFlashAttribute("message", "操作成功");
+            attributes.addFlashAttribute("message", "Task failed!");
         }
         return REDIRECT_LIST;
     }
 
-
+    //delete blog method
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id,RedirectAttributes attributes) {
         blogService.deleteBlog(id);
-        attributes.addFlashAttribute("message", "删除成功");
+        attributes.addFlashAttribute("message", "Post deleted!");
         return REDIRECT_LIST;
     }
-
-
-
 }

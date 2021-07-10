@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--post adder page-->
+<!--tag list page-->
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
@@ -38,7 +38,6 @@
     <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
         <i class="sidebar icon"></i>
     </a>>
-    </div>
     <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
         <i class="sidebar icon"></i>
     </a>
@@ -46,27 +45,30 @@
 </nav>
 <!--Navigation-->
 
+<!--Secondary Menu-->
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" th:href="@{/admin/tags/input}" class="item">新增</a>
-            <a href="#" th:href="@{/admin/tags}" class="teal active item">列表</a>
+            <a href="#" th:href="@{/admin/tags/input}" class="item">New</a>
+            <a href="#" th:href="@{/admin/tags}" class="purple active item">List</a>
         </div>
     </div>
 </div>
+<!--Secondary Menu-->
 
-<!--Center Content-->>
+<!--Center Content-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
             <i class="close icon"></i>
-            <div class="header">提示：</div>
-            <p th:text="${message}">恭喜，操作成功！</p>
+            <div class="header">System Message：</div>
+            <p th:text="${message}">task completed！</p>
         </div>
-        <table class="ui compact teal table">
+        <!--tags sorted in table-->
+        <table class="ui compact purple table">
             <thead>
             <tr>
-                <th></th>
+                <th>#</th>
                 <th>Tag Label</th>
                 <th>Tasks</th>
             </tr>
@@ -92,7 +94,7 @@
                         <a th:href="@{/admin/tags(page=${page.number}+1)}" class="item"
                            th:unless="${page.last}">Next</a>
                     </div>
-                    <a href="#" th:href="@{/admin/tags/input}" class="ui mini right floated teal basic button">新增</a>
+                    <a href="#" th:href="@{/admin/tags/input}" class="ui mini right floated purple basic button">New Tag</a>
                 </th>
             </tr>
             </tfoot>

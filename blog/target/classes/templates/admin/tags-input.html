@@ -23,7 +23,7 @@
     <div class="ui container">
         <div class="right menu">
             <a href="#" th:href="@{/admin/tags/input}" class="active purple item">New</a>
-            <a href="#" th:href="@{/admin/tags}" class="item">List</a>
+            <a href="#" th:href="@{/admin/tags}" class="purple item">List</a>
         </div>
     </div>
 </div>
@@ -37,8 +37,8 @@
             <input type="hidden" name="id" th:value="*{id}">
             <div class=" field">
                 <div class="ui left labeled input">
-                    <label class="ui purple basic label">Tag</label>
-                    <input type="text" name="name" placeholder="Tag label" th:value="*{name}">
+                    <label class="ui purple basic label">Tag Label</label>
+                    <input type="text" name="name" placeholder="new tag name" th:value="*{name}">
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
             <!--/*/
             <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
               <i class="close icon"></i>
-              <div class="header">Validation Failed</div>
+              <div class="header">System Message: </div>
               <p th:errors="*{name}">Invalid Submission!</p>
             </div>
              /*/-->
@@ -134,7 +134,7 @@
                 identifier: 'name',
                 rules: [{
                     type: 'empty',
-                    prompt: 'Tag: can not be empty!'
+                    prompt: 'Tag label: can not be empty!'
                 }]
             }
         }

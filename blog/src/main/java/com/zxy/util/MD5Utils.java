@@ -40,6 +40,6 @@ public class MD5Utils {
 
     //use the main method to get encoded password
     public static void main(String[] args) {
-        System.out.println(code("111111"));
+        System.out.println(code("615615"));
     }
 }

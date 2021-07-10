@@ -24,7 +24,7 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" th:href="@{/admin/tags/input}" class="item">New</a>
+            <a href="#" th:href="@{/admin/tags/input}" class="purple item">New</a>
             <a href="#" th:href="@{/admin/tags}" class="purple active item">List</a>
         </div>
     </div>
@@ -69,7 +69,7 @@
                         <a th:href="@{/admin/tags(page=${page.number}+1)}" class="item"
                            th:unless="${page.last}">Next</a>
                     </div>
-                    <a href="#" th:href="@{/admin/tags/input}" class="ui mini right floated purple basic button">New Tag</a>
+                    <a href="#" th:href="@{/admin/tags/input}" class="ui mini right floated purple basic button">Add Tag</a>
                 </th>
             </tr>
             </tfoot>

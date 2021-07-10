@@ -68,10 +68,11 @@
             <!--latest posts-->
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced ">Top Posts</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
-                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
-                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
+                <div id="newblog-container">
+                    <div class="ui inverted link list" th:fragment="newblogList">
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin"
+                           th:each="blog : ${newblogs}" th:text="${blog.title}">SAMPLE POST</a>
+                    </div>
                 </div>
             </div>
             <div class="three wide column">
@@ -97,7 +98,7 @@
 </footer>
 <!--Bottom footer-->
 
-
+<!--javascript dependencies-->
 <th:block th:fragment="script">
     <!--CDN Release Of Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>

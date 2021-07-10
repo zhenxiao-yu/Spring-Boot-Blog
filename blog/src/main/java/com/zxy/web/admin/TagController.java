@@ -62,9 +62,9 @@ public class TagController {
         }
         Tag t = tagService.saveTag(tag);
         if (t == null) {
-            attributes.addFlashAttribute("message", "Unable to add new Tag!");
+            attributes.addFlashAttribute("message", "Unable to add new tag!");
         } else {
-            attributes.addFlashAttribute("message", "New Tag added!");
+            attributes.addFlashAttribute("message", "New tag added!");
         }
         return "redirect:/admin/tags";
     }
@@ -82,7 +82,7 @@ public class TagController {
         }
         Tag t = tagService.updateTag(id, tag);
         if (t == null) {
-            attributes.addFlashAttribute("message", "Unable to update Tag!");
+            attributes.addFlashAttribute("message", "Unable to update tag!");
         } else {
             attributes.addFlashAttribute("message", "Tag updated!");
         }

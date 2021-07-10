@@ -61,9 +61,9 @@ public class TypeController {
         }
         Type t = typeService.saveType(type);
         if (t == null ) {
-            attributes.addFlashAttribute("message", "Unable to add new Category!");
+            attributes.addFlashAttribute("message", "Unable to add new category!");
         } else {
-            attributes.addFlashAttribute("message", "New Category added!");
+            attributes.addFlashAttribute("message", "New category added!");
         }
         return "redirect:/admin/types";
     }
@@ -80,7 +80,7 @@ public class TypeController {
         }
         Type t = typeService.updateType(id,type);
         if (t == null ) {
-            attributes.addFlashAttribute("message", "Unable to update Category!");
+            attributes.addFlashAttribute("message", "Unable to update category!");
         } else {
             attributes.addFlashAttribute("message", "Category updated!");
         }

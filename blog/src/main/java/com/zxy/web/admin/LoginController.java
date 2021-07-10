@@ -39,7 +39,7 @@ public class LoginController {
             session.setAttribute("user",user);
             return "admin/index";
         } else {
-            attributes.addFlashAttribute("message", "Username or Password Incorrect!");
+            attributes.addFlashAttribute("message", "The username or password you have entered is invalid!");
             return "redirect:/admin";
         }
     }

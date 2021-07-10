@@ -26,43 +26,65 @@
     <div class="ui container">
 
         <div class="ui stackable grid">
-            <div class="eleven wide column">
+            <div class="nine wide column">
+                <!--about me image-->
                 <div class="ui segment">
                     <img src="https://unsplash.it/800/600?image=1005" alt="" class="ui rounded image">
                 </div>
             </div>
-            <div class="five wide column">
+            <div class="seven wide column">
                 <div class="ui top attached segment">
                     <div class="ui header">About Me</div>
                 </div>
+                <!--description-->
                 <div class="ui attached segment">
-                    <p class="m-text">李仁密，一个独立开发者，折腾在 0 和 1 世界的大叔；一个终身学习者，誓将学习无限循环. 希望结识可以共同成长的小伙伴.</p>
-                    <p class="m-text">热爱编程，喜欢折腾，正在探索高效学习编程技术的方法...</p>
+                    <p class="m-text">Hello, my name is Mark Yu. I am a third year software engineering student at
+                        University of Western Ontario</p>
+                    <p class="m-text">With a background in visual arts, I focus mainly on front end development using
+                        vue and react. I also spend my time making games using the unity engine.</p>
                 </div>
+                <!--personal label-->
                 <div class="ui attached segment">
-                    <div class="ui orange basic left pointing label">编程</div>
-                    <div class="ui orange basic left pointing label">写作</div>
-                    <div class="ui orange basic left pointing label">思考</div>
-                    <div class="ui orange basic left pointing label">运动</div>
+                    <div class="ui orange basic left pointing label">Developer</div>
+                    <div class="ui orange basic left pointing label">Artist</div>
+                    <div class="ui orange basic left pointing label">Student</div>
+                    <div class="ui orange basic left pointing label">Cocktail Enthusiast</div>
                 </div>
+                <!--specialty-->
                 <div class="ui attached segment">
-                    <div class="ui teal basic left pointing label m-margin-tb-tiny">Java</div>
-                    <div class="ui teal basic left pointing label m-margin-tb-tiny">JavaScript</div>
-                    <div class="ui teal basic left pointing label m-margin-tb-tiny">Node</div>
-                    <div class="ui teal basic left pointing label m-margin-tb-tiny">React</div>
-                    <div class="ui teal basic left pointing label m-margin-tb-tiny">RN</div>
-                    <div class="ui teal basic left pointing label m-margin-tb-tiny">MYSQL</div>
-                    <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Java</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">JavaScript</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Vue.js</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">C#</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Python</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">React.js</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Unity</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">UE4</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">MYSQL</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">...</div>
                 </div>
-                <div class="ui bottom attached segment">
-                    <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
-                    <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-                    <a href="#" class="ui qq circular icon button" data-content="865729312"
-                       data-position="bottom center"><i class="qq icon"></i></a>
+                <!--links-->
+                <div class="ui bottom attached center aligned segment">
+                    <!--github-->
+                    <a href="https://github.com/zhenxiao-yu" class="ui git circular icon button"
+                       data-content="zhenxiao-yu"
+                       data-position="bottom center"><i class="github icon"></i></a>
+                    <!--snapchat-->
+                    <a href="#" class="ui discord circular icon button" data-content="markyu2020"
+                       data-position="bottom center"><i class="snapchat ghost icon"></i></a>
+                    <!--instagram-->
+                    <a href="#" class="ui insta circular icon button"><i class="instagram icon"></i></a>
+                    <!--email-->
+                    <a href="#" class="ui email circular icon button" data-content="zyu347@uwo.ca"
+                       data-position="bottom center"><i class="envelope outline icon"></i></a>
+                    <!--phone-->
+                    <a href="#" class="ui phone circular icon button" data-content="(306)581-5556"
+                       data-position="bottom center"><i class="mobile alternate icon"></i></a>
                 </div>
-
-                <div class="ui wechat-qr flowing popup transition hidden">
-                    <img src="../static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 110px">
+                <!--instagram QR-->
+                <div class="ui instagramQR flowing popup transition hidden">
+                    <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" alt=""
+                         class="ui rounded image" style="width: 110px">
                 </div>
             </div>
         </div>
@@ -71,6 +93,10 @@
 </div>
 <!--Center Content-->
 
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <!--Bottom Footer-->
@@ -94,7 +120,7 @@
     });
 
     //css popup control
-    $('.phone').popup();
+    $('.phone').popup({});
     $('.email').popup();
     $('.discord').popup();
     $('.git').popup();

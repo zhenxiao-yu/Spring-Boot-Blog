@@ -108,6 +108,10 @@
     <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
     <!--editor md language js-->
     <script src="../../static/lib/editormd/languages/en.js" th:src="@{/lib/editormd/languages/en.js}"></script>
+
+    <script>
+        $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+    </script>
 </th:block>
 
 </body>

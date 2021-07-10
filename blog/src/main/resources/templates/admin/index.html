@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--page title-->
-    <title>Admin Center</title>
+    <title>Login Successful</title>
     <!--CDN Release Of Semantic UI-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <!--custom css file-->
@@ -52,10 +52,11 @@
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <div class="ui success large message">
-            <h3>Hi,</h3>
-            <p>李仁密，欢迎登录！</p>
+            <!--login success message-->
+            <h3>Welcome back, <span th:text="${session.user.nickname}">SAMPLE USER</span></h3>
+            <p>You are now logged in！</p>
         </div>
-
+        <!--login success image-->
         <img src="https://unsplash.it/1000/400?image=1005" alt="" class="ui rounded bordered fluid image">
     </div>
 </div>
@@ -63,8 +64,9 @@
 <br>
 <br>
 
-<!--底部footer-->
+<!--Bottom Footer-->
 <footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <!--replaced by fragment template-->
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="three wide column">
@@ -75,39 +77,47 @@
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Top Posts</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
+                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
+                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Contact Me</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
-                    <a href="#" class="item m-text-thin">QQ：865729312</a>
+                    <a href="#" class="item m-text-thin">Email：zyu347@uwo.ca</a>
+                    <a href="#" class="item m-text-thin">Phone：(306)581-5556</a>
+                    <a href="#" class="item m-text-thin">Instagram：m4rkyu</a>
                 </div>
             </div>
             <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
-                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Thank you for visiting my blog!</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">This is my personal blog, I will be posting
+                    content related to programming,
+                    game development, and other things I find worthy of discussion. I hope you find something
+                    useful...</p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2021 ZhenXiao Yu</p>
     </div>
-
+    <!--replaced by fragment template-->
 </footer>
+<!--Bottom Footer-->
+
+<!--javascript dependencies-->
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <!--/*/</th:block>/*/-->
 <script>
+    //toggle menu items
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
-
+    //show dropdown on hover
     $('.ui.dropdown').dropdown({
         on: 'hover'
     });

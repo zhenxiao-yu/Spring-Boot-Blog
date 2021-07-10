@@ -95,9 +95,9 @@ public class BlogController {
         }
 
         if (b == null ) {
-            attributes.addFlashAttribute("message", "Task success!");
-        } else {
             attributes.addFlashAttribute("message", "Task failed!");
+        } else {
+            attributes.addFlashAttribute("message", "Task success!");
         }
         return REDIRECT_LIST;
     }

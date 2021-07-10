@@ -86,7 +86,8 @@
             <!--post content-->
             <div class="required field">
                 <div id="md-content" style="z-index: 1 !important;">
-                    <textarea placeholder="Start writing..." name="content" style="display: none" th:text="*{content}"></textarea>
+                    <textarea placeholder="Start writing..." name="content" style="display: none"
+                              th:text="*{content}"></textarea>
                 </div>
             </div>
 
@@ -127,12 +128,13 @@
             <div class="required field">
                 <div class="ui left labeled input">
                     <label class="ui purple basic label">Thumbnail</label>
-                    <input type="text" name="firstPicture" th:value="*{firstPicture}" placeholder="Paste Image URL here...">
+                    <input type="text" name="firstPicture" th:value="*{firstPicture}" placeholder="Image URL">
                 </div>
             </div>
 
             <div class="required field">
-                <textarea name="description" th:text="*{description}" placeholder="Describe your post" maxlength="200"></textarea>
+                <textarea name="description" th:text="*{description}"
+                          placeholder="Describe your post (300 character limit)" maxlength="300"></textarea>
             </div>
 
             <div class="inline fields">
@@ -140,38 +142,38 @@
                     <div class="ui checkbox">
                         <input type="checkbox" id="recommend" name="recommend" checked th:checked="*{recommend}"
                                class="hidden">
-                        <label for="recommend">推荐</label>
+                        <label for="recommend">Add To Recommended</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="shareStatement" name="shareStatement" th:checked="*{shareStatement}"
                                class="hidden">
-                        <label for="shareStatement">转载声明</label>
+                        <label for="shareStatement">Show Copyright Notice</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="appreciation" name="appreciation" th:checked="*{appreciation}"
                                class="hidden">
-                        <label for="appreciation">赞赏</label>
+                        <label for="appreciation">Allow Donation</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="commentabled" name="commentabled" th:checked="*{commentabled}"
                                class="hidden">
-                        <label for="commentabled">评论</label>
+                        <label for="commentabled">Enable Comment Section</label>
                     </div>
                 </div>
             </div>
-
+            <!--where error message is displayed-->
             <div class="ui error message"></div>
-
+            <!--bottom action buttons-->
             <div class="ui right aligned container">
-                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
-                <button type="button" id="save-btn" class="ui secondary button">保存</button>
-                <button type="button" id="publish-btn" class="ui purple button">发布</button>
+                <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
+                <button type="button" id="save-btn" class="ui secondary button">Save</button>
+                <button type="button" id="publish-btn" class="ui purple button">Submit</button>
             </div>
 
         </form>
@@ -181,8 +183,9 @@
 
 <br>
 <br>
-<!--底部footer-->
+<!--Bottom Footer-->
 <footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <!--replaced by fragment template-->
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="three wide column">
@@ -193,31 +196,37 @@
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Top Posts</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
-                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
+                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
+                    <a href="#" class="item m-text-thin">SAMPLE POST</a>
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Contact Me</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
-                    <a href="#" class="item m-text-thin">QQ：865729312</a>
+                    <a href="#" class="item m-text-thin">Email：zyu347@uwo.ca</a>
+                    <a href="#" class="item m-text-thin">Phone：(306)581-5556</a>
+                    <a href="#" class="item m-text-thin">Instagram：m4rkyu</a>
                 </div>
             </div>
             <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
-                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Thank you for visiting my blog!</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">This is my personal blog, I will be posting
+                    content related to programming,
+                    game development, and other things I find worthy of discussion. I hope you find something
+                    useful...</p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2021 ZhenXiao Yu</p>
     </div>
-
+    <!--replaced by fragment template-->
 </footer>
+<!--Bottom Footer-->
 
+<!--javascript dependencies-->
 <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
@@ -226,72 +235,70 @@
 
 <script>
 
-    //初始化Markdown编辑器
+    //init md editor
     var contentEditor;
     $(function () {
         contentEditor = editormd("md-content", {
             width: "100%",
             height: 640,
             syncScrolling: "single",
-//        path    : "../static/lib/editormd/lib/"
             path: "/lib/editormd/lib/"
         });
     });
+    //toggle menu items
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
-
+    //show dropdown on hover
     $('.ui.dropdown').dropdown({
         on: 'hover'
     });
-
+    //save button
     $('#save-btn').click(function () {
         $('[name="published"]').val(false);
         $('#blog-form').submit();
     });
-
-
+    //publish button
     $('#publish-btn').click(function () {
         $('[name="published"]').val(true);
         $('#blog-form').submit();
     });
-
-
+    //form validation controller
     $('.ui.form').form({
         fields: {
             title: {
                 identifier: 'title',
                 rules: [{
                     type: 'empty',
-                    prompt: '标题：请输入博客标题'
+                    prompt: 'Title: Can not be empty!'
                 }]
             },
             content: {
                 identifier: 'content',
                 rules: [{
                     type: 'empty',
-                    prompt: '标题：请输入博客内容'
+                    prompt: 'Content: Can not be empty!'
                 }]
             },
             typeId: {
                 identifier: 'type.id',
                 rules: [{
                     type: 'empty',
-                    prompt: '标题：请输入博客分类'
+                    prompt: 'Category: Can not be empty!'
                 }]
             },
             firstPicture: {
                 identifier: 'firstPicture',
                 rules: [{
                     type: 'empty',
-                    prompt: '标题：请输入博客首图'
+                    prompt: 'Thumbnail: Can not be empty!'
                 }]
             },
             description: {
                 identifier: 'description',
                 rules: [{
                     type: 'empty',
-                    prompt: '标题：请输入博客描述'
+                    prompt: 'Description: Can not be empty!'
                 }]
             }
         }

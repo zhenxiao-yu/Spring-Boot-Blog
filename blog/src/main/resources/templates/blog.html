@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Blog Page-->
+<!--Blog Display Page-->
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
@@ -240,7 +240,7 @@
                 <input type="hidden" name="parentComment.id" value="-1">
                 <!--comment text-->
                 <div class="field">
-                    <textarea name="content" placeholder="Leave a comment..."></textarea>
+                    <textarea name="content" placeholder="Leave a comment..." maxlength="500"></textarea>
                 </div>
 
                 <div class="fields">

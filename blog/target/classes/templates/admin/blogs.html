@@ -97,11 +97,11 @@
                 <tbody>
                 <tr th:each="blog,iterStat : ${page.content}">
                     <td th:text="${iterStat.count}">1</td>
-                    <td th:text="${blog.title}">Unity Particle Effects</td>
+                    <td th:text="${#strings.abbreviate(blog.title,40)}">Unity Particle Effects</td>
                     <td th:text="${blog.type.name}">Game Development</td>
                     <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
                     <td th:text="${blog.published} ? 'Published':'Draft'">Post</td>
-                    <td th:text="${blog.updateTime}">2021-07-06 09:45</td>
+                    <td th:text="${#dates.format(blog.updateTime,'YY-MMM-dd')}">2021-07-06 09:45</td>
                     <!--task buttons-->
                     <td>
                         <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}"

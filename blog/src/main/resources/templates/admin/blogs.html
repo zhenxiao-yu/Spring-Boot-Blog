@@ -82,7 +82,7 @@
 
         <!--posts sorted in tables-->
         <div id="table-container">
-            <table th:fragment="blogList" class="ui compact purple table">
+            <table th:fragment="blogList" class="ui compact selectable inverted table">
                 <thead>
                 <tr>
                     <th>#</th>
@@ -104,10 +104,12 @@
                     <td th:text="${#dates.format(blog.updateTime,'YY-MMM-dd')}">2021-07-06 09:45</td>
                     <!--task buttons-->
                     <td>
-                        <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}"
-                           class="ui mini teal basic button">Edit</a>
-                        <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}"
-                           class="ui mini red basic button">Delete</a>
+                        <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui circular teal icon button">
+                            <i class="edit icon"></i>
+                        </a>
+                        <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui circular red icon button">
+                            <i class="trash icon"></i>
+                        </a>
                     </td>
                 </tr>
                 </tbody>

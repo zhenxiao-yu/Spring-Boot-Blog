@@ -22,13 +22,13 @@
 <!--Navigation-->
 
 <!--Secondary Menu-->
-<div class="ui attached pointing menu">
+<div class="ui m-teal attached pointing menu">
     <div class="ui container">
         <div class="right menu">
             <!--new post page-->
-            <a href="#" th:href="@{/admin/blogs/input}" class=" item">New</a>
+            <a href="#" th:href="@{/admin/blogs/input}" class="item">New</a>
             <!--list view of posts-->
-            <a href="#" th:href="@{/admin/blogs}" class="purple active item">List</a>
+            <a href="#" th:href="@{/admin/blogs}" class="active m-teal item">List</a>
         </div>
     </div>
 </div>
@@ -82,7 +82,7 @@
 
         <!--posts sorted in tables-->
         <div id="table-container">
-            <table th:fragment="blogList" class="ui compact selectable inverted table">
+            <table th:fragment="blogList" class="ui compact striped inverted table">
                 <thead>
                 <tr>
                     <th>#</th>
@@ -104,10 +104,10 @@
                     <td th:text="${#dates.format(blog.updateTime,'YY-MMM-dd')}">2021-07-06 09:45</td>
                     <!--task buttons-->
                     <td>
-                        <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui circular teal icon button">
+                        <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui circular teal inverted icon button">
                             <i class="edit icon"></i>
                         </a>
-                        <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui circular red icon button">
+                        <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui circular red inverted icon button">
                             <i class="trash icon"></i>
                         </a>
                     </td>
@@ -119,11 +119,11 @@
                         <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
                             <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item"
                                th:unless="${page.first}">Prev</a>
-                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item"
+                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item"
                                th:unless="${page.last}">Next</a>
                         </div>
                         <a href="#" th:href="@{/admin/blogs/input}"
-                           class="ui mini right floated purple basic button">Add Post</a>
+                           class="ui right floated purple basic button">Add Post</a>
                     </th>
                 </tr>
                 </tfoot>

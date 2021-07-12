@@ -20,3 +20,19 @@
 .t-post-title {
     font-family: 'Exo 2', sans-serif !important;
 }
+
+.t-thumbnail {
+    border: 1px solid #ddd !important;
+    border-radius: 4px;
+    padding: 2px;
+    width: 200px;
+}
+
+.t-avatar {
+    width: 100%;
+    padding-top: 100%;
+}
+
+.t-tag {
+    color: #0B0C10 !important;
+}

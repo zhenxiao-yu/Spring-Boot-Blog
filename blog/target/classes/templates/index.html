@@ -53,19 +53,20 @@
                                     <!--avatar, name, publish date, view count-->
                                     <div class="eleven wide column">
                                         <div class="ui mini inverted horizontal link list">
-
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                                                <!--avatar-->
+                                                <img src="https://unsplash.it/100/100?image=1005" th:src="@{${blog.user.avatar}}" alt="" class="t-avatar ui avatar image">
+                                                <!--name-->
                                                 <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">SAMPLE USER</a></div>
                                             </div>
-
+                                            <!--date-->
                                             <div class="item">
-                                                <i class="calendar icon"></i><span
-                                                    th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">SAMPLE DATE</span>
+                                                <i class="large calendar icon"></i><span
+                                                    th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"> SAMPLE DATE </span>
                                             </div>
 
                                             <div class="item">
-                                                <i class="eye icon"></i> <span th:text="${blog.views}">VIEW COUNT</span>
+                                                <i class="large eye icon"></i> <span th:text="${blog.views}"> VIEW COUNT </span>
                                             </div>
 
                                         </div>
@@ -82,7 +83,7 @@
                                 <!--thumbnail-->
                                 <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
                                     <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"
-                                         alt="" class="ui rounded image">
+                                         alt="" class="t-thumbnail m-mobile-hide ui rounded image">
                                 </a>
                             </div>
 
@@ -107,23 +108,22 @@
             </div>
 
             <!--side panel-->
-            <div class="five wide column animated fadeInRight">
+            <div class="five wide column">
                 <!--category-->
-                <div class="ui segments">
-                    <div class="ui  secondary segment">
+                <div class="ui segments animated fadeInDown">
+                    <div class="ui inverted secondary segment">
                         <div class="ui two column grid">
                             <!--header-->
                             <div class="column">
                                 <i class="idea icon"></i>Categories
                             </div>
                             <div class="right aligned column">
-                                <a href="#" th:href="@{types/-1}" target="_blank">more <i
-                                        class="angle double right icon"></i></a>
+                                <a href="#" th:href="@{types/-1}" target="_blank">more <i class="angle double right icon"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="ui teal segment">
-                        <div class="ui fluid vertical menu">
+                    <div class="ui inverted segment">
+                        <div class="ui fluid inverted vertical menu animated fadeInRight">
                             <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
                                th:each="type : ${types}">
                                 <span th:text="${type.name}">SAMPLE CATEGORY</span>
@@ -137,8 +137,8 @@
                 <!--category-->
 
                 <!--tag-->
-                <div class="ui inverted segments m-margin-top-large">
-                    <div class="ui secondary segment">
+                <div class="ui inverted segments m-margin-top-large animated fadeInRight">
+                    <div class="ui secondary inverted segment">
                         <div class="ui two column grid">
                             <!--header-->
                             <div class="column">
@@ -150,19 +150,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class=" ui teal segment">
+                    <div class=" ui inverted segment">
                         <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank"
-                           class="ui purple basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
-                            <span th:text="${tag.name}">SAMPLE TAG</span>
-                            <div class="detail" th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
+                           class="ui teal left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
+                            <span class="t-tag" th:text="${tag.name}">SAMPLE TAG</span>
+                            <div class="t-tag detail"  th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
                         </a>
                     </div>
                 </div>
                 <!--tag-->
 
                 <!--latest recommendations-->
-                <div class="ui segments m-margin-top-large">
-                    <div class="ui inverted secondary segment ">
+                <div class="ui segments m-margin-top-large animated fadeInUp">
+                    <div class="ui inverted secondary segment">
                         <i class="bookmark icon"></i>Latest Recommendations
                     </div>
                     <div class="ui inverted segment" th:each="blog : ${recommendBlogs}">

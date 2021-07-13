@@ -21,19 +21,22 @@
     font-family: 'Exo 2', sans-serif !important;
 }
 
+.t-section-title {
+    font-family: 'Exo 2', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+
 .t-thumbnail {
     border: 1px solid #ddd !important;
-    border-radius: 4px;
-    padding: 2px;
-    width: 200px;
+    border-radius: 4px !important;
+    padding: 2px !important;
+    width: 200px !important;
 }
 
 .t-avatar {
-    width: 100%;
-    padding-top: 100%;
 }
 
 .t-tag {
     color: #0B0C10 !important;
-    
 }

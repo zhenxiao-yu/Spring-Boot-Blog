@@ -115,7 +115,7 @@
                         <div class="ui two column grid">
                             <!--header-->
                             <div class="column">
-                                <i class="idea icon"></i>Categories
+                                <span class="t-section-title"> <i class="idea icon"></i> Categories</span>
                             </div>
                             <div class="right aligned column">
                                 <a href="#" th:href="@{types/-1}" target="_blank">more <i class="angle double right icon"></i></a>
@@ -127,7 +127,7 @@
                             <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
                                th:each="type : ${types}">
                                 <span th:text="${type.name}">SAMPLE CATEGORY</span>
-                                <div class="ui purple basic left pointing label" th:text="${#arrays.length(type.blogs)}">
+                                <div class="ui violet left pointing label" th:text="${#arrays.length(type.blogs)}">
                                     SAMPLE NUMBER
                                 </div>
                             </a>
@@ -152,7 +152,7 @@
                     </div>
                     <div class=" ui inverted segment">
                         <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank"
-                           class="ui teal left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
+                           class="ui olive left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
                             <span class="t-tag" th:text="${tag.name}">SAMPLE TAG</span>
                             <div class="t-tag detail"  th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
                         </a>
@@ -161,11 +161,11 @@
                 <!--tag-->
 
                 <!--latest recommendations-->
-                <div class="ui segments m-margin-top-large animated fadeInUp">
+                <div class="ui segments m-margin-top-large animated slideInRight">
                     <div class="ui inverted secondary segment">
                         <i class="bookmark icon"></i>Latest Recommendations
                     </div>
-                    <div class="ui inverted segment" th:each="blog : ${recommendBlogs}">
+                    <div class="ui inverted segment animated tada" th:each="blog : ${recommendBlogs}">
                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-teal m-text-thin"
                            th:text="${blog.title}">SAMPLE TITLE</a>
                     </div>
@@ -173,8 +173,8 @@
                 <!--latest recommendations-->
 
                 <!--contact qr code-->
-                <h4 class="ui inverted horizontal divider header m-margin-top-large">Let's Stay In Touch</h4>
-                <div class="ui centered card" style="width: 11em">
+                <h4 class="ui inverted horizontal divider header m-margin-top-large animated fadeInUpBig">Let's Stay In Touch</h4>
+                <div class="ui centered card animated fadeInUpBig" style="width: 6em">
                     <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" alt=""
                          class="ui rounded image">
                 </div>

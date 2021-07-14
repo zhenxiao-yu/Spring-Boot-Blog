@@ -185,9 +185,10 @@
   color: #888;
 }
 
+/* bolded */
 .typo strong,.typo  b {
   font-weight: bold;
-  color: #000;
+  color: #ffffff;
 }
 
 /* 可拖动文件添加拖动手势 */
@@ -232,7 +233,7 @@
 .typo h1,.typo  h2,.typo  h3,.typo  h4,.typo  h5,.typo  h6 {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
   font-weight: 100;
-  color: #000;
+  color: #ffffff;
   line-height: 1.35;
 }
 
@@ -310,7 +311,7 @@
 }
 
 .typo-em, .typo em, legend, caption {
-  color: #000;
+  color: #fdfdfd;
   font-weight: inherit;
 }
 

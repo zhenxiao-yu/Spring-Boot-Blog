@@ -47,12 +47,13 @@
                 </div>
             </div>
         </div>
-        <div class="ui attached segment">
+
+        <div class="ui attached inverted segment">
             <!--thumbnail picture-->
             <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}" alt=""
                  class="ui fluid rounded image">
         </div>
-        <div class="ui  attached padded segment">
+        <div class="ui attached padded inverted segment">
             <!--post content-->
             <div class="ui right aligned basic segment">
                 <div class="ui orange basic label" th:text="${blog.flag}">SAMPLE FLAG</div>
@@ -61,7 +62,7 @@
             <h2 class="ui center aligned header" th:text="${blog.title}">SAMPLE TITLE</h2>
             <br>
             <!--post text-->
-            <div id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large"
+            <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large"
                  th:utext="${blog.content}">
 
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the

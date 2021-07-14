@@ -34,7 +34,7 @@
                         </div>
                         <!--post counter-->
                         <div class="right aligned column">
-                            Total <h2 class="ui header m-inline-block olive m-text-thin" th:text="${page.totalElements}">
+                            Total <h2 class="ui header" id="header-counter"th:text="${page.totalElements}">
                             14 </h2> Posts
                         </div>
                     </div>
@@ -111,7 +111,7 @@
             <div class="five wide column">
                 <!--category-->
                 <div class="ui segments animated fadeInDown">
-                    <div class="ui inverted secondary segment">
+                    <div class="ui inverted  segment">
                         <div class="ui two column grid">
                             <!--header-->
                             <div class="column">
@@ -138,7 +138,7 @@
 
                 <!--tag-->
                 <div class="ui inverted segments m-margin-top-large animated fadeInRight">
-                    <div class="ui secondary inverted segment">
+                    <div class="ui inverted segment">
                         <div class="ui two column grid">
                             <!--header-->
                             <div class="column">
@@ -162,11 +162,12 @@
 
                 <!--latest recommendations-->
                 <div class="ui segments m-margin-top-large animated slideInRight">
-                    <div class="ui inverted secondary segment">
+                    <!--header segment-->
+                    <div class="ui inverted segment">
                         <span class="t-section-title"><i class="bookmark icon"></i> Latest Recommendations</span>
                     </div>
                     <div class="ui inverted segment animated tada" th:each="blog : ${recommendBlogs}">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-post-title m-text-thin"
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-section-text"
                            th:text="${blog.title}">SAMPLE TITLE</a>
                     </div>
                 </div>

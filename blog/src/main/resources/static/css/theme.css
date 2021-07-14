@@ -15,10 +15,29 @@
 
 .t-description {
     font-family: 'Alegreya Sans', sans-serif !important;
+    color: #6f7173 !important;
 }
 
 .t-post-title {
     font-family: 'Exo 2', sans-serif !important;
+    color: #59BA50 !important;
+    cursor: pointer;
+}
+
+.t-post-title::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    width: 0px;
+    background-color: tomato;
+}
+
+.t-post-title:hover::after {
+    width: 100%;
+    transition: all 0.4s;
 }
 
 .t-section-title {
@@ -28,15 +47,22 @@
 }
 
 .t-thumbnail {
-    border: 1px solid #ddd !important;
-    border-radius: 4px !important;
+    border: 2px solid #59BA50 !important;
+    border-radius: 10px !important;
     padding: 2px !important;
     width: 200px !important;
+}
+
+.t-image {
+    border: 2px solid  !important;
+    border-radius: 4px !important;
+    padding: 2px !important;
 }
 
 .t-avatar {
 }
 
 .t-tag {
-    color: #0B0C10 !important;
+    color: #1b1c1d !important;
+    font-family: 'Exo 2', sans-serif !important;
 }

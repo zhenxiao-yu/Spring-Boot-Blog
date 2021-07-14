@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
 
 body {
     background-color: #0b0c10;
@@ -65,7 +67,7 @@ body {
 /*-------text -----*/
 
 .m-text {
-    font-weight: 300 !important;
+    font-weight: 600 !important;
     letter-spacing: 1px !important;
     line-height: 1.8;
 }
@@ -165,20 +167,24 @@ body {
     color: #0B0C10 !important;
 }
 
+.m-green {
+    color: #59BA50 !important;
+}
+
 .m-teal {
-    color: #66FCF1 !important;
-}
-
-.m-grey {
-    color: #C5C6C7 !important;
-}
-
-.m-navy {
-    color: #1F2833 !important;
+    color: #00A174 !important;
 }
 
 .m-dark-teal {
-    color: #45A29E !important;
+    color: #008482 !important;
+}
+
+.m-blue {
+    color: #006678 !important;
+}
+
+.m-b-dark-blue {
+    color: #2F4858 !important;
 }
 
 

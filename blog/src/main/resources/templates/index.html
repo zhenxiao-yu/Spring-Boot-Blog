@@ -30,11 +30,11 @@
                 <div class="ui top attached inverted segment">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <h3 class="m-dark-teal ui header">Home</h3>
+                            <h3 class="olive ui header">Recent Posts</h3>
                         </div>
                         <!--post counter-->
                         <div class="right aligned column">
-                            Total <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">
+                            Total <h2 class="ui header m-inline-block olive m-text-thin" th:text="${page.totalElements}">
                             14 </h2> Posts
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         <!--reversed image and text in mobile platform-->
                         <div class="ui middle aligned mobile reversed stackable grid">
                             <div class="eleven wide column ">
-                                <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-post-title m-teal" th:text="${blog.title}">SAMPLE TITLE</a></h3>
+                                <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-post-title" th:text="${blog.title}">SAMPLE TITLE</a></h3>
                                 <p class="t-description m-text" th:text="|${blog.description}...|">SAMPLE BLOG DESCRIPTION</p>
                                 <div class="ui grid">
                                     <!--avatar, name, publish date, view count-->
@@ -142,7 +142,7 @@
                         <div class="ui two column grid">
                             <!--header-->
                             <div class="column">
-                                <i class="tags icon"></i>Tags
+                                <span class="t-section-title"><i class="tags icon"></i> Tags</span>
                             </div>
                             <div class="right aligned column">
                                 <a href="#" th:href="@{tags/-1}" target="_blank">more <i
@@ -163,20 +163,40 @@
                 <!--latest recommendations-->
                 <div class="ui segments m-margin-top-large animated slideInRight">
                     <div class="ui inverted secondary segment">
-                        <i class="bookmark icon"></i>Latest Recommendations
+                        <span class="t-section-title"><i class="bookmark icon"></i> Latest Recommendations</span>
                     </div>
                     <div class="ui inverted segment animated tada" th:each="blog : ${recommendBlogs}">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-teal m-text-thin"
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-post-title m-text-thin"
                            th:text="${blog.title}">SAMPLE TITLE</a>
                     </div>
                 </div>
                 <!--latest recommendations-->
 
-                <!--contact qr code-->
+                <!--contact qr codes-->
                 <h4 class="ui inverted horizontal divider header m-margin-top-large animated fadeInUpBig">Let's Stay In Touch</h4>
-                <div class="ui centered card animated fadeInUpBig" style="width: 6em">
-                    <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" alt=""
-                         class="ui rounded image">
+                <div class="ui animated fadeInUpBig">
+                    <div class="ui center grid">
+                        <div class="eight wide column">
+                            <div class="ui centered card animated fadeInUpBig" style="width: 8em">
+                                <img src="../static/images/snapchat.jpg" th:src="@{/images/snapchat.jpg}" alt="" class="ui t-image rounded image">
+                            </div>
+                        </div>
+                        <div class="eight wide column">
+                            <div class="ui centered card animated fadeInUpBig" style="width: 8em">
+                                <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" alt="" class="ui t-image rounded image">
+                            </div>
+                        </div>
+                        <div class="eight wide column">
+                            <div class="ui centered card animated fadeInUpBig" style="width: 8em">
+                                <img src="../static/images/twitter.jpg" th:src="@{/images/twitter.jpg}" alt="" class="ui t-image rounded image">
+                            </div>
+                        </div>
+                        <div class="eight wide column">
+                            <div class="ui centered card animated fadeInUpBig" style="width: 8em">
+                                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui t-image rounded image">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--contact qr code-->
             </div>

@@ -288,3 +288,690 @@
 2021-07-13 18:39:45.329  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
 2021-07-13 18:39:45.526  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
 2021-07-13 18:39:45.529  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:45:56.775  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:45:56.805  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:45:57.158  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:45:57.161  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:45:58.855  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 20:45:58.859  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 20:45:59.076  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:45:59.079  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:45:59.871  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:45:59.879  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:46:00.078  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:00.081  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:00.502  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 20:46:00.505  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 20:46:00.713  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:00.715  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:01.361  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.zxy.web.TagShowController.tags', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 20:46:01.367  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : tags
+2021-07-13 20:46:01.647  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:01.649  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:01.997  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:46:02.005  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:46:02.200  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:02.203  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:03.925  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:46:03.933  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:46:09.027  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:09.027  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:46:09.031  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:09.035  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:46:09.227  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:09.229  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:15.437  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/10', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[10, {}]}
+2021-07-13 20:46:15.487  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-13 20:46:15.787  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:15.789  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:15.960  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/comments/10', ip='127.0.0.1', classMethod='com.zxy.web.CommentController.comments', args=[10, {}]}
+2021-07-13 20:46:15.974  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : blog :: commentList
+2021-07-13 20:46:38.913  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 1, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:46:38.924  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:46:39.164  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:39.167  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:46:43.768  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:46:43.776  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:46:43.993  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:46:43.995  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:16.634  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:47:16.644  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:47:16.966  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:16.969  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:25.694  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:25.696  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:27.075  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:27.077  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:27.738  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:27.741  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:28.713  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:28.715  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:29.554  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:29.556  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:30.083  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:30.086  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:32.642  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:32.644  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:33.377  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:33.380  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:34.232  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:34.235  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:34.736  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:34.738  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:36.418  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:36.421  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:37.055  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:37.057  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:37.606  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:37.609  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:38.086  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:38.088  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:38.620  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:38.623  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:39.104  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:39.107  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:40.139  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:40.142  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:40.670  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:40.673  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:41.191  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:41.194  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:47:41.645  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:47:41.647  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:51:02.441  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:51:02.449  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:51:02.673  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:51:02.676  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:52:04.402  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:52:04.411  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:52:04.651  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:52:04.654  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:52:32.535  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:52:32.542  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:52:32.773  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:52:32.776  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:52:34.593  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:52:34.600  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:52:34.808  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:52:34.810  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:52:35.778  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:52:35.785  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:52:35.995  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:52:35.998  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:52:37.071  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:52:37.078  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:52:37.331  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:52:37.334  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:52:38.471  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:52:38.479  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:52:38.688  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:52:38.691  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:54:21.897  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:54:21.904  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:54:22.140  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:54:22.142  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:56:18.638  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:56:18.645  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:56:18.879  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:56:18.882  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:56:48.623  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:56:48.633  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:56:48.866  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:56:48.869  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:57:02.820  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:57:02.827  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:57:03.059  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:57:03.061  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:59:15.460  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:59:15.467  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:59:15.701  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:59:15.706  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 20:59:45.438  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 20:59:45.445  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 20:59:45.679  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 20:59:45.681  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:00:09.962  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:00:09.970  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:00:10.244  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:00:10.247  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:00:26.948  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:00:26.956  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:00:27.194  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:00:27.196  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:01:37.602  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:01:37.611  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:01:37.891  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:01:37.894  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:02:29.767  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:02:29.775  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:02:30.035  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:02:30.038  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:37.809  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:37.821  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:38.090  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:38.093  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:45.300  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:45.307  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:45.533  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:45.535  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:46.672  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:46.679  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:46.889  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:46.891  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:48.012  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:48.019  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:48.230  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:48.232  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:49.357  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:49.364  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:49.575  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:49.578  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:50.523  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:50.529  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:50.747  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:50.750  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:51.857  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:51.863  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:52.093  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:52.095  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:53.315  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:53.323  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:53.534  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:53.537  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:06:54.736  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:06:54.743  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:06:55.002  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:06:55.004  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:07:26.527  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:07:26.534  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:07:26.770  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:07:26.773  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:08:03.109  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:08:03.116  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:08:03.388  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:08:03.391  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:08:40.678  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:08:40.686  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:08:40.965  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:08:40.968  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:11:03.074  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:11:03.081  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:11:03.320  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:11:03.322  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:11:25.286  INFO 27228 --- [Thread-16] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@36c256df: startup date [Tue Jul 13 18:36:44 EDT 2021]; root of context hierarchy
+2021-07-13 21:11:25.297  INFO 27228 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2021-07-13 21:11:25.299  INFO 27228 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-07-13 21:11:25.775  INFO 27228 --- [restartedMain] com.zxy.BlogApplication                  : Starting BlogApplication on B with PID 27228 (C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog\target\classes started by YZX06 in C:\Users\YZX06\Documents\GitHub\Spring-Boot-Blog\blog)
+2021-07-13 21:11:25.775  INFO 27228 --- [restartedMain] com.zxy.BlogApplication                  : The following profiles are active: dev
+2021-07-13 21:11:25.780  INFO 27228 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5552cdd5: startup date [Tue Jul 13 21:11:25 EDT 2021]; root of context hierarchy
+2021-07-13 21:11:26.324  INFO 27228 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2021-07-13 21:11:26.324  INFO 27228 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-13 21:11:26.324  INFO 27228 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2021-07-13 21:11:26.337  INFO 27228 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-13 21:11:26.337  INFO 27228 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 557 ms
+2021-07-13 21:11:26.376  INFO 27228 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2021-07-13 21:11:26.376  INFO 27228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-07-13 21:11:26.376  INFO 27228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-07-13 21:11:26.376  INFO 27228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-07-13 21:11:26.376  INFO 27228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-07-13 21:11:26.622  INFO 27228 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2021-07-13 21:11:26.622  INFO 27228 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-07-13 21:11:26.685  INFO 27228 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-07-13 21:11:26.720  INFO 27228 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2021-07-13 21:11:26.859  INFO 27228 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-13 21:11:26.934  INFO 27228 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-07-13 21:11:27.241  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5552cdd5: startup date [Tue Jul 13 21:11:25 EDT 2021]; root of context hierarchy
+2021-07-13 21:11:27.254  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.zxy.web.AboutShowController.about()
+2021-07-13 21:11:27.255  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.255  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.zxy.query.BlogQuery,org.springframework.ui.Model)
+2021-07-13 21:11:27.255  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.input(org.springframework.ui.Model)
+2021-07-13 21:11:27.256  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.BlogController.post(com.zxy.entity.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2021-07-13 21:11:27.256  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-13 21:11:27.256  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.zxy.query.BlogQuery,org.springframework.ui.Model)
+2021-07-13 21:11:27.256  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.loginPage()
+2021-07-13 21:11:27.256  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2021-07-13 21:11:27.256  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.257  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.257  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.input(org.springframework.ui.Model)
+2021-07-13 21:11:27.257  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.post(com.zxy.entity.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.257  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-13 21:11:27.257  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-13 21:11:27.258  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TagController.editPost(com.zxy.entity.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.259  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.259  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.input(org.springframework.ui.Model)
+2021-07-13 21:11:27.259  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.post(com.zxy.entity.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.259  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-13 21:11:27.259  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.zxy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2021-07-13 21:11:27.259  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.zxy.web.admin.TypeController.editPost(com.zxy.entity.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-07-13 21:11:27.260  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.zxy.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2021-07-13 21:11:27.260  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.zxy.web.CommentController.post(com.zxy.entity.Comment,javax.servlet.http.HttpSession)
+2021-07-13 21:11:27.260  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.zxy.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2021-07-13 21:11:27.261  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2021-07-13 21:11:27.261  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.zxy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2021-07-13 21:11:27.261  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.newblogs(org.springframework.ui.Model)
+2021-07-13 21:11:27.261  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2021-07-13 21:11:27.261  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2021-07-13 21:11:27.261  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.zxy.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2021-07-13 21:11:27.262  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-07-13 21:11:27.262  INFO 27228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-07-13 21:11:27.280  INFO 27228 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-13 21:11:27.280  INFO 27228 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-13 21:11:27.287  INFO 27228 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2021-07-13 21:11:27.293  INFO 27228 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-07-13 21:11:27.506  INFO 27228 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-13 21:11:27.536  INFO 27228 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2021-07-13 21:11:27.543  INFO 27228 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2021-07-13 21:11:27.545  INFO 27228 --- [restartedMain] com.zxy.BlogApplication                  : Started BlogApplication in 1.816 seconds (JVM running for 9284.672)
+2021-07-13 21:11:28.844  INFO 27228 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-07-13 21:11:28.844  INFO 27228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2021-07-13 21:11:28.848  INFO 27228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2021-07-13 21:11:28.850  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:11:28.864  WARN 27228 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2021-07-13 21:11:28.868  WARN 27228 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2021-07-13 21:11:28.872  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:11:29.183  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:11:29.186  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:12:16.719  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:12:16.728  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:12:16.978  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:12:16.981  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:15:36.725  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:15:36.732  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:15:36.991  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:15:36.994  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:16:53.019  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:16:53.026  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:16:53.265  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:16:53.268  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:23:23.485  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:23:23.492  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:23:23.731  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:23:23.734  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:18.079  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:18.087  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:18.325  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:18.328  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:18.490  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:18.498  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:18.715  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:18.717  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:19.848  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:19.856  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:20.066  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:20.068  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:21.129  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:21.136  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:21.353  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:21.356  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:22.375  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:22.382  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:22.602  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:22.605  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:23.963  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:23.970  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:24.185  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:24.187  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:25.153  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:25.160  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:25.368  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:25.371  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:26.445  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:26.452  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:26.705  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:26.708  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:27.584  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:27.591  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:27.797  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:27.799  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:28.862  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:28.869  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:29.110  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:29.113  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:30.188  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:30.195  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:30.430  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:30.432  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:31.738  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:31.745  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:31.968  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:31.971  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:33.038  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:33.045  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:33.256  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:33.259  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:34.451  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:34.458  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:34.669  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:34.672  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:35.967  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:35.974  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:36.185  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:36.187  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:37.413  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:37.420  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:37.632  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:37.634  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:38.898  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:38.906  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:39.142  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:39.144  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:24:40.424  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:24:40.430  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:24:40.652  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:24:40.654  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:26:39.412  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:26:39.418  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:26:39.661  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:26:39.663  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:29:34.829  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.zxy.web.AboutShowController.about', args=[]}
+2021-07-13 21:29:34.830  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : about
+2021-07-13 21:29:35.058  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:29:35.061  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:29:35.565  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.zxy.web.ArchiveShowController.archives', args=[{}]}
+2021-07-13 21:29:35.575  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : archives
+2021-07-13 21:29:35.775  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:29:35.777  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:29:36.153  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.zxy.web.TagShowController.tags', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 21:29:36.162  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : tags
+2021-07-13 21:29:36.434  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:29:36.437  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:29:36.822  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 21:29:36.828  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 21:29:37.047  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:29:37.049  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:29:37.620  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:29:37.627  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:29:37.823  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:29:37.825  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:30:51.472  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:30:51.479  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:30:51.729  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:30:51.732  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:34:45.137  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/4', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 4, {}]}
+2021-07-13 21:34:45.146  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 21:34:45.462  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:34:45.465  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:34:47.269  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:34:47.276  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:34:47.516  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:34:47.518  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:34:54.737  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:34:54.745  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:34:55.011  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:34:55.014  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:35:11.103  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:35:11.110  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:35:11.359  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:35:11.361  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:35:24.849  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:35:24.856  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:35:25.102  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:35:25.104  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:35:51.830  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:35:51.837  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:35:52.095  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:35:52.097  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:35:53.723  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:35:53.730  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:35:53.970  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:35:53.973  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:36:12.173  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:36:12.180  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:36:12.410  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:36:12.412  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:38:03.723  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:38:03.730  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:38:03.973  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:38:03.976  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:38:47.646  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:38:47.654  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:38:47.899  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:38:47.901  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:39:08.298  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:39:08.305  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:39:08.557  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:39:08.560  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:40:00.722  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:40:00.729  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:40:00.967  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:40:00.970  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:24.901  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:42:24.908  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:42:25.161  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:25.164  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:39.092  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 21:42:39.095  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 21:42:39.335  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:39.337  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:41.204  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.zxy.web.TagShowController.tags', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 21:42:41.208  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : tags
+2021-07-13 21:42:41.483  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:41.485  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:42.335  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.zxy.web.ArchiveShowController.archives', args=[{}]}
+2021-07-13 21:42:42.341  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : archives
+2021-07-13 21:42:42.544  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:42.546  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:43.166  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.zxy.web.AboutShowController.about', args=[]}
+2021-07-13 21:42:43.166  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : about
+2021-07-13 21:42:43.386  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:43.389  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:44.107  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.zxy.web.ArchiveShowController.archives', args=[{}]}
+2021-07-13 21:42:44.112  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : archives
+2021-07-13 21:42:44.308  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:44.311  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:44.815  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.zxy.web.TagShowController.tags', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 21:42:44.820  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : tags
+2021-07-13 21:42:45.087  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:45.089  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:45.420  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 21:42:45.423  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 21:42:45.627  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:45.629  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:42:46.033  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:42:46.040  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:42:46.241  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:42:46.243  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:44:55.089  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:44:55.096  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:44:55.340  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:44:55.342  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:45:45.307  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:45:45.317  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:45:45.578  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:45:45.580  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:45:58.946  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:45:58.953  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:45:59.191  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:45:59.193  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:47:55.723  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:47:55.731  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:47:55.974  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:47:55.977  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:47:57.811  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:47:57.819  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:47:58.059  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:47:58.061  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:49:09.788  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:49:09.795  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:49:10.034  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:49:10.036  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:51:26.824  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:51:26.833  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:51:27.079  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:51:27.081  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:52:01.246  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:52:01.255  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:52:01.505  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:52:01.507  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:38.185  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:38.192  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:38.445  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:38.447  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:39.465  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:39.472  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:39.688  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:39.691  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:40.666  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:40.673  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:40.888  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:40.890  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:41.858  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:41.865  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:42.076  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:42.078  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:43.023  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:43.029  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:43.265  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:43.268  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:44.233  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:44.240  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:44.459  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:44.461  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:45.561  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:45.568  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:45.777  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:45.779  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:47.917  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:47.925  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:48.144  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:48.146  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:49.018  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:49.025  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:49.212  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:49.214  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:50.327  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:50.334  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:50.544  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:50.547  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:51.744  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:51.752  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:51.960  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:51.962  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:53.997  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:54.004  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:54.223  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:54.226  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:55.192  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:55.199  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:55.408  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:55.411  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:56.574  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:56.582  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:56.792  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:56.795  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:57.974  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:57.981  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:58.192  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:58.194  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:53:59.337  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:53:59.343  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:53:59.555  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:53:59.557  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:54:00.703  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:54:00.709  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:54:00.933  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:54:00.935  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:54:02.010  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:54:02.017  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:54:02.240  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:54:02.242  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:54:03.562  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:54:03.569  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:54:03.783  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:54:03.785  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:54:46.033  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:54:46.040  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:54:46.284  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:54:46.287  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:57:03.392  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:57:03.402  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:57:03.679  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:57:03.682  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 21:58:24.460  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 21:58:24.468  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 21:58:24.722  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 21:58:24.724  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:01:39.729  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:01:39.737  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:01:39.988  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:01:39.990  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:02:49.715  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:02:49.723  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:02:49.980  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:02:49.982  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:04:58.503  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[8, {}]}
+2021-07-13 22:04:58.514  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-13 22:04:58.803  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:04:58.805  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:04:58.986  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/comments/8', ip='127.0.0.1', classMethod='com.zxy.web.CommentController.comments', args=[8, {}]}
+2021-07-13 22:04:58.995  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : blog :: commentList
+2021-07-13 22:05:37.069  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:05:37.082  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:05:37.333  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:05:37.336  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:10:29.819  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:10:29.827  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:10:30.074  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:10:30.076  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:11:21.375  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:11:21.384  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:11:21.641  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:11:21.643  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:11:53.089  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:11:53.098  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:11:53.350  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:11:53.352  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:12:53.335  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 22:12:53.339  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 22:12:53.585  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:12:53.588  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:12:55.082  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:12:55.089  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:12:55.307  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:12:55.309  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:12:56.331  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zxy.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2021-07-13 22:12:56.334  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : types
+2021-07-13 22:12:56.535  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:12:56.538  INFO 27228 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:12:58.138  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/9', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[9, {}]}
+2021-07-13 22:12:58.146  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-13 22:12:58.468  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:12:58.470  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:12:58.606  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/comments/9', ip='127.0.0.1', classMethod='com.zxy.web.CommentController.comments', args=[9, {}]}
+2021-07-13 22:12:58.609  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : blog :: commentList
+2021-07-13 22:13:09.056  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:13:09.067  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:13:09.303  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:13:09.306  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:13:52.197  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:13:52.205  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:13:52.474  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:13:52.476  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:15:54.341  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 1, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:15:54.348  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:15:54.605  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:15:54.607  INFO 27228 --- [http-nio-8080-exec-1] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:15:56.476  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:15:56.484  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:15:56.704  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:15:56.706  INFO 27228 --- [http-nio-8080-exec-10] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:16:35.525  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:16:35.533  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:16:35.787  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:16:35.790  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:33:56.275  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.index', args=[Page request [number: 0, size 7, sort: updateTime: DESC], {}]}
+2021-07-13 22:33:56.282  INFO 27228 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : index
+2021-07-13 22:33:56.526  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:33:56.528  INFO 27228 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:34:18.247  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/6', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[6, {}]}
+2021-07-13 22:34:18.254  INFO 27228 --- [http-nio-8080-exec-8] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-13 22:34:18.541  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:34:18.543  INFO 27228 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-13 22:34:18.694  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/comments/6', ip='127.0.0.1', classMethod='com.zxy.web.CommentController.comments', args=[6, {}]}
+2021-07-13 22:34:18.697  INFO 27228 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : blog :: commentList
+2021-07-13 22:35:13.628  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/blog/11', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.blog', args=[11, {}]}
+2021-07-13 22:35:13.639  INFO 27228 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : blog
+2021-07-13 22:35:13.934  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-13 22:35:13.937  INFO 27228 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList

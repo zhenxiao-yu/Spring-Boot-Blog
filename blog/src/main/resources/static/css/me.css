@@ -171,24 +171,24 @@ body {
     color: #0B0C10 !important;
 }
 
-.m-green {
-    color: #59BA50 !important;
+.m-dark-red {
+    color: #644e5b !important;
 }
 
-.m-teal {
-    color: #00A174 !important;
+.m-deep-red {
+    color: #9c5a63 !important;
 }
 
-.m-dark-teal {
-    color: #008482 !important;
+.m-red{
+    color: #c86567 !important;
 }
 
-.m-blue {
-    color: #006678 !important;
+.m-grey{
+    color: #96a8bc !important;
 }
 
-.m-b-dark-blue {
-    color: #2F4858 !important;
+.m-dark-blue {
+    color: #314455 !important;
 }
 
 

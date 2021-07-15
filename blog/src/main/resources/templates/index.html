@@ -35,7 +35,7 @@
                         </div>
                         <!--post counter-->
                         <div class="right aligned column">
-                            Total <h2 class="ui header" id="header-counter"th:text="${page.totalElements}">
+                            Total <h2 class="ui header" id="header-counter" th:text="${page.totalElements}">
                             14 </h2> Posts
                         </div>
                     </div>
@@ -48,17 +48,24 @@
                         <!--reversed image and text in mobile platform-->
                         <div class="ui middle aligned mobile reversed stackable grid">
                             <div class="eleven wide column ">
-                                <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-post-title" th:text="${blog.title}">SAMPLE TITLE</a></h3>
-                                <p class="t-description hvr-skew-forward" th:text="|${blog.description}...|">SAMPLE BLOG DESCRIPTION</p>
+                                <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                                                         class="t-post-title" th:text="${blog.title}">SAMPLE TITLE</a>
+                                </h3>
+                                <p class="t-description hvr-skew-forward" th:text="|${blog.description}...|">SAMPLE BLOG
+                                    DESCRIPTION</p>
                                 <div class="ui grid">
                                     <!--avatar, name, publish date, view count-->
                                     <div class="eleven wide column">
                                         <div class="ui mini inverted horizontal link list">
                                             <div class="item">
                                                 <!--avatar-->
-                                                <img src="https://unsplash.it/100/100?image=1005" th:src="@{${blog.user.avatar}}" alt="" class="t-avatar ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005"
+                                                     th:src="@{${blog.user.avatar}}" alt=""
+                                                     class="t-avatar ui avatar image">
                                                 <!--name-->
-                                                <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">SAMPLE USER</a></div>
+                                                <div class="content"><a href="#" class="header"
+                                                                        th:text="${blog.user.nickname}">SAMPLE USER</a>
+                                                </div>
                                             </div>
                                             <!--date-->
                                             <div class="item">
@@ -67,13 +74,16 @@
                                             </div>
                                             <!--view-->
                                             <div class="item">
-                                                <i class="large eye icon"></i> <span th:text="${blog.views}"> VIEW COUNT </span>
+                                                <i class="large eye icon"></i> <span
+                                                    th:text="${blog.views}"> VIEW COUNT </span>
                                             </div>
                                         </div>
                                     </div>
                                     <!--post category-->
                                     <div class="right aligned five wide column">
-                                        <a href="#"  target="_blank" class="ui small inverted brown button m-padded-tiny m-text-thin " th:text="${blog.type.name}">SAMPLE CATEGORY</a>
+                                        <a href="#" target="_blank"
+                                           class="ui small inverted brown button m-padded-tiny m-text-thin "
+                                           th:text="${blog.type.name}">SAMPLE CATEGORY</a>
                                     </div>
                                 </div>
                             </div>
@@ -117,16 +127,19 @@
                                 <span class="t-section-title"> <i class="idea icon"></i>Categories</span>
                             </div>
                             <div class="right aligned column">
-                                <a href="#" class="hvr-pulse" th:href="@{types/-1}" target="_blank"><i class="plus square icon"></i></a>
+                                <a href="#" class="hvr-pulse" th:href="@{types/-1}" target="_blank"><i
+                                        class="plus square icon"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="ui inverted segment">
                         <div class="ui fluid inverted vertical menu animated fadeInRight">
-                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="hvr-grow-shadow item"
+                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank"
+                               class="hvr-grow-shadow item"
                                th:each="type : ${types}">
                                 <span class="t-section-text" th:text="${type.name}">SAMPLE CATEGORY</span>
-                                <div class="ui  basic left pointing label" style="background: #0F9E5E !important" th:text="${#arrays.length(type.blogs)}">
+                                <div class="ui  basic left pointing label" style="background: #c86567 !important"
+                                     th:text="${#arrays.length(type.blogs)}">
                                     SAMPLE NUMBER
                                 </div>
                             </a>
@@ -150,10 +163,13 @@
                         </div>
                     </div>
                     <div class=" ui inverted segment">
-                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui inverted brown left pointing label m-margin-tb-tiny hvr-grow-rotate" th:each="tag : ${tags}">
+                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank"
+                           style="background: #96a8bc !important"
+                           class="ui left pointing label m-margin-tb-tiny hvr-grow-rotate"
+                           th:each="tag : ${tags}">
                             <span style="color:black;">#</span>
-                            <span class="t-tag" th:text="${tag.name}">SAMPLE TAG</span>
-                            <div class="t-tag detail"  th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
+                            <span class="t-tag-text" th:text="${tag.name}">SAMPLE TAG</span>
+                            <div class="t-tag-text detail" th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
                         </a>
                     </div>
                 </div>
@@ -166,34 +182,40 @@
                         <span class="t-section-title "><i class="bookmark icon"></i>Latest Recommendations</span>
                     </div>
                     <div class="ui inverted segment animated flip" th:each="blog : ${recommendBlogs}">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-section-text hvr-ripple-in"
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                           class="t-section-text hvr-ripple-in"
                            th:text="${blog.title}">SAMPLE TITLE</a>
                     </div>
                 </div>
                 <!--latest recommendations-->
 
                 <!--contact qr codes-->
-                <h4 class="ui inverted horizontal divider header m-margin-top-large animated fadeInUpBig">Let's Stay In Touch</h4>
+                <h4 class="ui inverted horizontal divider header m-margin-top-large animated fadeInUpBig">Let's Stay In
+                    Touch</h4>
                 <div class="ui animated fadeInUpBig">
                     <div class="ui center grid">
                         <div class="eight wide column">
                             <div class="ui centered card hvr-outline-out animated fadeInUpBig" style="width: 8em">
-                                <img src="../static/images/snapchat.jpg" th:src="@{/images/snapchat.jpg}" alt="" class="ui t-image rounded image">
+                                <img src="../static/images/snapchat.jpg" th:src="@{/images/snapchat.jpg}" alt=""
+                                     class="ui t-image rounded image">
                             </div>
                         </div>
                         <div class="eight wide column">
                             <div class="ui centered card hvr-outline-out animated fadeInUpBig" style="width: 8em">
-                                <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" alt="" class="ui t-image rounded image">
+                                <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" alt=""
+                                     class="ui t-image rounded image">
                             </div>
                         </div>
                         <div class="eight wide column">
                             <div class="ui centered card hvr-outline-out animated fadeInUpBig" style="width: 8em">
-                                <img src="../static/images/twitter.jpg" th:src="@{/images/twitter.jpg}" alt="" class="ui t-image rounded image">
+                                <img src="../static/images/twitter.jpg" th:src="@{/images/twitter.jpg}" alt=""
+                                     class="ui t-image rounded image">
                             </div>
                         </div>
                         <div class="eight wide column">
                             <div class="ui centered card hvr-outline-out animated fadeInUpBig" style="width: 8em">
-                                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui t-image rounded image">
+                                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt=""
+                                     class="ui t-image rounded image">
                             </div>
                         </div>
                     </div>

@@ -13,16 +13,18 @@
     text-decoration: underline !important;
 }
 
+/*Post description*/
 .t-description {
     font-family: 'Alegreya Sans', sans-serif !important;
-    color: #6f7173 !important;
+    color: #96a8bc !important;
 }
 
 /*Post Title*/
 .t-post-title {
     font-family: 'Exo 2', sans-serif !important;
-    color: #d76f5c !important;
+    color: #c86567 !important;
     font-weight: 200 !important;
+    text-shadow: 1px 1px #5f4a56 !important;
     cursor: pointer;
 }
 
@@ -34,7 +36,7 @@
     margin-right: auto;
     height: 4px;
     width: 0px;
-    background-color: #b4cb18;
+    background-color: #96a8bc !important;
 }
 
 .t-post-title:hover::after {
@@ -42,10 +44,11 @@
     transition: all 0.8s;
 }
 
+/*Section text*/
 .t-section-text {
     font-family: 'Alegreya Sans', sans-serif !important;
-    font-size: 14px !important;
-    color: #6f7173 !important;
+    font-size: 16px !important;
+    color: #96a8bc !important;
 }
 
 
@@ -56,7 +59,7 @@
 }
 
 .t-thumbnail {
-    border: 2px solid #6f7173 !important;
+    border: 2px solid #96a8bc !important;
     border-radius: 10px !important;
     padding: 2px !important;
     width: 200px !important;
@@ -66,7 +69,7 @@
 .t-section-title {
     font-family: 'Exo 2', sans-serif !important;
     font-size: 16px !important;
-    color: #d76f5c !important ;
+    color: #c86567 !important ;
     font-weight: bold !important;
 }
 
@@ -75,7 +78,7 @@
 .t-section-text {
     font-family: 'Alegreya Sans', sans-serif !important;
     font-size: 14px !important;
-    color: #6f7173 !important;
+    color: #96a8bc !important;
 }
 
 .t-image {
@@ -90,10 +93,11 @@
     padding-left: 0.4em !important;
     padding-right: 0.4em !important;
     font-family: 'Exo 2', sans-serif !important;
-    color: #7cddfd !important;
+    color: #9c5a63 !important;
 }
 
-.t-tag {
-    color: #1b1c1d !important;
+.t-tag-text {
+    color: #314455 !important;
     font-family: 'Exo 2', sans-serif !important;
 }
+

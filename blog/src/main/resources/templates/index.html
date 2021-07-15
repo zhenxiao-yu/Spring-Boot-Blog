@@ -31,7 +31,7 @@
                 <div class="ui top attached inverted segment">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <h3 class="green ui header">Recent Posts</h3>
+                            <h3 class="olive ui header">Recent Posts</h3>
                         </div>
                         <!--post counter-->
                         <div class="right aligned column">
@@ -49,7 +49,7 @@
                         <div class="ui middle aligned mobile reversed stackable grid">
                             <div class="eleven wide column ">
                                 <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-post-title" th:text="${blog.title}">SAMPLE TITLE</a></h3>
-                                <p class="t-description m-text" th:text="|${blog.description}...|">SAMPLE BLOG DESCRIPTION</p>
+                                <p class="t-description hvr-skew-forward" th:text="|${blog.description}...|">SAMPLE BLOG DESCRIPTION</p>
                                 <div class="ui grid">
                                     <!--avatar, name, publish date, view count-->
                                     <div class="eleven wide column">
@@ -73,9 +73,7 @@
                                     </div>
                                     <!--post category-->
                                     <div class="right aligned five wide column">
-                                        <a href="#"  target="_blank"
-                                           class="ui violet label m-padded-tiny m-text-thin "
-                                           th:text="${blog.type.name}">SAMPLE CATEGORY</a>
+                                        <a href="#"  target="_blank" class="ui small inverted brown button m-padded-tiny m-text-thin " th:text="${blog.type.name}">SAMPLE CATEGORY</a>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +82,7 @@
                                 <!--thumbnail-->
                                 <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
                                     <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"
-                                         alt="" class="t-thumbnail m-mobile-hide ui rounded image">
+                                         alt="" class="t-thumbnail hvr-grow-shadow m-mobile-hide ui rounded image">
                                 </a>
                             </div>
 
@@ -128,7 +126,7 @@
                             <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="hvr-grow-shadow item"
                                th:each="type : ${types}">
                                 <span class="t-section-text" th:text="${type.name}">SAMPLE CATEGORY</span>
-                                <div class="ui violet left pointing label" th:text="${#arrays.length(type.blogs)}">
+                                <div class="ui  basic left pointing label" style="background: #0F9E5E !important" th:text="${#arrays.length(type.blogs)}">
                                     SAMPLE NUMBER
                                 </div>
                             </a>
@@ -143,7 +141,7 @@
                         <div class="ui two column grid">
                             <!--header-->
                             <div class="column">
-                                <span class="t-section-title"><i class="tags icon"></i>Top Tags </span>
+                                <span class="t-section-title"><i class="tags icon"></i>Top Tags</span>
                             </div>
                             <div class="right aligned column">
                                 <a href="#" class="hvr-pulse" th:href="@{tags/-1}" target="_blank"><i
@@ -152,8 +150,7 @@
                         </div>
                     </div>
                     <div class=" ui inverted segment">
-                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank"
-                           class="ui green left pointing label m-margin-tb-tiny hvr-grow-rotate" th:each="tag : ${tags}">
+                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui inverted brown left pointing label m-margin-tb-tiny hvr-grow-rotate" th:each="tag : ${tags}">
                             <span style="color:black;">#</span>
                             <span class="t-tag" th:text="${tag.name}">SAMPLE TAG</span>
                             <div class="t-tag detail"  th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
@@ -166,9 +163,9 @@
                 <div class="ui segments m-margin-top-large animated slideInRight">
                     <!--header segment-->
                     <div class="ui inverted segment">
-                        <span class="t-section-title hvr-grow"><i class="bookmark icon"></i>Latest Recommendations</span>
+                        <span class="t-section-title "><i class="bookmark icon"></i>Latest Recommendations</span>
                     </div>
-                    <div class="ui inverted segment animated tada" th:each="blog : ${recommendBlogs}">
+                    <div class="ui inverted segment animated flip" th:each="blog : ${recommendBlogs}">
                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="t-section-text hvr-ripple-in"
                            th:text="${blog.title}">SAMPLE TITLE</a>
                     </div>

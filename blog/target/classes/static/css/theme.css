@@ -13,6 +13,12 @@
     text-decoration: underline !important;
 }
 
+.t-info {
+    font-family: 'Exo 2', sans-serif !important;
+    color: #96a8bc !important;
+    font-size: x-small !important;
+}
+
 /*Post description*/
 .t-description {
     font-family: 'Alegreya Sans', sans-serif !important;
@@ -24,14 +30,13 @@
     font-family: 'Exo 2', sans-serif !important;
     color: #c86567 !important;
     font-weight: 200 !important;
-    text-shadow: 1px 1px #5f4a56 !important;
     cursor: pointer;
 }
 
 .t-post-title::after {
     content: "";
     display: block;
-    margin-top: 10px;
+    margin-top: 3px;
     margin-left: auto;
     margin-right: auto;
     height: 4px;
@@ -59,9 +64,10 @@
 }
 
 .t-thumbnail {
-    border: 2px solid #96a8bc !important;
+    border: 2px solid #5f4a56 !important;
     border-radius: 10px !important;
     padding: 2px !important;
+    height: 100px !important;
     width: 200px !important;
 }
 
@@ -87,17 +93,30 @@
     padding: 2px !important;
 }
 
-#header-counter {
+.t-header-counter {
     display: inline-block !important;
     font-weight: 600 !important;
     padding-left: 0.4em !important;
     padding-right: 0.4em !important;
     font-family: 'Exo 2', sans-serif !important;
-    color: #9c5a63 !important;
+    text-shadow: 1px 1px #5f4a56 !important;
+    color: #c86567 !important;
 }
+
+.t-header-text {
+    font-family: 'Exo 2', sans-serif !important;
+    color: #96a8bc !important;
+}
+
 
 .t-tag-text {
     color: #314455 !important;
     font-family: 'Exo 2', sans-serif !important;
+}
+
+.t-category-text {
+    font-family: 'Exo 2', sans-serif !important;
+    color: #314455 !important;
+    font-weight: 600 !important;
 }
 

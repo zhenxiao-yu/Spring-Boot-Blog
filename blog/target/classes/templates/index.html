@@ -31,11 +31,11 @@
                 <div class="ui top attached inverted segment">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <h3 class="olive ui header">Recent Posts</h3>
+                            <h3 class="ui t-header-counter header ">Recent Posts</h3>
                         </div>
                         <!--post counter-->
-                        <div class="right aligned column">
-                            Total <h2 class="ui header" id="header-counter" th:text="${page.totalElements}">
+                        <div class="t-header-text right aligned column">
+                            Total <h2 class="ui t-header-counter header hvr-buzz" th:text="${page.totalElements}">
                             14 </h2> Posts
                         </div>
                     </div>
@@ -49,9 +49,9 @@
                         <div class="ui middle aligned mobile reversed stackable grid">
                             <div class="eleven wide column ">
                                 <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
-                                                         class="t-post-title" th:text="${blog.title}">SAMPLE TITLE</a>
+                                                         class="t-post-title hvr-grow" th:text="${blog.title}">SAMPLE TITLE</a>
                                 </h3>
-                                <p class="t-description hvr-skew-forward" th:text="|${blog.description}...|">SAMPLE BLOG
+                                <p class="t-description" th:text="|${blog.description}...|">SAMPLE BLOG
                                     DESCRIPTION</p>
                                 <div class="ui grid">
                                     <!--avatar, name, publish date, view count-->
@@ -60,20 +60,19 @@
                                             <div class="item">
                                                 <!--avatar-->
                                                 <img src="https://unsplash.it/100/100?image=1005"
-                                                     th:src="@{${blog.user.avatar}}" alt=""
+                                                     th:src="@{${blog.user.avatar}}" alt+=""
                                                      class="t-avatar ui avatar image">
                                                 <!--name-->
-                                                <div class="content"><a href="#" class="header"
-                                                                        th:text="${blog.user.nickname}">SAMPLE USER</a>
+                                                <div class="content"><a href="#" class="header t-info hvr-pop" th:text="${blog.user.nickname}">SAMPLE USER</a>
                                                 </div>
                                             </div>
                                             <!--date-->
-                                            <div class="item">
+                                            <div class="item t-info">
                                                 <i class="large calendar icon"></i><span
                                                     th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"> SAMPLE DATE </span>
                                             </div>
                                             <!--view-->
-                                            <div class="item">
+                                            <div class="item t-info">
                                                 <i class="large eye icon"></i> <span
                                                     th:text="${blog.views}"> VIEW COUNT </span>
                                             </div>
@@ -82,7 +81,8 @@
                                     <!--post category-->
                                     <div class="right aligned five wide column">
                                         <a href="#" target="_blank"
-                                           class="ui small inverted brown button m-padded-tiny m-text-thin "
+                                           style="background: #c86567 !important"
+                                           class="ui mini button m-padded-tiny t-category-text"
                                            th:text="${blog.type.name}">SAMPLE CATEGORY</a>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                                 <!--thumbnail-->
                                 <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
                                     <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"
-                                         alt="" class="t-thumbnail hvr-grow-shadow m-mobile-hide ui rounded image">
+                                         alt="" class="t-thumbnail hvr-grow-rotate m-mobile-hide ui rounded image">
                                 </a>
                             </div>
 
@@ -105,11 +105,13 @@
                     <div class="ui middle aligned two column grid">
                         <div class="column">
                             <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}"
-                               class="m-green ui inverted button"><i class="angle double left icon"></i>Prev</a>
+                               style="background-color: #c86567 !important;"
+                               class="ui tiny button t-category-text hvr-sweep-to-left"><i class="angle double left icon"></i>Prev</a>
                         </div>
                         <div class="right aligned column">
                             <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}"
-                               class="m-green ui inverted button">Next<i class="angle double right icon"></i></a>
+                               style="background-color: #c86567 !important;"
+                               class="ui tiny button t-category-text hvr-sweep-to-right">Next<i class="angle double right icon"></i></a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +130,7 @@
                             </div>
                             <div class="right aligned column">
                                 <a href="#" class="hvr-pulse" th:href="@{types/-1}" target="_blank"><i
-                                        class="plus square icon"></i></a>
+                                        class="m-grey medium plus square icon"></i></a>
                             </div>
                         </div>
                     </div>
@@ -137,8 +139,9 @@
                             <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank"
                                class="hvr-grow-shadow item"
                                th:each="type : ${types}">
-                                <span class="t-section-text" th:text="${type.name}">SAMPLE CATEGORY</span>
-                                <div class="ui  basic left pointing label" style="background: #c86567 !important"
+                                <span class="t-section-text " th:text="${type.name}">SAMPLE CATEGORY</span>
+                                <div class="ui basic t-category-text left pointing label"
+                                     style="background: #c86567 !important"
                                      th:text="${#arrays.length(type.blogs)}">
                                     SAMPLE NUMBER
                                 </div>
@@ -158,7 +161,7 @@
                             </div>
                             <div class="right aligned column">
                                 <a href="#" class="hvr-pulse" th:href="@{tags/-1}" target="_blank"><i
-                                        class="plus square icon"></i></a>
+                                        class="m-grey medium plus square icon"></i></a>
                             </div>
                         </div>
                     </div>
@@ -167,7 +170,7 @@
                            style="background: #96a8bc !important"
                            class="ui left pointing label m-margin-tb-tiny hvr-grow-rotate"
                            th:each="tag : ${tags}">
-                            <span style="color:black;">#</span>
+                            <span style="color:#314455;">#</span>
                             <span class="t-tag-text" th:text="${tag.name}">SAMPLE TAG</span>
                             <div class="t-tag-text detail" th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
                         </a>
@@ -179,7 +182,7 @@
                 <div class="ui segments m-margin-top-large animated slideInRight">
                     <!--header segment-->
                     <div class="ui inverted segment">
-                        <span class="t-section-title "><i class="bookmark icon"></i>Latest Recommendations</span>
+                        <span class="t-section-title"><i class="bookmark icon"></i>Latest Recommendations</span>
                     </div>
                     <div class="ui inverted segment animated flip" th:each="blog : ${recommendBlogs}">
                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
@@ -190,7 +193,7 @@
                 <!--latest recommendations-->
 
                 <!--contact qr codes-->
-                <h4 class="ui inverted horizontal divider header m-margin-top-large animated fadeInUpBig">Let's Stay In
+                <h4 class="ui inverted horizontal divider header t-section-title m-margin-top-large animated fadeInUpBig">Let's Stay In
                     Touch</h4>
                 <div class="ui animated fadeInUpBig">
                     <div class="ui center grid">

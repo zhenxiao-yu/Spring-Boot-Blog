@@ -41,19 +41,22 @@
         <!--archive map-->
         <th:block th:each="item : ${archiveMap}">
             <!--year-->
-            <h3 class="ui center aligned header" th:text="${item.key}">SAMPLE YEAR</h3>
+            <h3 class="ui center aligned huge header" id="t-archive-yr" th:text="${item.key}">SAMPLE YEAR</h3>
             <div class="t-post-title ui fluid vertical inverted menu m-shadow-seg">
-                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item"
+                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item hvr-skew"
                    th:each="blog : ${item.value}">
 
-          <span>
+          <span style="color: #96a8bc !important" >
               <!--title-->
             <i class="bullseye icon"></i><span th:text="${blog.title}">SAMPLE TITLE</span>
               <!--date tag-->
-            <div class="ui purple basic left pointing label m-padded-mini "
+            <div class="ui basic left pointing horizontal label m-padded-tiny "
+                 style="background-color: #9c5a63  !important;"
                  th:text="${#dates.format(blog.updateTime,'MMM-dd')}">SAMPLE DATE</div>
           </span>
-                    <div class="ui left pointing label m-padded-mini " th:text="${blog.flag}">SAMPLE FLAG
+                    <div class="ui label m-padded-tiny t-category-text m-mobile-hide" th:text="${blog.flag}"
+                         style=" background-image: linear-gradient(to bottom, #c86567 , #65c8c6) !important">
+                        SAMPLE FLAG
                     </div>
                 </a>
             </div>
@@ -62,6 +65,8 @@
     </div>
 </div>
 <!--Center Content-->
+<br>
+<br>
 <br>
 <br>
 <!--Bottom footer-->

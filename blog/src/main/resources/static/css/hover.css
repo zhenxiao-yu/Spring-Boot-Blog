@@ -2051,7 +2051,7 @@
 .hvr-ripple-in:before {
   content: '';
   position: absolute;
-  border: #5f4a56 solid 3px;
+  border: #65c8c6 solid 3px;
   top: -12px;
   right: -12px;
   bottom: -12px;
@@ -2077,7 +2077,7 @@
 .hvr-outline-out:before {
   content: '';
   position: absolute;
-  border: #5f4a56 solid 4px;
+  border: #c86567 solid 4px;
   border-radius: 4px;
   top: 0;
   right: 0;

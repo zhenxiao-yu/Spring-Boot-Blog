@@ -28,7 +28,7 @@
             <!--main panel-->
             <div class="eleven wide column animated fadeInLeft">
                 <!--main panel header-->
-                <div class="ui top attached inverted segment">
+                <div class="ui top attached inverted segment m-shadow-seg">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
                             <h3 class="ui t-header-counter header ">Recent Posts</h3>
@@ -42,7 +42,7 @@
                 </div>
 
                 <!--main panel content-->
-                <div class="ui attached inverted segment">
+                <div class="ui attached inverted segment m-shadow-seg">
                     <!--post-->
                     <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
                         <!--reversed image and text in mobile platform-->
@@ -101,7 +101,7 @@
                 </div>
 
                 <!--main panel footer -->
-                <div class="ui bottom inverted attached segment" th:if="${page.totalPages}>1">
+                <div class="ui bottom inverted attached segment m-shadow-seg" th:if="${page.totalPages}>1">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
                             <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}"
@@ -121,7 +121,7 @@
             <!--side panel-->
             <div class="five wide column">
                 <!--category-->
-                <div class="ui segments animated fadeInDown">
+                <div class="ui segments animated fadeInDown m-shadow-seg">
                     <div class="ui inverted  segment">
                         <div class="ui two column grid">
                             <!--header-->
@@ -152,7 +152,7 @@
                 <!--category-->
 
                 <!--tag-->
-                <div class="ui inverted segments m-margin-top-large animated fadeInRight">
+                <div class="ui inverted segments m-margin-top-large animated fadeInRight m-shadow-seg">
                     <div class="ui inverted segment">
                         <div class="ui two column grid">
                             <!--header-->
@@ -179,7 +179,7 @@
                 <!--tag-->
 
                 <!--latest recommendations-->
-                <div class="ui segments m-margin-top-large animated slideInRight">
+                <div class="ui segments m-margin-top-large animated slideInRight m-shadow-seg">
                     <!--header segment-->
                     <div class="ui inverted segment">
                         <span class="t-section-title"><i class="bookmark icon"></i>Latest Recommendations</span>
@@ -193,8 +193,10 @@
                 <!--latest recommendations-->
 
                 <!--contact qr codes-->
-                <h4 class="ui inverted horizontal divider header t-section-title m-margin-top-large animated fadeInUpBig">Let's Stay In
-                    Touch</h4>
+                <h4 class="ui inverted horizontal divider header t-section-title m-margin-top-large animated fadeInUpBig"
+                style="color: #96a8bc  !important;">
+                    Let's Stay In
+                    Touch!</h4>
                 <div class="ui animated fadeInUpBig">
                     <div class="ui center grid">
                         <div class="eight wide column">

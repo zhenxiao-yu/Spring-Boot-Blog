@@ -7,6 +7,7 @@
     <!--page title-->
     <title>Category Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <!--custom css file-->
     <link rel="stylesheet" href="../static/css/me.css">
     <link rel="stylesheet" href="../static/css/theme.css">
 </head>
@@ -21,68 +22,83 @@
 <!--Navigation-->
 
 <!--Center Content-->
-<div class="m-container-small m-padded-tb-big animated fadeIn">
+<div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <!--header-->
-        <div class="ui top attached segment">
+        <div class="ui top attached inverted segment m-shadow-seg">
             <div class="ui middle aligned two column grid">
                 <div class="column">
-                    <h3 class="ui purple header">Category</h3>
+                    <h3 class="ui t-header-counter header">Category</h3>
                 </div>
-                <div class="right aligned column">
-                    Total <h2 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(types)}">
+                <div class="t-header-text right aligned column">
+                    Total <h2 class="ui t-header-counter header m-inline-block hvr-buzz" th:text="${#arrays.length(types)}">
                     SAMPLE NUMBER </h2> Categories
                 </div>
             </div>
         </div>
         <!--category counter-->
-        <div class="ui attached segment m-padded-tb-large">
-            <div class="ui labeled button m-margin-tb-tiny" th:each="type : ${types}">
-                <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic  button"
-                   th:classappend="${type.id==activeTypeId} ? 'purple'" th:text="${type.name}">SAME CATEGORY</a>
-                <div class="ui basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'purple'"
+        <div class="ui attached inverted segment m-padded-tb-large m-shadow-seg">
+            <!--category label-->
+            <div class="ui centered labeled button m-margin-tb-tiny hvr-wobble-vertical" th:each="type : ${types}">
+                <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="t-category-text t-grey-bg ui small button"
+                   th:classappend="${type.id==activeTypeId} ? 't-label-active'" th:text="${type.name}">SAME CATEGORY</a>
+
+                <div style ="background-color: #c86567 !important" class="t-category-text ui left pointing label"
+                     th:classappend="${type.id==activeTypeId} ? 'active'"
                      th:text="${#arrays.length(type.blogs)}">SAMPLE NUMBER
                 </div>
             </div>
+            <!--category label-->
         </div>
-
-        <div class="ui top attached purple segment">
+        <!--categorical posts-->
+        <div class="ui top attached inverted segment m-shadow-seg animated lightSpeedIn">
             <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
                 <div class="ui middle aligned mobile reversed stackable grid">
                     <div class="eleven wide column">
-                        <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
-                                                 class="m-black" th:text="${blog.title}">SAMPLE TITLE</a></h3>
-                        <p class="m-text" th:text="|${blog.description}...|">SAMPLE BLOG DESCRIPTION</p>
+                        <h3 class="ui header">
+                            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                               class="t-post-title hvr-grow animated bounce" th:text="${blog.title}">
+                                SAMPLE TITLE
+                            </a>
+                        </h3>
+                        <p class="t-description" th:text="|${blog.description}...|">SAMPLE BLOG DESCRIPTION</p>
                         <div class="ui grid">
+                            <!--avatar, name, publish date, view count-->
                             <div class="eleven wide column">
-                                <div class="ui mini horizontal link list">
+                                <div class="ui mini inverted horizontal link list">
                                     <div class="item">
+                                        <!--avatar-->
                                         <img src="https://unsplash.it/100/100?image=1005"
-                                             th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
-                                        <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">SAMPLE
+                                             th:src="@{${blog.user.avatar}}" alt="" class="t-avatar ui avatar image">
+                                        <div class="content"><a href="#" class="header t-info hvr-pop" th:text="${blog.user.nickname}">SAMPLE
                                             USER</a>
                                         </div>
                                     </div>
-                                    <div class="item">
+                                    <!--date-->
+                                    <div class="item t-info">
                                         <i class="calendar icon"></i><span
                                             th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">SAMPLE DATE</span>
                                     </div>
-                                    <div class="item">
+                                    <div class="item t-info">
                                         <i class="eye icon"></i> <span th:text="${blog.views}">VIEW COUNT</span>
                                     </div>
                                 </div>
                             </div>
+                            <!--post category label-->
                             <div class="right aligned five wide column">
-                                <a href="#" target="_blank" class="ui purple basic label m-padded-tiny m-text-thin"
-                                   th:text="${blog.type.name}">SAMPLE TYPE</a>
+                                <a href="#" target="_blank"
+                                   style="background: #c86567 !important"
+                                   class="ui mini button m-padded-tiny t-category-text"
+                                   th:text="${blog.type.name}">SAMPLE Category</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="five wide column">
+                        <!--thumbnail-->
                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
                             <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}" alt=""
-                                 class="ui rounded image">
+                                 class="t-thumbnail hvr-grow-rotate m-mobile-hide ui middle-aligned rounded image">
                         </a>
                     </div>
 
@@ -95,11 +111,13 @@
             <div class="ui middle aligned two column grid">
                 <div class="column">
                     <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}-1)}" th:unless="${page.first}"
-                       class="ui mini purple basic button"><i class="angle double left icon"></i>Prev</a>
+                       style="background-color: #c86567 !important;"
+                       class="ui tiny button t-category-text hvr-sweep-to-left"><i class="angle double left icon"></i>Prev</a>
                 </div>
                 <div class="right aligned column">
                     <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}+1)}" th:unless="${page.last}"
-                       class="ui mini purple basic button">Next<i class="angle double right icon"></i></a>
+                       style="background-color: #c86567 !important;"
+                       class="ui tiny button t-category-text hvr-sweep-to-left">Next<i class="angle double right icon"></i></a>
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@
 
 .t-menu:hover {
     font-family: 'Exo 2', sans-serif !important;
-    background-image: linear-gradient(to right, #314455 , transparent) !important;
+    background-image: linear-gradient(to bottom, #c86567 , transparent) !important;
 }
 
 /*Post Info*/
@@ -79,11 +79,20 @@
 }
 
 /*Thumbnail*/
-.t-thumbnail {
+.t-thumbnail-reduced{
     border: 1px solid #65c8c6 !important;
     border-radius: 10px !important;
     padding: 2px !important;
     height: 100px !important;
+    width: 200px !important;
+}
+
+/*Thumbnail*/
+.t-thumbnail {
+    border: 1px solid #65c8c6 !important;
+    border-radius: 10px !important;
+    padding: 2px !important;
+    height: 120px !important;
     width: 200px !important;
 }
 
@@ -137,6 +146,12 @@
 .t-category-text {
     font-family: 'Exo 2', sans-serif !important;
     color: #314455 !important;
-    font-weight: 600 !important;
 }
 
+
+
+.t-label-active {
+    -webkit-box-shadow: 0 0 5px 2px rgba(200, 101, 103, 0.6) !important;
+    -moz-box-shadow: 0 0 5px 2px rgba(200, 101, 103, 0.6) !important;
+    box-shadow: 0 0 5px 2px rgba(200, 101, 103, 0.6) !important;
+}

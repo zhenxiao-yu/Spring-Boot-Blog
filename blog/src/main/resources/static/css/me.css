@@ -209,6 +209,9 @@ body {
     color: #314455 !important;
 }
 
+.m-deep-red-bg {
+    background-color: #9c5a63 !important;
+}
 
 /*-----mobile-----*/
 .m-mobile-show {

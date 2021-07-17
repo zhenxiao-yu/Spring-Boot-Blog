@@ -26,7 +26,7 @@
 <div class="m-container-small m-padded-tb-big" style="height: 800px!important;">
     <div class="ui container">
         <!--header-->
-        <div class="ui top attached padded inverted segment m-shadow-seg">
+        <div class="ui top attached padded inverted segment m-shadow-seg animated fadeInDown">
             <div class="ui middle aligned two column grid">
                 <div class="column">
                     <h3 class="ui t-header-counter header">Archive</h3>
@@ -41,20 +41,20 @@
         <!--archive map-->
         <th:block th:each="item : ${archiveMap}">
             <!--year-->
-            <h3 class="ui center aligned huge header" id="t-archive-yr" th:text="${item.key}">SAMPLE YEAR</h3>
-            <div class="t-post-title ui fluid vertical inverted menu m-shadow-seg">
+            <h3 class="ui center aligned huge header animated lightSpeedIn" id="t-archive-yr" th:text="${item.key}">SAMPLE YEAR</h3>
+            <div class="t-post-title ui fluid vertical inverted menu m-shadow-seg animated fadeInUp">
                 <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item hvr-skew"
                    th:each="blog : ${item.value}">
 
           <span style="color: #96a8bc !important" >
               <!--title-->
-            <i class="bullseye icon"></i><span th:text="${blog.title}">SAMPLE TITLE</span>
+            <i class="clock icon"></i><span th:text="${blog.title}">SAMPLE TITLE</span>
               <!--date tag-->
             <div class="ui basic left pointing horizontal label m-padded-tiny "
                  style="background-color: #9c5a63  !important;"
                  th:text="${#dates.format(blog.updateTime,'MMM-dd')}">SAMPLE DATE</div>
           </span>
-                    <div class="ui label m-padded-tiny t-category-text m-mobile-hide" th:text="${blog.flag}"
+                    <div class="ui label m-padded-tiny t-category-text m-mobile-hide animated rubberBand" th:text="${blog.flag}"
                          style=" background-image: linear-gradient(to bottom, #c86567 , #65c8c6) !important">
                         SAMPLE FLAG
                     </div>

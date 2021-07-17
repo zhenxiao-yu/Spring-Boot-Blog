@@ -31,19 +31,29 @@
                     <h3 class="ui t-header-counter header">Tag</h3>
                 </div>
                 <div class="t-header-text right aligned column">
-                    Total <h2 class="ui t-header-counter header m-inline-block hvr-buzz" th:text="${#arrays.length(tags)}">
+                    Total <h2 class="ui t-header-counter header m-inline-block hvr-buzz"
+                              th:text="${#arrays.length(tags)}">
                     SAMPLE NUMBER </h2> Tags
                 </div>
             </div>
+
         </div>
         <!--tag counter-->
         <div class="ui attached inverted segment m-padded-tb-large m-shadow-seg">
             <a href="#" th:href="@{/tags/{id}(id=${tag.id})}"
-               class="ui basic left pointing large label m-margin-tb-tiny"
-               th:classappend="${tag.id==activeTagId} ? 'purple'" th:each="tag : ${tags}">
-                <span th:text="${tag.name}">SAMPLE TAG</span>
-                <div class="detail" th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
+               style="background: #96a8bc !important"
+               class="ui left pointing tiny label m-margin-tb-tiny"
+               th:if="${#arrays.length(tag.blogs)!=0}"
+               th:classappend="${tag.id==activeTagId} ? 't-tag-active'" th:each="tag : ${tags}">
+                <span style="color:#314455;">#</span>
+                <span class="t-tag-text" th:text="${tag.name}">SAMPLE TAG</span>
+                <div class="t-tag-text detail" th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
             </a>
+            <!--empty tags-->
+            <a href="#" style="background: #96a8bc !important" class="ui left pointing tiny label m-margin-tb-tiny t-tag-text">
+                ...empty tags
+            </a>
+
         </div>
 
         <!--posts sorted by tags-->
@@ -68,7 +78,8 @@
                                             <img src="https://unsplash.it/100/100?image=1005"
                                                  th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
                                             <div class="content">
-                                                <a href="#" class="header t-info hvr-pop" th:text="${blog.user.nickname}">
+                                                <a href="#" class="header t-info hvr-pop"
+                                                   th:text="${blog.user.nickname}">
                                                     SAMPLE USER
                                                 </a>
                                             </div>
@@ -97,8 +108,9 @@
                                     <a href="#" th:href="@{/tags/{id}(id=${tag.id})}"
                                        style="background: #96a8bc !important"
                                        class="ui left pointing label m-padded-mini t-tag-text"
-                                       th:classappend="${tag.id==activeTagId} ? 'm-shadow-seg basic'" th:each="tag : ${blog.tags}"
-                                       th:text="${tag.name}">SAMPLE TAG</a>
+                                       th:classappend="${tag.id==activeTagId} ? 't-tag-active'"
+                                       th:each="tag : ${blog.tags}"
+                                       th:text="${tag.name}"> SAMPLE TAG </a>
                                 </div>
                             </div>
 

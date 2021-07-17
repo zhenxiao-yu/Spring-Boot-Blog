@@ -40,11 +40,13 @@
         <div class="ui attached inverted segment m-padded-tb-large m-shadow-seg">
             <!--category label-->
             <div class="ui centered labeled button m-margin-tb-tiny hvr-wobble-vertical" th:each="type : ${types}">
-                <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="t-category-text ui small button"
-                   th:classappend="${type.id==activeTypeId} ? 't-label-active'" th:text="${type.name}">SAME CATEGORY</a>
+                <a href="#" th:href="@{/types/{id}(id=${type.id})}"
+                   style="background-color: #96a8bc !important;"
+                   class="t-category-text ui small button"
+                   th:classappend="${type.id==activeTypeId} ? 't-category-active'" th:text="${type.name}">SAME CATEGORY</a>
 
                 <div style ="background-color: #c86567 !important" class="t-category-text ui left pointing label"
-                     th:classappend="${type.id==activeTypeId} ? 'active'"
+                     th:classappend="${type.id==activeTypeId} ? 't-category-active'"
                      th:text="${#arrays.length(type.blogs)}">SAMPLE NUMBER
                 </div>
             </div>

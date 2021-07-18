@@ -50,10 +50,17 @@
                 <div class="t-tag-text detail" th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
             </a>
             <!--empty tags-->
-            <a href="#" style="background: #96a8bc !important" class="ui left pointing tiny label m-margin-tb-tiny t-tag-text">
-                ...empty tags
-            </a>
-
+            <span id="emptyTags" style="display: none" >
+                <a href="#" th:href="@{/tags/{id}(id=${tag.id})}"
+                   style="background: #96a8bc !important;"
+                   class="ui left pointing tiny label m-margin-tb-tiny"
+                   th:if="${#arrays.length(tag.blogs)==0}"
+                   th:classappend="${tag.id==activeTagId} ? 't-tag-active'" th:each="tag : ${tags}">
+                    <span style="color:#314455;">#</span>
+                    <span class="t-tag-text" th:text="${tag.name}">SAMPLE TAG</span>
+                    <div class="t-tag-text detail" th:text="${#arrays.length(tag.blogs)}">SAMPLE NUMBER</div>
+                </a>
+            </span>
         </div>
 
         <!--posts sorted by tags-->
@@ -143,10 +150,9 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-<!--Center Content-->
+
 <br>
 <br>
 
@@ -169,6 +175,16 @@
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
+    //tag showEmpty control
+    function showEmpty() {
+        var tags = document.getElementById("emptyTags");
+        if (tags.style.display === "none") {
+            tags.style.display = "inline-block";
+        } else {
+            tags.style.display = "none";
+        }
+    }
 
 </script>
 </body>

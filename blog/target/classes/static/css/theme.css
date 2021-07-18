@@ -13,12 +13,11 @@
 .t-menu {
     font-family: 'Exo 2', sans-serif !important;
     font-weight: bold !important;
-    font-size: 15px !important;
 }
 
 .t-menu:hover {
     font-family: 'Exo 2', sans-serif !important;
-    background-image: linear-gradient(to bottom, #c86567 , transparent) !important;
+    background-image: linear-gradient(to top, #314455 , transparent) !important;
 }
 
 /*Post Info*/
@@ -78,7 +77,7 @@
     font-size: 16px !important;
 }
 
-/*Thumbnail*/
+/*Thumbnail for index page*/
 .t-thumbnail-reduced{
     border: 1px solid #65c8c6 !important;
     border-radius: 10px !important;
@@ -94,6 +93,22 @@
     padding: 2px !important;
     height: 120px !important;
     width: 200px !important;
+}
+
+/*footer Title*/
+.t-footer-title {
+    font-family: 'Exo 2', sans-serif !important;
+    font-size: 15px !important;
+    color: #c86567 !important ;
+}
+
+/*footer Title*/
+.t-footer-text {
+    font-family: 'Exo 2', sans-serif !important;
+    font-size: 14px !important;
+    color: #96a8bc !important ;
+    line-height: 1.6 !important ;
+
 }
 
 /*Section Title*/

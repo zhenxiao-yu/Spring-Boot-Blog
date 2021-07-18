@@ -37,7 +37,7 @@ public class IndexController {
         //display categories in a list
         model.addAttribute("types", typeService.listTypeTop(6));
         //display tags in a list
-        model.addAttribute("tags", tagService.listTagTop(10));
+        model.addAttribute("tags", tagService.listTagTop(12));
         //display recent posts in recommendation area
         model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
         return "index";
@@ -64,7 +64,7 @@ public class IndexController {
     //set recommended stories in the footer
     @GetMapping("/footer/newblog")
     public String newblogs(Model model) {
-        model.addAttribute("newblogs", blogService.listRecommendBlogTop(3));
+        model.addAttribute("newblogs", blogService.listRecommendBlogTop(5));
         return "_fragments :: newblogList";
     }
 

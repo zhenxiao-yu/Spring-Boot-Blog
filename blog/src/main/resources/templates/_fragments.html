@@ -65,48 +65,60 @@
 
 <!--Bottom footer-->
 <footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive m-shadow-small">
-    <div class="ui center aligned container">
+    <div class="ui container">
         <div class="ui inverted divided stackable grid">
-            <div class="three wide column">
-                <!--qr code-->
 
-                <div class="ui inverted link list">
-                    <div class="item">
-                        <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" class="ui rounded image"
-                             alt="" style="width: 110px">
-                    </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header t-footer-title">Share This Page</h4>
+                <!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_google_gmail"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_facebook"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_email"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_reddit"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_blogger"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_facebook_messenger"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_twitter"></a>
+                    <a style="margin-bottom:1em; margin-right:1em" class="a2a_button_wechat"></a>
                 </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
             </div>
             <!--latest posts-->
-            <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Top Posts</h4>
+            <div class="five wide column">
+                <h4 class="ui inverted header t-footer-title">Trending Posts</h4>
                 <div id="newblog-container">
                     <div class="ui inverted link list" th:fragment="newblogList">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin"
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item t-footer-text "
                            th:each="blog : ${newblogs}" th:text="${blog.title}">SAMPLE POST</a>
                     </div>
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Contact Me</h4>
+                <h4 class="ui inverted header t-footer-title">Contact Me</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">Email：zyu347@uwo.ca</a>
-                    <a href="#" class="item m-text-thin">Phone：(306)581-5556</a>
-                    <a href="#" class="item m-text-thin">Instagram：m4rkyu</a>
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="envelope outline icon"></i>: zyu347@uwo.ca</a>
+                    <a href="#" class=" item t-footer-text m-opacity-mini"><i class="mobile icon"></i>: (306)581-5556</a>
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="instagram icon"></i>: m4rkyu</a>
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="github icon"></i>: zhenxiao-yu</a>
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="slack icon"></i>: Mark Yu</a>
                 </div>
             </div>
             <!--blog description-->
-            <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Thank you for visiting my blog!</h4>
-                <p class="m-text-thin m-text-spaced m-opacity-mini">This is my personal blog, I will be posting
+            <div class="five wide column">
+                <h4 class="ui inverted header t-footer-title ">Hello! My name is ZhenXiao Yu</h4>
+                <p class="t-footer-text m-opacity-mini">This is my personal blog, I will be posting
                     content related to programming,
                     game development, and other things I find worthy of discussion. I hope you find something
                     useful...</p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - <span
+        <div class="ui center aligned container">
+            <p class="t-footer-text m-text-spaced m-opacity-tiny">Copyright © 2020 - <span
                 th:text="${#dates.year(#dates.createNow())}">CURRENT YEAR</span> ZhenXiao Yu</p>
+        </div>
     </div>
 </footer>
 <!--Bottom footer-->

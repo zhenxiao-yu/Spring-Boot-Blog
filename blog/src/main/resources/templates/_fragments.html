@@ -67,7 +67,44 @@
 <footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive m-shadow-small">
     <div class="ui container">
         <div class="ui inverted divided stackable grid">
+            <!--blog description-->
+            <div class="five wide column">
+                <h4 class="ui inverted header t-footer-title ">Hey there, my name is Mark</h4>
+                <p class="t-footer-text m-opacity-mini">
+                    I am a programmer, artist and game developer.
+                </p>
+                <p class="t-footer-text m-opacity-mini">
+                    I live in Ontario as a full-time student at Western University.
+                    You can learn more about my life
+                    <a style="color: #96a8bc;text-decoration: underline !important" th:href="@{/about}"> here </a>.
+                </p>
+                <p class="t-footer-text m-opacity-mini">
+                    This site hosts all of my coding tutorials, artworks, projects, and more.
+                    I hope you find something useful or inspiring during your exploration.
+                </p>
 
+
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header t-footer-title">Contact Me</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="envelope outline icon"></i>: zyu347@uwo.ca</a>
+                    <a href="#" class=" item t-footer-text m-opacity-mini"><i class="mobile icon"></i>: (306)581-5556</a>
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="instagram icon"></i>: m4rkyu</a>
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="github icon"></i>: zhenxiao-yu</a>
+                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="slack icon"></i>: Mark Yu</a>
+                </div>
+            </div>
+            <!--latest posts-->
+            <div class="five wide column">
+                <h4 class="ui inverted header t-footer-title">Trending Posts</h4>
+                <div id="newblog-container">
+                    <div class="ui inverted link list" th:fragment="newblogList">
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item t-footer-text hvr-skew-forward"
+                           th:each="blog : ${newblogs}" th:text="${blog.title}">SAMPLE POST</a>
+                    </div>
+                </div>
+            </div>
             <div class="three wide column">
                 <h4 class="ui inverted header t-footer-title">Share This Page</h4>
                 <!-- AddToAny BEGIN -->
@@ -85,38 +122,13 @@
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
             </div>
-            <!--latest posts-->
-            <div class="five wide column">
-                <h4 class="ui inverted header t-footer-title">Trending Posts</h4>
-                <div id="newblog-container">
-                    <div class="ui inverted link list" th:fragment="newblogList">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item t-footer-text "
-                           th:each="blog : ${newblogs}" th:text="${blog.title}">SAMPLE POST</a>
-                    </div>
-                </div>
-            </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header t-footer-title">Contact Me</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="envelope outline icon"></i>: zyu347@uwo.ca</a>
-                    <a href="#" class=" item t-footer-text m-opacity-mini"><i class="mobile icon"></i>: (306)581-5556</a>
-                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="instagram icon"></i>: m4rkyu</a>
-                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="github icon"></i>: zhenxiao-yu</a>
-                    <a href="#" class="item t-footer-text m-opacity-mini"><i class="slack icon"></i>: Mark Yu</a>
-                </div>
-            </div>
-            <!--blog description-->
-            <div class="five wide column">
-                <h4 class="ui inverted header t-footer-title ">Hello! My name is ZhenXiao Yu</h4>
-                <p class="t-footer-text m-opacity-mini">This is my personal blog, I will be posting
-                    content related to programming,
-                    game development, and other things I find worthy of discussion. I hope you find something
-                    useful...</p>
-            </div>
+
+
         </div>
         <div class="ui inverted section divider"></div>
         <div class="ui center aligned container">
-            <p class="t-footer-text m-text-spaced m-opacity-tiny">Copyright © 2020 - <span
+            <img class="ui centered rounded image t-logo" src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}">
+            <p class="t-footer-text m-text-spaced m-opacity-tiny m-margin-top">Copyright © 2020 - <span
                 th:text="${#dates.year(#dates.createNow())}">CURRENT YEAR</span> ZhenXiao Yu</p>
         </div>
     </div>

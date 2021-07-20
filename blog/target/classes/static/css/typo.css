@@ -1,10 +1,14 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
 
 .typo p {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.8;
   text-align: justify;
+  color: #96a8bc !important;
+  font-family: 'Alegreya Sans', sans-serif !important;
 }
 
 .typo li {
@@ -47,7 +51,7 @@
 /* 块/段落引用 */
 .typo blockquote {
   position: relative;
-  color: #999;
+  color: #c86567;
   font-weight: 400;
   border-left: 1px solid #1abc9c;
   padding-left: 1em;
@@ -79,6 +83,8 @@
 .typo address, caption, cite, code, dfn, em, th, var {
   font-style: normal;
   font-weight: 400;
+  font-family: 'Alegreya Sans', sans-serif !important;
+  color: #96a8bc !important;
 }
 
 /* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
@@ -97,7 +103,7 @@
 
 /* 统一上标和下标 */
 .typo sub,.typo  sup {
-  font-size: 75%;
+  font-size: 85%;
   line-height: 0;
   position: relative;
 }
@@ -116,7 +122,7 @@
 
 /* 让链接在 hover 状态下显示下划线 */
 .typo a {
-  color: #1abc9c;
+  color: #c86567;
 }
 
 .typo a:hover {
@@ -124,12 +130,12 @@
 }
 
 .typo a {
-  border-bottom: 1px solid #1abc9c;
+  border-bottom: 1px solid #65c8c6;
 }
 
 .typo a:hover {
-  border-bottom-color: #555;
-  color: #555;
+  border-bottom-color: #c86567;
+  color: #65c8c6;
   text-decoration: none;
 }
 
@@ -150,8 +156,8 @@
 
 /* 标记，类似于手写的荧光笔的作用 */
 .typo mark {
-  background: #fffdd1;
-  border-bottom: 1px solid #ffedce;
+  background: #65c8c6;
+  border-bottom: 1px solid #c86567;
   padding: 2px;
   margin: 0 5px;
 }
@@ -162,8 +168,8 @@
 }
 
 .typo pre {
-  background: #c86567;
-  border: 3px solid #96a8bc;
+  background: #314455;
+  border: 1px solid #65c8c6 ;
   padding: 1em 1.5em;
   display: block;
   -webkit-overflow-scrolling: touch;
@@ -172,7 +178,7 @@
 /* 一致化 horizontal rule */
 .typo hr {
   border: none;
-  border-bottom: 1px solid #96a8bc;
+  border-bottom: 1px solid #65c8c6;
   margin-bottom: 0.8em;
   height: 10px;
 }
@@ -182,13 +188,13 @@
   /* 图片说明 */
 .typo figcaption {
   font-size: 0.9em;
-  color: #96a8bc;
+  color: #9c5a63;
 }
 
 /* bolded */
 .typo strong,.typo  b {
   font-weight: bold;
-  color: #96a8bc;
+  color: #c86567;
 }
 
 /* 可拖动文件添加拖动手势 */
@@ -233,7 +239,7 @@
 .typo h1,.typo  h2,.typo  h3,.typo  h4,.typo  h5,.typo  h6 {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
   font-weight: 100;
-  color: #96a8bc;
+  color: #c86567;
   line-height: 1.35;
 }
 
@@ -287,13 +293,13 @@
 
 /* 同 ul/ol，在文章中应用 table 基本格式 */
 .typo table th, .typo table td, .typo-table th, .typo-table td, .typo table caption {
-  border: 1px solid #96a8bc;
+  border: 1px solid #ddd;
   padding: 0.5em 1em;
   color: #666;
 }
 
 .typo table th, .typo-table th {
-  background: #96a8bc;
+  background: #fbfbfb;
 }
 
 .typo table thead th, .typo-table thead th {
@@ -311,7 +317,7 @@
 }
 
 .typo-em, .typo em, legend, caption {
-  color: #96a8bc;
+  color: #75d7e2;
   font-weight: inherit;
 }
 

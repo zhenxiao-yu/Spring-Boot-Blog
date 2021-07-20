@@ -58,7 +58,10 @@
         <div class="ui attached padded inverted segment">
             <!--post content-->
             <div class="ui right aligned basic segment">
-                <div class="ui orange basic label" th:text="${blog.flag}">SAMPLE FLAG</div>
+                <div class="ui large label m-padded-tiny t-category-text m-mobile-hide animated rubberBand" th:text="${blog.flag}"
+                     style=" background-image: linear-gradient(to bottom, #c86567 , #65c8c6) !important">
+                    SAMPLE FLAG
+                </div>
             </div>
             <!--post title-->
             <h2 class="ui center aligned header" th:text="${blog.title}">SAMPLE TITLE</h2>

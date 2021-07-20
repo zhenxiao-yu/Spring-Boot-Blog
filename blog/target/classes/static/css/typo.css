@@ -162,8 +162,8 @@
 }
 
 .typo pre {
-  background: #f8f8f8;
-  border: 1px solid #ddd;
+  background: #c86567;
+  border: 3px solid #96a8bc;
   padding: 1em 1.5em;
   display: block;
   -webkit-overflow-scrolling: touch;
@@ -172,7 +172,7 @@
 /* 一致化 horizontal rule */
 .typo hr {
   border: none;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid #96a8bc;
   margin-bottom: 0.8em;
   height: 10px;
 }
@@ -182,13 +182,13 @@
   /* 图片说明 */
 .typo figcaption {
   font-size: 0.9em;
-  color: #888;
+  color: #96a8bc;
 }
 
 /* bolded */
 .typo strong,.typo  b {
   font-weight: bold;
-  color: #ffffff;
+  color: #96a8bc;
 }
 
 /* 可拖动文件添加拖动手势 */
@@ -233,7 +233,7 @@
 .typo h1,.typo  h2,.typo  h3,.typo  h4,.typo  h5,.typo  h6 {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
   font-weight: 100;
-  color: #ffffff;
+  color: #96a8bc;
   line-height: 1.35;
 }
 
@@ -287,13 +287,13 @@
 
 /* 同 ul/ol，在文章中应用 table 基本格式 */
 .typo table th, .typo table td, .typo-table th, .typo-table td, .typo table caption {
-  border: 1px solid #ddd;
+  border: 1px solid #96a8bc;
   padding: 0.5em 1em;
   color: #666;
 }
 
 .typo table th, .typo-table th {
-  background: #fbfbfb;
+  background: #96a8bc;
 }
 
 .typo table thead th, .typo-table thead th {
@@ -311,7 +311,7 @@
 }
 
 .typo-em, .typo em, legend, caption {
-  color: #fdfdfd;
+  color: #96a8bc;
   font-weight: inherit;
 }
 

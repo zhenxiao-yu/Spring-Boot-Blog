@@ -72,6 +72,17 @@
     transition: all 0.8s;
 }
 
+/*blog Title*/
+.t-blog-text {
+    font-family: 'Alegreya Sans', sans-serif !important;
+    color: #96a8bc !important;
+}
+
+/*blog Title*/
+.t-blog-title {
+    font-family: 'Exo 2', sans-serif !important;
+    color: #96a8bc !important;
+}
 /*Section text*/
 .t-section-text {
     font-family: 'Alegreya Sans', sans-serif !important;

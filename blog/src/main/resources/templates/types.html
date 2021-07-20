@@ -46,6 +46,7 @@
                    th:classappend="${type.id==activeTypeId} ? 't-category-active'" th:text="${type.name}">SAME CATEGORY</a>
 
                 <div style ="background-color: #c86567 !important" class="t-category-text ui left pointing label"
+                     th:classappend="${type.id==activeTypeId} ? 't-category-active'"
                      th:text="${#arrays.length(type.blogs)}">SAMPLE NUMBER
                 </div>
             </div>

@@ -50,12 +50,12 @@
             </div>
         </div>
 
-        <div class="ui attached inverted segment">
+        <div class="ui attached inverted segment m-shadow-seg">
             <!--thumbnail picture-->
             <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}" alt=""
-                 class="ui fluid rounded image">
+                 class="ui fluid rounded image t-thumbnail-large">
         </div>
-        <div class="ui attached padded inverted segment">
+        <div class="ui attached padded inverted segment m-shadow-seg">
             <!--post content-->
             <div class="ui right aligned basic segment">
                 <div class="ui large label m-padded-tiny t-category-text m-mobile-hide animated rubberBand" th:text="${blog.flag}"
@@ -121,25 +121,24 @@
             <br>
             <div class="m-padded-lr-responsive">
                 <div class="ui divider"></div>
-                <div class="ui basic purple left pointing label" th:each="tag : ${blog.tags}" th:text="${tag.name}">
+                <div class="ui left pointing label t-tag-text m-margin-tb-tiny hvr-grow-rotate"
+                     style="background: #96a8bc !important"
+                     th:each="tag : ${blog.tags}"
+                     th:text="${tag.name}">
                     SAMPLE TAG
                 </div>
             </div>
             <br>
-
+            <br>
+            <br>
             <!--donate-->
             <div th:if="${blog.appreciation}">
                 <div class="ui center aligned basic segment">
-                    <button id="payButton" class="ui orange basic circular button">Donate</button>
+                    <button id="payButton" style="background-color: #c86567 !important;" class="ui circular t-category-text button hvr-pulse-grow">Donate</button>
                 </div>
-                <div class="ui payQR flowing popup transition hidden">
-                    <div class="ui orange basic label">
-                        <div class="ui images" style="font-size: inherit !important;">
-                            <div class="image">
-                                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt=""
-                                     class="ui rounded bordered image" style="width: 120px">
-                                <div>Wechat</div>
-                            </div>
+                <div class="ui payQR flowing inverted popup transition hidden m-shadow-seg">
+                    <div style="background-color: #1b1c1d !important;" class="ui label">
+                        <div class="ui images t-section-title" style="font-size: inherit !important;">
                             <div class="image">
                                 <img src="../static/images/PayPal.jpg" th:src="@{/images/Paypal.jpg}" alt=""
                                      class="ui rounded bordered image" style="width: 120px">
@@ -153,14 +152,16 @@
         </div>
 
         <!--post information-->
-        <div class="ui attached positive message" th:if="${blog.shareStatement}">
+        <div class="ui attached inverted segment m-shadow-seg" th:if="${blog.shareStatement}">
             <div class="ui middle aligned grid">
-                <div class="eleven wide column">
+                <div class="eleven wide column t-blog-title">
                     <ui class="list">
-                        <li>Author：<span th:text="${blog.user.nickname}">SAMPLE USER</span><a href="#"
-                                                                                              th:href="@{/about}"
-                                                                                              target="_blank">（Contact
-                            Author）</a></li>
+                        <li>Author：<span th:text="${blog.user.nickname}">SAMPLE USER</span>
+                            <a href="#"
+                               id="t-archive-yr"
+                               class="hvr-skew"
+                               th:href="@{/about}"
+                               target="_blank">（ Author Details）</a></li>
                         <li>Published On：<span th:text="${#dates.format(blog.createTime,'yyyy-MM-dd HH:mm')}">SAMPLE DATE</span>
                         </li>
                         <li>Last Updated On：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">SAMPLE DATE</span>
@@ -169,41 +170,41 @@
                     </ui>
                 </div>
                 <div class="five wide column">
-                    <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt=""
-                         class="ui right floated rounded bordered image" style="width: 110px">
+                    <img src="../static/images/snapchat.jpg" th:src="@{/images/snapchat.jpg}" alt=""
+                         class="ui right floated rounded bordered tiny image" style="width: 80px">
                 </div>
             </div>
         </div>
         <!--post information-->
 
         <!--Comment Section-->
-        <div class="ui bottom attached segment" th:if="${blog.commentabled}">
-            <div id="comment-container" class="ui purple segment">
+        <div class="ui bottom attached inverted segment m-shadow-seg" th:if="${blog.commentabled}">
+            <div id="comment-container" class="ui inverted segment">
                 <div th:fragment="commentList">
                     <div class="ui threaded comments" style="max-width: 100%;">
                         <!--comment section header-->
-                        <h3 class="ui dividing header">Comment</h3>
+                        <h3 class="ui dividing inverted header t-blog-title">Comment</h3>
                         <!--comment thread-->
-                        <div class="comment" th:each="comment : ${comments}">
+                        <div class=" comment" th:each="comment : ${comments}">
                             <a class="avatar">
                                 <img src="https://unsplash.it/100/100?image=1005" th:src="@{${comment.avatar}}">
                             </a>
                             <div class="content">
-                                <a class="author">
+                                <a class="author t-blog-title">
                                     <span th:text="${comment.nickname}">SAMPLE USER</span>
                                     <div class="ui mini basic purple left pointing label m-padded-mini"
                                          th:if="${comment.adminComment}">ADMIN
                                     </div>
                                 </a>
                                 <div class="metadata">
-                                    <span class="date"
+                                    <span class="date t-comment-info-small "
                                           th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">SAMPLE TIME</span>
                                 </div>
-                                <div class="text" th:text="${comment.content}">
+                                <div class="text t-description" th:text="${comment.content}">
                                     SAMPLE COMMENT TEXT
                                 </div>
                                 <div class="actions">
-                                    <a class="reply" data-commentid="1" data-commentnickname="Matt"
+                                    <a class="reply t-info-small" data-commentid="1" data-commentnickname="Matt"
                                        th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}"
                                        onclick="reply(this)">REPLY</a>
                                 </div>
@@ -214,22 +215,23 @@
                                         <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.avatar}}">
                                     </a>
                                     <div class="content">
-                                        <a class="author">
+                                        <a class="author t-blog-title">
                                             <span th:text="${reply.nickname}">SAMPLE USER</span>
-                                            <div class="ui mini basic purple left pointing label m-padded-mini"
+                                            <div class="ui mini t-category-text left pointing label m-padded-tiny"
+                                                 style="background-color: #c86567 !important;"
                                                  th:if="${reply.adminComment}">ADMIN
                                             </div>
-                                            &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-purple">@ SAMPLE USER</span>
+                                            &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ SAMPLE USER</span>
                                         </a>
                                         <div class="metadata">
-                                            <span class="date"
+                                            <span class="date t-comment-info-small "
                                                   th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">SAMPLE TIME</span>
                                         </div>
-                                        <div class="text" th:text="${reply.content}">
+                                        <div class="text t-description" th:text="${reply.content}">
                                             SAMPLE COMMENT TEXT
                                         </div>
                                         <div class="actions">
-                                            <a class="reply" data-commentid="1" data-commentnickname="Matt"
+                                            <a class="reply t-info-small" data-commentid="1" data-commentnickname="Matt"
                                                th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}"
                                                onclick="reply(this)">Reply</a>
                                         </div>
@@ -242,11 +244,11 @@
             </div>
 
             <!--comment forms-->
-            <div id="comment-form" class="ui form">
+            <div id="comment-form" class="ui inverted form">
                 <input type="hidden" name="blog.id" th:value="${blog.id}">
                 <input type="hidden" name="parentComment.id" value="-1">
                 <!--comment text-->
-                <div class="field">
+                <div class=" field">
                     <textarea name="content" placeholder="Leave a comment..." maxlength="500"></textarea>
                 </div>
 
@@ -269,7 +271,9 @@
                     </div>
                     <!--submit button-->
                     <div class="field  m-margin-bottom-small m-mobile-wide">
-                        <button id="commentpost-btn" type="button" class="ui purple button m-mobile-wide"><i
+                        <button id="commentpost-btn" type="button"
+                                style="background-color: #c86567 !important;"
+                                class="ui t-category-text button m-mobile-wide hvr-sweep-to-top"><i
                                 class="edit icon"></i>Submit
                         </button>
                     </div>

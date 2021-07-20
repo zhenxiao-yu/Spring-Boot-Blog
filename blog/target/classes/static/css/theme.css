@@ -35,6 +35,14 @@
     margin-right: 20px !important;
 }
 
+/*comment time*/
+.t-comment-info-small {
+    font-family: 'Exo 2', sans-serif !important;
+    color: #9c5a63 !important;
+    font-size: small !important;
+    margin-right: 20px !important;
+}
+
 
 /*Post description*/
 .t-description {
@@ -115,6 +123,13 @@
     width: 200px !important;
 }
 
+/*Thumbnail*/
+.t-thumbnail-large {
+    border: 1px solid #65c8c6 !important;
+    border-radius: 10px !important;
+    padding: 2px !important;
+}
+
 /*footer Title*/
 .t-footer-title {
     font-family: 'Exo 2', sans-serif !important;
@@ -186,7 +201,9 @@
 
 
 .t-category-active {
-    background-image: linear-gradient(to left, #65c8c6 , transparent) !important;
+    -webkit-box-shadow: 0 0 1px 2px #65c8c6 !important;
+    -moz-box-shadow: 0 0 1px 2px #65c8c6 !important;
+    box-shadow: 0 0 1px 2px #65c8c6 !important;
 }
 
 .t-tag-active {

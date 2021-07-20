@@ -27,6 +27,15 @@
     font-size: x-small !important;
 }
 
+/*Post Info*/
+.t-info-small {
+    font-family: 'Exo 2', sans-serif !important;
+    color: #65c8c6 !important;
+    font-size: small !important;
+    margin-right: 20px !important;
+}
+
+
 /*Post description*/
 .t-description {
     font-family: 'Alegreya Sans', sans-serif !important;

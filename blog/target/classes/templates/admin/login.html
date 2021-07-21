@@ -17,25 +17,24 @@
 <br>
 <br>
 <!--Login in -->
-<div class="m-container-small m-padded-tb-massive" style="max-width: 30em !important;">
+<div class="m-container-small m-padded-tb-massive" style="max-width: 35em !important;">
     <div class="ur container">
         <div class="ui middle aligned center aligned grid">
             <div class="column">
-                <h2 class="ui purple image header">
-                    <div class="content">
-                        Please Log In
-                    </div>
-                </h2>
                 <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
-                    <div class="ui  segment">
+                    <div class="ui inverted segment m-shadow-seg m-padded-tb-massive m-padded-large" style="height: 600px!important;">
+                        <img class="ui centered rounded medium image" src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}">
+                        <h3 class="ui huge header t-blog-title" >
+                                Login
+                        </h3>
                         <div class="field">
-                            <div class="ui left icon input">
+                            <div class="ui left icon inverted input">
                                 <i class="user icon"></i>
                                 <input type="text" name="username" placeholder="Username">
                             </div>
                         </div>
                         <div class="field">
-                            <div class="ui left icon input">
+                            <div class="ui left icon inverted input">
                                 <i class="lock icon"></i>
                                 <input type="password" name="password" placeholder="Password">
                             </div>

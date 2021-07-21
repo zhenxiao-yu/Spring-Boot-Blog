@@ -26,6 +26,10 @@ body {
     padding: 1em !important;
 }
 
+.m-padded-large {
+    padding: 4em !important;
+}
+
 .m-padded-tb-mini {
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;

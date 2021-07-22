@@ -25,13 +25,15 @@
 <!--Center Content-->>
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
-        <div class="ui success large message">
+        <div class="ui success large message t-category-text">
             <!--login success message-->
             <h3>Welcome back, <span th:text="${session.user.nickname}">SAMPLE USER</span></h3>
-            <p>You are now logged in！</p>
+            <p>You now have <strong>admin</strong> access! </p>
+            <p>Navigate the <strong>Admin Center</strong> using the main menu to get started.</p>
+            <p>As the <strong>Admin</strong>, you can add new posts, new tags and new category.</p>
         </div>
         <!--login success image-->
-        <img src="https://unsplash.it/1000/400?image=1005" alt="" class="ui rounded bordered fluid image">
+        <img src="https://unsplash.it/1000/600?image=500" alt="" class="ui rounded bordered fluid image t-thumbnail-large">
     </div>
 </div>
 <!--Center Content-->

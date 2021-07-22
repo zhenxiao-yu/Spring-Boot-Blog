@@ -22,13 +22,13 @@
 <!--Navigation-->
 
 <!--Secondary Menu-->
-<div class="ui m-teal attached pointing menu">
+<div class="ui  attached pointing inverted menu">
     <div class="ui container">
-        <div class="right menu">
+        <div class="left menu">
             <!--new post page-->
-            <a href="#" th:href="@{/admin/blogs/input}" class="item">New</a>
+            <a href="#" th:href="@{/admin/blogs/input}" class="item t-menu">New</a>
             <!--list view of posts-->
-            <a href="#" th:href="@{/admin/blogs}" class="active m-teal item">List</a>
+            <a href="#" th:href="@{/admin/blogs}" class="active m-red item t-menu">List</a>
         </div>
     </div>
 </div>
@@ -38,15 +38,15 @@
 <!--Center Content-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
-        <div class="ui secondary segment form">
+        <div class="ui inverted segment form m-shadow-seg">
             <input type="hidden" name="page">
-            <div class="inline fields">
+            <div class="inline inverted fields">
                 <!--title input field-->
                 <div class="field">
                     <input type="text" name="title" placeholder="Title">
                 </div>
                 <div class="field">
-                    <div class="ui labeled action input">
+                    <div class="ui labeled action inverted input">
                         <div class="ui type selection dropdown">
                             <input type="hidden" name="typeId">
                             <i class="dropdown icon"></i>

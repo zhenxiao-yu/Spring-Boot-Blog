@@ -68,7 +68,7 @@
                             <!--avatar, name, publish date, view count-->
                             <div class="eleven wide column">
                                 <div class="ui mini inverted horizontal link list">
-                                    <div class="item">
+                                    <div class="item hvr-pop">
                                         <!--avatar-->
                                         <img src="https://unsplash.it/100/100?image=1005"
                                              th:src="@{${blog.user.avatar}}" alt="" class="t-avatar ui avatar image">
@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                     <!--date-->
-                                    <div class="item t-info">
+                                    <div class="item hvr-pop">
                                         <i class="calendar icon"></i><span
                                             th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">SAMPLE DATE</span>
                                     </div>
@@ -114,7 +114,7 @@
                 <div class="column">
                     <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}-1)}" th:unless="${page.first}"
                        style="background-color: #c86567 !important;"
-                       class="ui tiny button t-category-text hvr-sweep-to-left"><i class="angle double left icon"></i>Prev</a>
+                       class="ui tiny button t-category-text hvr-sweep-to-right"><i class="angle double left icon"></i>Prev</a>
                 </div>
                 <div class="right aligned column">
                     <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}+1)}" th:unless="${page.last}"

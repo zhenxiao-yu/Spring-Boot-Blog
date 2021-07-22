@@ -20,11 +20,11 @@
 <!--Navigation-->
 
 <!--Secondary Menu-->
-<div class="ui attached pointing menu">
+<div class="ui attached inverted pointing menu">
     <div class="ui container">
-        <div class="right menu">
-            <a href="#" th:href="@{/admin/types/input}" class="purple item">New</a>
-            <a href="#" th:href="@{/admin/types}" class="purple active item">List</a>
+        <div class="right  menu">
+            <a href="#" th:href="@{/admin/types/input}" class="item t-category-text">New</a>
+            <a href="#" th:href="@{/admin/types}" class="active item t-category-text t-tag-active">List</a>
         </div>
     </div>
 </div>
@@ -35,40 +35,48 @@
     <div class="ui container">
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
             <i class="close icon"></i>
-            <div class="header">System Message：</div>
-            <p th:text="${message}">task completed！</p>
+            <div class="header t-category-text">System Message：</div>
+            <p th:text="${message}" class="t-category-text">task completed！</p>
         </div>
         <!--tags sorted in table-->
-        <table class="ui compact purple table">
+        <table class="ui compact striped inverted table m-shadow-seg animated fadeInDown">
             <thead>
             <tr>
-                <th>#</th>
-                <th>Category Label</th>
-                <th>Tasks</th>
+                <th class="t-section-title">#</th>
+                <th class="t-section-title">Category Label</th>
+                <th class="t-section-title">Tasks</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="type,iterStat : ${page.content}">
-                <td th:text="${iterStat.count}">1</td>
-                <td th:text="${type.name}">Tutorial</td>
+                <td th:text="${iterStat.count}" class="t-footer-text">1</td>
+                <td th:text="${type.name}" class="t-footer-text">Tutorial</td>
                 <td>
                     <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}"
-                       class="ui mini teal basic button">Edit</a>
+                       class="ui circular teal inverted icon button">
+                        <i class="edit icon"></i>
+                    </a>
                     <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}"
-                       class="ui mini red basic button">Delete</a>
+                       class="ui circular red inverted icon button">
+                        <i class="trash icon"></i>
+                    </a>
                 </td>
             </tr>
             </tbody>
             <tfoot>
             <tr>
                 <th colspan="6">
-                    <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                        <a th:href="@{/admin/types(page=${page.number}-1)}" class="item"
+                    <div class="ui small pagination inverted menu" th:if="${page.totalPages}>1">
+                        <a th:href="@{/admin/types(page=${page.number}-1)}" class="item t-blog-title m-shadow-seg"
                            th:unless="${page.first}">Prev</a>
-                        <a th:href="@{/admin/types(page=${page.number}+1)}" class="item"
+                        <a th:href="@{/admin/types(page=${page.number}+1)}" class="item t-blog-title m-shadow-seg"
                            th:unless="${page.last}">Next</a>
                     </div>
-                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated purple basic button">Add Category</a>
+                    <a href="#" th:href="@{/admin/types/input}"
+                       style="background-color: #c86567 !important;"
+                       class="ui small right floated button t-category-text hvr-sweep-to-top">
+                        Add Category
+                    </a>
                 </th>
             </tr>
             </tfoot>

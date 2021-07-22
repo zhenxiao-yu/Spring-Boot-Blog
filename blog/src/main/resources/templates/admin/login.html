@@ -22,9 +22,9 @@
         <div class="ui middle aligned center aligned grid">
             <div class="column">
                 <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
-                    <div class="ui inverted segment m-shadow-seg m-padded-tb-massive m-padded-large" style="height: 600px!important;">
-                        <img class="ui centered rounded medium image" src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}">
-                        <h3 class="ui huge header t-blog-title" >
+                    <div class="ui inverted segment m-shadow-seg m-padded-tb-massive m-padded-large" style="height: 500px!important;">
+                        <img class="ui centered rounded medium image animated flipInY" src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}">
+                        <h3 class="ui huge header t-blog-title animated slideInDown" >
                                 Login
                         </h3>
                         <div class="field">
@@ -39,14 +39,13 @@
                                 <input type="password" name="password" placeholder="Password">
                             </div>
                         </div>
-                        <button class="ui fluid large purple submit button">Submit</button>
-                    </div>
+                        <button style="background-color: #c86567 !important;" class="ui fluid large submit button t-category-text hvr-sweep-to-top">Submit</button>
 
-                    <div class="ui error mini message"></div>
-                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">
-                        Access Denied: username or password Incorrect!
+                        <div class="ui error small message"></div>
+                        <div class="ui mini negative message t-category-text" th:unless="${#strings.isEmpty(message)}" th:text="${message}">
+                            Access Denied: username or password Incorrect!
+                        </div>
                     </div>
-
                 </form>
 
             </div>

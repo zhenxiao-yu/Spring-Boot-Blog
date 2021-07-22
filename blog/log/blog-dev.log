@@ -700,3 +700,33 @@ org.attoparser.ParseException: (Line = 42, Column = 16) Malformed markup: Attrib
 2021-07-22 12:19:42.280  INFO 20732 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
 2021-07-22 12:19:48.541  INFO 20732 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
 2021-07-22 12:19:48.544  INFO 20732 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 12:20:14.595  INFO 20732 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 12:20:14.598  INFO 20732 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 12:20:16.478  INFO 20732 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 12:20:16.481  INFO 20732 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 12:20:19.164  INFO 20732 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 12:20:19.167  INFO 20732 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:08:36.888  INFO 20732 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:08:36.891  INFO 20732 --- [http-nio-8080-exec-4] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:08:38.849  INFO 20732 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:08:38.852  INFO 20732 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:08:42.149  INFO 20732 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:08:42.152  INFO 20732 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:09:09.870  INFO 20732 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:09:09.873  INFO 20732 --- [http-nio-8080-exec-2] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:09:17.134  INFO 20732 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:09:17.137  INFO 20732 --- [http-nio-8080-exec-6] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:09:49.127  INFO 20732 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:09:49.130  INFO 20732 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:10:17.102  INFO 20732 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:10:17.105  INFO 20732 --- [http-nio-8080-exec-5] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:12:07.933  INFO 20732 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:12:07.936  INFO 20732 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:12:23.999  INFO 20732 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:12:24.002  INFO 20732 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:12:24.938  INFO 20732 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:12:24.941  INFO 20732 --- [http-nio-8080-exec-9] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:13:05.367  INFO 20732 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:13:05.370  INFO 20732 --- [http-nio-8080-exec-7] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2021-07-22 13:13:21.756  INFO 20732 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.zxy.web.IndexController.newblogs', args=[{}]}
+2021-07-22 13:13:21.759  INFO 20732 --- [http-nio-8080-exec-3] com.zxy.aspect.LogAspect                 : Result : _fragments :: newblogList

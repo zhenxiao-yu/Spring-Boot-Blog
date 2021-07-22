@@ -23,8 +23,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" th:href="@{/admin/types/input}" class="active purple item">New</a>
-            <a href="#" th:href="@{/admin/types}" class="purple item">List</a>
+            <a href="#" th:href="@{/admin/types/input}" class="active item t-category-text t-tag-active">New</a>
+            <a href="#" th:href="@{/admin/types}" class="item t-category-text">List</a>
         </div>
     </div>
 </div>
@@ -39,8 +39,8 @@
             <input type="hidden" name="id" th:value="*{id}">
             <div class=" field">
                 <div class="ui left labeled input">
-                    <label class="ui purple basic label">Category Label</label>
-                    <input type="text" name="name" placeholder="new category name" th:value="*{name}">
+                    <label class="ui label t-category-text" style="background-color: #c86567 !important;">Category Label</label>
+                    <input type="text" class="t-category-text" name="name" placeholder="new category name" th:value="*{name}">
                 </div>
             </div>
 
@@ -48,13 +48,16 @@
             <!--/*/
             <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
               <i class="close icon"></i>
-              <div class="header">System Message: </div>
-              <p th:errors="*{name}">Invalid Submission!</p>
+              <div class="header t-category-text">System Message: </div>
+              <p th:errors="*{name}" class="t-category-text">Invalid Submission!</p>
             </div>
              /*/-->
             <div class="ui right aligned container">
-                <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
-                <button class="ui purple submit button">Submit</button>
+                <button type="button" class="ui button t-category-text hvr-skew-backward" style="background-color :#96a8bc !important;" onclick="window.history.go(-1)">Back</button>
+                <button class="ui submit button t-category-text hvr-sweep-to-top" style="background-color: #c86567 !important;">
+
+                    Submit
+                </button>
             </div>
 
         </form>

@@ -21,7 +21,7 @@ public class Comment {
     private Date createTime; //time when the comment was made
 
     @ManyToOne
-    private Blog blog; //reference to the blo
+    private Blog blog; //reference to the blog
 
 
     @OneToMany(mappedBy = "parentComment")

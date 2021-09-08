@@ -19,11 +19,11 @@
 <!--Navigation-->
 
 <!--Secondary Menu-->
-<div class="ui attached pointing menu">
+<div class="ui attached inverted pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" th:href="@{/admin/tags/input}" class="active purple item">New</a>
-            <a href="#" th:href="@{/admin/tags}" class="purple item">List</a>
+            <a href="#" th:href="@{/admin/tags/input}" class="active item t-category-text t-tag-active">New</a>
+            <a href="#" th:href="@{/admin/tags}" class="item t-category-text">List</a>
         </div>
     </div>
 </div>
@@ -36,9 +36,9 @@
               th:action="*{id}==null ? @{/admin/tags} : @{/admin/tags/{id}(id=*{id})} " class="ui form">
             <input type="hidden" name="id" th:value="*{id}">
             <div class=" field">
-                <div class="ui left labeled input">
-                    <label class="ui purple basic label">Tag Label</label>
-                    <input type="text" name="name" placeholder="new tag name" th:value="*{name}">
+                <div class="ui left inverted labeled input">
+                    <label style="background-color: #c86567 !important;"  class="ui label">Tag Label</label>
+                    <input style="background-color: #c86567 !important;"  type="text" name="name" placeholder="new tag name" th:value="*{name}">
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
              /*/-->
             <div class="ui right aligned container">
                 <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
-                <button class="ui purple submit button">Submit</button>
+                <button style="background-color: #c86567 !important;" class="ui submit button hvr-sweep-to-top">Submit</button>
             </div>
 
         </form>

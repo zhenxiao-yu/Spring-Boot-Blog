@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    //retrieve user bu username and id
+    //retrieve user by username and id
     @Override
     public User checkUser(String username, String password) {
         //use MD5Utils to encode password (for extra security)

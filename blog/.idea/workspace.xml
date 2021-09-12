@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc0c4d23-0218-4692-b35a-a928f60eaef9" name="Default" comment="" />
+    <list default="true" id="bc0c4d23-0218-4692-b35a-a928f60eaef9" name="Default" comment="color changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -299,7 +299,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.49947312" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -671,7 +671,7 @@
       <workItem from="1631382160349" duration="1069000" />
       <workItem from="1631386425497" duration="593000" />
       <workItem from="1631472670226" duration="2960000" />
-      <workItem from="1631476591299" duration="4243000" />
+      <workItem from="1631476591299" duration="6943000" />
     </task>
     <servers />
   </component>

@@ -44,9 +44,9 @@
             <input type="hidden" name="published" th:value="*{published}">
             <input type="hidden" name="id" th:value="*{id}">
             <div class="required field">
-                <div style="background-color: #c86567 !important;"  class="ui left labeled input ">
+                <div class="ui left labeled input">
                     <!--type selection dropdown-->
-                    <div class="ui selection compact dropdown label">
+                    <div style="background-color: #c86567 !important;"  class="ui selection compact dropdown label">
                         <input type="hidden" value="Normal" name="flag" th:value="*{flag}">
                         <i class="dropdown icon"></i>
                         <div class="text t-category-text">Select Reading Level</div>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <!--title input field-->
-                    <input type="text" name="title" placeholder="Title" th:value="*{title}">
+                    <input class="t-blog-title" type="text" name="title" placeholder="Title" th:value="*{title}">
                 </div>
             </div>
             <!--post content-->
@@ -77,7 +77,7 @@
                         <div class="ui fluid selection dropdown">
                             <input type="hidden" name="type.id" th:value="*{type}!=null ? *{type.id}">
                             <i class="dropdown icon"></i>
-                            <div class="default text t-category-text">Category</div>
+                            <div class="default text">Category</div>
                             <div class="menu">
                                 <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}"
                                      th:text="${type.name}">Game Development
@@ -88,7 +88,7 @@
                 </div>
                 <div class=" field">
                     <div class="ui left labeled action input">
-                        <label class="ui compact purple basic label">Tag</label>
+                        <label class="ui compact label t-category-text" style="background-color: #c86567 !important;">Tag</label>
                         <div class="ui fluid selection multiple search  dropdown">
                             <input type="hidden" name="tagIds" th:value="*{tagIds}">
                             <i class="dropdown icon"></i>
@@ -105,7 +105,7 @@
             <!--post picture input-->
             <div class="required field">
                 <div class="ui left labeled input">
-                    <label class="ui purple basic label">Thumbnail</label>
+                    <label class="ui label t-category-text" style="background-color: #c86567 !important;">Thumbnail</label>
                     <input type="text" name="firstPicture" th:value="*{firstPicture}" placeholder="Image URL">
                 </div>
             </div>
@@ -120,28 +120,28 @@
                     <div class="ui checkbox">
                         <input type="checkbox" id="recommend" name="recommend" checked th:checked="*{recommend}"
                                class="hidden">
-                        <label for="recommend">Add To Recommended</label>
+                        <label for="recommend" class="t-blog-title" style="color: #FFF!important;">Add To Recommended</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="shareStatement" name="shareStatement" th:checked="*{shareStatement}"
                                class="hidden">
-                        <label for="shareStatement">Show Copyright Notice</label>
+                        <label for="shareStatement" class="t-blog-title" style="color: #FFF!important;">Show Copyright Notice</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="appreciation" name="appreciation" th:checked="*{appreciation}"
                                class="hidden">
-                        <label for="appreciation">Allow Donation</label>
+                        <label for="appreciation" class="t-blog-title" style="color: #FFF!important;">Allow Donation</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="commentabled" name="commentabled" th:checked="*{commentabled}"
                                class="hidden">
-                        <label for="commentabled">Enable Comment Section</label>
+                        <label for="commentabled" class="t-blog-title" style="color: #FFF!important;">Enable Comment Section</label>
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
             <div class="ui right aligned container">
                 <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
                 <button type="button" id="save-btn" class="ui secondary button">Save</button>
-                <button type="button" id="publish-btn" class="ui purple button">Submit</button>
+                <button type="button" id="publish-btn" style="background-color: #c86567 !important;" class="ui button">Submit</button>
             </div>
 
         </form>

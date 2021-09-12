@@ -24,11 +24,11 @@
 <!--Secondary Menu-->
 <div class="ui  attached pointing inverted menu">
     <div class="ui container">
-        <div class="left menu">
+        <div class="right menu">
             <!--new post page-->
-            <a href="#" th:href="@{/admin/blogs/input}" class="item t-menu">New</a>
+            <a href="#" th:href="@{/admin/blogs/input}" class="item t-category-text">New</a>
             <!--list view of posts-->
-            <a href="#" th:href="@{/admin/blogs}" class="active m-red item t-menu">List</a>
+            <a href="#" th:href="@{/admin/blogs}" class="active item t-category-text t-tag-active">List</a>
         </div>
     </div>
 </div>
@@ -41,6 +41,15 @@
         <div class="ui inverted segment form m-shadow-seg">
             <input type="hidden" name="page">
             <div class="inline inverted fields">
+                <!--search button-->
+                <div class="field">
+                    <button type="button"
+                            style="background-color: #c86567 !important; margin-left: 20px;"
+                            id="search-btn"
+                            class="ui circular icon button t-category-text hvr-grow">
+                        <i class="search icon"></i>
+                    </button>
+                </div>
                 <!--title input field-->
                 <div class="field">
                     <input type="text" name="title" placeholder="Title">
@@ -62,7 +71,7 @@
                             </div>
                         </div>
                         <!--clear button-->
-                        <button id="clear-btn" class="ui compact button">Clear</button>
+                        <button id="clear-btn" style="background-color: #c86567 !important;" class="ui compact button t-category-text">Clear</button>
                     </div>
                 </div>
                 <!--title input field-->
@@ -72,36 +81,31 @@
                         <label for="recommend">Recommended</label>
                     </div>
                 </div>
-                <!--search button-->
-                <div class="field">
-                    <button type="button" id="search-btn" class="ui mini purple basic button"><i class="search icon"></i>Search
-                    </button>
-                </div>
             </div>
         </div>
 
         <!--posts sorted in tables-->
         <div id="table-container">
-            <table th:fragment="blogList" class="ui compact striped inverted table">
+            <table th:fragment="blogList" class="ui compact striped inverted table m-shadow-seg animated fadeInDown m-shadow-seg">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Recommended</th>
-                    <th>Status</th>
-                    <th>Last Updated</th>
-                    <th>Tasks</th>
+                    <th class="t-section-title">#</th>
+                    <th class="t-section-title">Title</th>
+                    <th class="t-section-title">Category</th>
+                    <th class="t-section-title">Recommended</th>
+                    <th class="t-section-title">Status</th>
+                    <th class="t-section-title">Last Updated</th>
+                    <th class="t-section-title">Tasks</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="blog,iterStat : ${page.content}">
-                    <td th:text="${iterStat.count}">1</td>
-                    <td th:text="${#strings.abbreviate(blog.title,40)}">Unity Particle Effects</td>
-                    <td th:text="${blog.type.name}">Game Development</td>
-                    <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
-                    <td th:text="${blog.published} ? 'Published':'Draft'">Post</td>
-                    <td th:text="${#dates.format(blog.updateTime,'YY-MMM-dd')}">2021-07-06 09:45</td>
+                    <td th:text="${iterStat.count}" class="t-footer-text">1</td>
+                    <td th:text="${#strings.abbreviate(blog.title,40)}" class="t-footer-text">Unity Particle Effects</td>
+                    <td th:text="${blog.type.name}" class="t-footer-text">Game Development</td>
+                    <td th:text="${blog.recommend} ? 'Yes':'No'" class="t-footer-text">Yes</td>
+                    <td th:text="${blog.published} ? 'Published':'Draft'" class="t-footer-text">Post</td>
+                    <td th:text="${#dates.format(blog.updateTime,'YY-MMM-dd')}" class="t-footer-text">2021-07-06 09:45</td>
                     <!--task buttons-->
                     <td>
                         <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui circular teal inverted icon button">
@@ -116,14 +120,14 @@
                 <tfoot>
                 <tr>
                     <th colspan="7">
-                        <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                            <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item"
+                        <div class="ui small pagination inverted menu" th:if="${page.totalPages}>1">
+                            <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item t-blog-title m-shadow-seg"
                                th:unless="${page.first}">Prev</a>
-                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item"
+                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item t-blog-title m-shadow-seg"
                                th:unless="${page.last}">Next</a>
                         </div>
                         <a href="#" th:href="@{/admin/blogs/input}"
-                           class="ui right floated purple basic button">Add Post</a>
+                           class="ui small right floated button t-category-text hvr-sweep-to-top" style="background-color: #c86567 !important;">Add Post</a>
                     </th>
                 </tr>
                 </tfoot>
